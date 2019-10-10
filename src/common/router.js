@@ -1,13 +1,14 @@
 import React from 'react';
 import { Router } from '@reach/router';
-import { Login, Repos, RepoDetail, NotFound } from 'routes';
+import { Login, Home, Repos, RepoDetail, NotFound } from 'routes';
 
 function RouterConfig() {
   return (
     <Router>
       <Login path="/login" />
-      <Repos path="/" />
-      <RepoDetail path="/:name" />
+      <Home path="/" />
+      <Repos path="/repo" />
+      <RepoDetail path="repo/:name" />
       <NotFound default />
     </Router>
   );
