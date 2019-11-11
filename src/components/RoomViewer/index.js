@@ -14,7 +14,7 @@ function RoomViewer() {
             Đây là những chỗ ở rẻ nhất của Lalastay
           </Box>
         </div>
-        <Grid container spacing={3}>
+        <Grid direction="row" container justify="center" alignItems="flex-start" spacing={3}>
           <Grid item>
             <SmallRoomItem />
           </Grid>

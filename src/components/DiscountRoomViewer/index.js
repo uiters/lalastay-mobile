@@ -5,7 +5,7 @@ import { SmallRoomItem } from 'components';
 function DiscountRoomViewer() {
   return (
     <>
-      <div style={{ width: '100%', marginTop: '40px', marginBottom: '40px' }}>
+      <div style={{ width: '100%', marginBottom: '40px' }}>
         <div style={{ marginBottom: '20px' }}>
           <Box fontWeight={600} fontSize={24} color="#2B2B2B">
             Các chỗ được đặt nhiều nhất
@@ -14,7 +14,7 @@ function DiscountRoomViewer() {
             Đây là những chỗ nỗi bất nhất của Lalastay
           </Box>
         </div>
-        <Grid container spacing={3}>
+        <Grid direction="row" container justify="center" alignItems="flex-start" spacing={2}>
           <Grid item>
             <SmallRoomItem />
           </Grid>

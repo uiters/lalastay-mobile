@@ -60,62 +60,59 @@ function SmallRoomItem() {
           <div>
             <img
               src={smallRoom}
-              style={{ width: '100%', height: '100%', borderRadius: '4px' }}
+              style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
+            />
+          </div>
+          <div>
+            <img
+              src={smallRoom}
+              style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
+            />
+          </div>
+          <div>
+            <img
+              src={smallRoom}
+              style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
+            />
+          </div>
+          <div>
+            <img
+              src={smallRoom}
+              style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
+            />
+          </div>
+          <div>
+            <img
+              src={smallRoom}
+              style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
+            />
+          </div>
+          <div>
+            <img src={smallRoom} style={{ width: '100%', height: '100%', borderRadius: '4px' }} />
+          </div>
+          <div>
+            <img
+              src={smallRoom}
+              style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
             ></img>
           </div>
           <div>
             <img
               src={smallRoom}
-              style={{ width: '100%', height: '100%', borderRadius: '4px' }}
-            ></img>
+              style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
+            />
           </div>
           <div>
             <img
               src={smallRoom}
-              style={{ width: '100%', height: '100%', borderRadius: '4px' }}
-            ></img>
+              style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
+            />
           </div>
           <div>
             <img
               src={smallRoom}
-              style={{ width: '100%', height: '100%', borderRadius: '4px' }}
-            ></img>
-          </div>
-          <div>
-            <img
-              src={smallRoom}
-              style={{ width: '100%', height: '100%', borderRadius: '4px' }}
-            ></img>
-          </div>
-          <div>
-            <img
-              src={smallRoom}
-              style={{ width: '100%', height: '100%', borderRadius: '4px' }}
-            ></img>
-          </div>
-          <div>
-            <img
-              src={smallRoom}
-              style={{ width: '100%', height: '100%', borderRadius: '4px' }}
-            ></img>
-          </div>
-          <div>
-            <img
-              src={smallRoom}
-              style={{ width: '100%', height: '100%', borderRadius: '4px' }}
-            ></img>
-          </div>
-          <div>
-            <img
-              src={smallRoom}
-              style={{ width: '100%', height: '100%', borderRadius: '4px' }}
-            ></img>
-          </div>
-          <div>
-            <img
-              src={smallRoom}
-              style={{ width: '100%', height: '100%', borderRadius: '4px' }}
-            ></img>
+              style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
+            />
           </div>
         </Swiper>
       </div>
@@ -123,7 +120,7 @@ function SmallRoomItem() {
         <Box display="inline" className={classes.address}>
           Đồng nai
         </Box>
-        <Box display="inline" className={classes.detailAddress}>
+        <Box display="inline" className={classes.detailAddress} paddingLeft={1}>
           Ngã tư sông ray, Đồng nai
         </Box>
         <Box display="inline" style={{ fontSize: '12px', position: 'absolute', right: 0 }}>

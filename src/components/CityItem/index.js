@@ -29,9 +29,10 @@ function CityItem() {
           borderRadius: '10px',
           boxShadow: '2px 4px 8px rgba(211, 211, 211, 0.5)',
           position: 'absolute',
+          objectFit: 'cover',
         }}
         src={city}
-      ></img>
+      />
       <div className={classes.content}>
         <Box textAlign="center">Đồng nai</Box>
         <Box textAlign="center">3550 chỗ ở</Box>

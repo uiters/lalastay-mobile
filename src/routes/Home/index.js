@@ -1,27 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Container } from '@material-ui/core';
 import { Navbar, CityViewer, DiscountRoomViewer, RoomViewer, VideoIntro } from 'components';
 
 function Home() {
-  const [isOpacity, setIsOpacity] = useState(0.2);
+  // const [isOpacity, setIsOpacity] = useState(0.2);
 
-  const listener = () => {
-    if (window.pageYOffset >= 300) {
-      setIsOpacity(1);
-    } else {
-      setIsOpacity(0.2);
-    }
-  };
+  // const listener = () => {
+  //   if (window.pageYOffset >= 300) {
+  //     setIsOpacity(1);
+  //   } else {
+  //     setIsOpacity(0.6);
+  //   }
+  // };
 
-  useEffect(() => {
-    window.addEventListener('scroll', listener);
-    return () => {
-      window.removeEventListener('scroll', listener);
-    };
-  });
+  // useEffect(() => {
+  //   window.addEventListener('scroll', listener);
+  //   return () => {
+  //     window.removeEventListener('scroll', listener);
+  //   };
+  // });
   return (
     <>
-      <Navbar opacity={isOpacity} />
+      {/* <Navbar opacity={isOpacity} /> */}
+      <Navbar />
       <VideoIntro />
       <Container>
         <CityViewer

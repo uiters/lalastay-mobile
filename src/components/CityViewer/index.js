@@ -5,7 +5,7 @@ import CityScroll from '../CityScroll';
 
 function CityViewer(props) {
   return (
-    <div>
+    <div style={{ marginBottom: '40px' }}>
       <div style={{ marginBottom: '20px' }}>
         <Box fontWeight={600} fontSize={24} color="#2B2B2B">
           {props.tilte}

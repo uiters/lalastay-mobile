@@ -14,9 +14,9 @@ function VideoIntro() {
     // event.target.pauseVideo();
   };
   return (
-    <>
+    <div style={{ marginBottom: '40px' }}>
       <YouTube videoId="NVk6tRk89xw" opts={opts} onReady={_onReady} />
-    </>
+    </div>
   );
 }
 

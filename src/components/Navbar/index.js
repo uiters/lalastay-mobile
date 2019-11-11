@@ -31,27 +31,31 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-function Navbar(props) {
+function Navbar() {
   const classes = useStyles();
-  // eslint-disable-next-line prefer-destructuring
-  const opacity = props.opacity;
+  // const opacity = props.opacity;
   return (
     <>
-      <nav className="menu" style={{ background: `rgba(250, 250, 250, ${opacity})` }}>
+      {/* <nav className="menu" style={{ background: `rgba(250, 250, 250, ${opacity})` }}> */}
+      <nav className="menu" style={{ background: '#FFFFFF' }}>
         <Grid container direction="row" justify="space-between" alignItems="center">
-          <Grid item>
-            <Grid container direction="row" alignItems="center" justify="space-between">
+          <Grid item xs={7}>
+            <Grid container direction="row" alignItems="center" justify="flex-start">
               <Box className={classes.logo}>
                 <img src={logo} className={classes.logoImg}></img>
               </Box>
               <Box className="search-container">
                 <Box display="inline">
-                  <input placeholder="Tìm kiếm" className="search-input" type="search"></input>
+                  <input placeholder="Tìm kiếm" className="search-input" type="search" />
+                  <button className="button-search" type="button"></button>
                 </Box>
+                {/* <Box display="inline">
+
+                </Box> */}
               </Box>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid item xs={5} container direction="row" justify="flex-end" alignItems="center">
             <Button className={classes.button}>Chủ nhà</Button>
             <Button className={classes.button}>Đăng kí</Button>
             <Button className={classes.button}>Đăng nhập</Button>
