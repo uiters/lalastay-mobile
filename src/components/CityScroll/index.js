@@ -7,7 +7,7 @@ import CityItem from '../CityItem';
 function CityScroll() {
   const params = {
     slidesPerView: 5,
-    spaceBetween: 15,
+    spaceBetween: 10,
     slidesPerGroup: 1,
     loop: true,
     loopFillGroupWithBlank: true,
@@ -26,52 +26,58 @@ function CityScroll() {
       },
       768: {
         slidesPerView: 3,
-        spaceBetween: 30,
+        spaceBetween: 20,
       },
       640: {
         slidesPerView: 2,
         spaceBetween: 20,
       },
+      360: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
       320: {
         slidesPerView: 1,
-        spaceBetween: 0,
+        spaceBetween: 10,
       },
     },
   };
 
   return (
-    <Swiper {...params}>
-      <div>
-        <CityItem />
-      </div>
-      <div>
-        <CityItem />
-      </div>
-      <div>
-        <CityItem />
-      </div>
-      <div>
-        <CityItem />
-      </div>
-      <div>
-        <CityItem />
-      </div>
-      <div>
-        <CityItem />
-      </div>
-      <div>
-        <CityItem />
-      </div>
-      <div>
-        <CityItem />
-      </div>
-      <div>
-        <CityItem />
-      </div>
-      <div>
-        <CityItem />
-      </div>
-    </Swiper>
+    <div className="container-city-scroll">
+      <Swiper {...params}>
+        <div>
+          <CityItem />
+        </div>
+        <div>
+          <CityItem />
+        </div>
+        <div>
+          <CityItem />
+        </div>
+        <div>
+          <CityItem />
+        </div>
+        <div>
+          <CityItem />
+        </div>
+        <div>
+          <CityItem />
+        </div>
+        <div>
+          <CityItem />
+        </div>
+        <div>
+          <CityItem />
+        </div>
+        <div>
+          <CityItem />
+        </div>
+        <div>
+          <CityItem />
+        </div>
+      </Swiper>
+    </div>
   );
 }
 

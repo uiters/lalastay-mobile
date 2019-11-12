@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from '@material-ui/core';
-import { Navbar, CityViewer, DiscountRoomViewer, RoomViewer, VideoIntro } from 'components';
+import { Navbar, CityViewer, RoomViewer, VideoIntro } from 'components';
 
 function Home() {
   // const [isOpacity, setIsOpacity] = useState(0.2);
@@ -29,7 +29,7 @@ function Home() {
           tilte="Địa điểm nổi bật hôm nay"
           content="Đây là những địa điểm nổi bật nhất Lalasttay"
         />
-        <DiscountRoomViewer />
+        <RoomViewer />
         <CityViewer
           tilte="Hay những địa điểm bạn chưa bao giờ tới"
           content="Lalastay sẽ dẫn bạn đến đây"

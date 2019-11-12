@@ -1,6 +1,3 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable react/self-closing-comp */
 import React from 'react';
 import { Box, Grid, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
@@ -9,8 +6,8 @@ import './style.css';
 
 const useStyles = makeStyles(() => ({
   logo: {
-    width: '70px',
-    height: '70px',
+    width: '60px',
+    height: '60px',
   },
   logoImg: {
     width: '100%',
@@ -39,23 +36,20 @@ function Navbar() {
       {/* <nav className="menu" style={{ background: `rgba(250, 250, 250, ${opacity})` }}> */}
       <nav className="menu" style={{ background: '#FFFFFF' }}>
         <Grid container direction="row" justify="space-between" alignItems="center">
-          <Grid item xs={7}>
+          <Grid item xs={6}>
             <Grid container direction="row" alignItems="center" justify="flex-start">
               <Box className={classes.logo}>
-                <img src={logo} className={classes.logoImg}></img>
+                <img src={logo} className={classes.logoImg} alt="img" />
               </Box>
-              <Box className="search-container">
-                <Box display="inline">
-                  <input placeholder="Tìm kiếm" className="search-input" type="search" />
-                  <button className="button-search" type="button"></button>
-                </Box>
-                {/* <Box display="inline">
-
-                </Box> */}
+              <Box display="inline" className="search-container">
+                <input placeholder="Tìm kiếm" className="search-input" />
+              </Box>
+              <Box display="inline" className="button-search-container">
+                <button className="button-search" type="button" />
               </Box>
             </Grid>
           </Grid>
-          <Grid item xs={5} container direction="row" justify="flex-end" alignItems="center">
+          <Grid item xs={6} container direction="row" justify="flex-end" alignItems="center">
             <Button className={classes.button}>Chủ nhà</Button>
             <Button className={classes.button}>Đăng kí</Button>
             <Button className={classes.button}>Đăng nhập</Button>
