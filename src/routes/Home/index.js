@@ -22,8 +22,10 @@ function Home() {
   return (
     <>
       {/* <Navbar opacity={isOpacity} /> */}
-      <Navbar />
-      <VideoIntro />
+      <div>
+        <Navbar />
+        <VideoIntro />
+      </div>
       <Container>
         <CityViewer
           tilte="Địa điểm nổi bật hôm nay"

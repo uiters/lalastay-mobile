@@ -17,28 +17,28 @@ function RoomViewer() {
               </Box>
             </div>
           </Grid>
-          <Grid item>
+          <Grid item md={3} xs={6} lg={3} sm={4}>
             <SmallRoomItem />
           </Grid>
-          <Grid item>
+          <Grid item md={3} xs={6} lg={3} sm={4}>
             <SmallRoomItem />
           </Grid>
-          <Grid item>
+          <Grid item md={3} xs={6} lg={3} sm={4}>
             <SmallRoomItem />
           </Grid>
-          <Grid item>
+          <Grid item md={3} xs={6} lg={3} sm={4}>
             <SmallRoomItem />
           </Grid>
-          <Grid item>
+          <Grid item md={3} xs={6} lg={3} sm={4}>
             <SmallRoomItem />
           </Grid>
-          <Grid item>
+          <Grid item md={3} xs={6} lg={3} sm={4}>
             <SmallRoomItem />
           </Grid>
-          <Grid item>
+          <Grid item md={3} xs={6} lg={3} sm={4}>
             <SmallRoomItem />
           </Grid>
-          <Grid item>
+          <Grid item md={3} xs={6} lg={3} sm={4}>
             <SmallRoomItem />
           </Grid>
         </Grid>
