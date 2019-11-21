@@ -52,5 +52,5 @@ input:focus {
 .MuiPaper-elevation1 {
   border-radius: 4px 4px 6px 6px !important;
   box-shadow: -2px 4px 6px rgba(0, 0, 0, 0.25) !important;
-  background: #FAFAFA !important;
+  background: #fafafa !important;
 }

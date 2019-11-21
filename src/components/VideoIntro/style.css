@@ -1,17 +1,17 @@
-.button-wiew{
-  background-color: #FC6C85;
+.button-wiew {
+  background-color: #fc6c85;
   color: #ffffff;
   border: none;
   font-size: 18px;
   padding: 8px;
 }
 
-.title{
+.title {
   font-weight: bold;
-font-size: 32px;
-line-height: 43px;
-color: #ffffff;
-line-height: 20px;
-align-items: center;
-text-align: center;
+  font-size: 32px;
+  line-height: 43px;
+  color: #ffffff;
+  line-height: 20px;
+  align-items: center;
+  text-align: center;
 }

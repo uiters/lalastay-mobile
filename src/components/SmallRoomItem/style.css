@@ -1,8 +1,7 @@
 .container-room-item {
-
   min-width: 140px;
   max-width: 300px;
-  min-height: 200 ;
+  min-height: 200;
 
   max-height: 297px;
   margin: 5px;
@@ -100,7 +99,6 @@
   width: 100%;
   /* height: 170px; */
   height: 50% !important;
-
 }
 
 .swiper-button-next:after,
@@ -126,7 +124,6 @@
   font-size: 18px;
   line-height: 18px;
 }
-.swiper-container{
-
+.swiper-container {
   margin-bottom: 10px !important;
 }
