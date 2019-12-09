@@ -1,0 +1,21 @@
+.outline-button {
+  padding: 6px 20px;
+  background-color: transparent;
+  color: #000000;
+  border: 1px solid gray;
+  font-size: 18px;
+  line-height: 23px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.button-best-fit {
+  padding: 6px 20px;
+  background-color: #fc6c85;
+  color: #ffffff;
+  border: none !important;
+  font-size: 18px;
+  line-height: 23px;
+  border-radius: 4px;
+  margin-right: 5px;
+}

@@ -1,0 +1,37 @@
+.MuiTableCell-body {
+  font-size: 20px !important;
+}
+
+.MuiTableCell-root {
+  font-size: 24px !important;
+}
+.container-show-image > .swiper-container {
+  height: 300px !important;
+  margin-bottom: 10px !important;
+}
+.slide-under {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.container-show-image:hover .swiper-button-next {
+  display: block !important;
+}
+.container-show-image:hover .swiper-button-prev {
+  display: block !important;
+}
+
+@font-face {
+  font-family: 'Harmonia';
+  src: local('Harmonia') url(../../fonts/Harmonia-Regular.ttf) format('truetype');
+}
+
+.MuiTableCell-root {
+  font-family: 'Harmonia';
+  font-size: 20px !important;
+  color: rgba(43, 43, 43, 0.8) !important;
+}
+
+.container-thum{
+  height: 150px !important;
+}

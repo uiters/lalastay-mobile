@@ -1,27 +1,35 @@
+/* eslint-disable react/jsx-boolean-value */
 import React from 'react';
-import { Button } from '@material-ui/core';
-import { makeStyles } from '@material-ui/styles';
-import { BasicLayout } from 'components';
-
-const useStyles = makeStyles({
-  root: {
-    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-    border: 0,
-    borderRadius: 3,
-    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-    color: 'white',
-    height: 48,
-    padding: '0 30px',
-  },
-});
+import { CityViewer, RoomViewer, VideoIntro } from 'components';
+import { Container } from '@material-ui/core';
 
 function Home() {
-  const classes = useStyles();
-
   return (
-    <BasicLayout>
-      <Button className={classes.root}>Design by CuOngW</Button>
-    </BasicLayout>
+    <div>
+      <div>
+        <VideoIntro />
+      </div>
+      <Container>
+        <CityViewer
+          tilte="Địa điểm nổi bật hôm nay"
+          sologen="Đây là những địa điểm nổi bật nhất Lalasttay"
+        />
+        <RoomViewer
+          sale={true}
+          tilte="Chỗ này rẻ nhất luôn"
+          sologen="Đây là những chỗ ở rẻ bật nhất của lalastay"
+        />
+        <CityViewer
+          tilte="Hay những địa điểm bạn chưa bao giờ tới"
+          sologen="Lalastay sẽ dẫn bạn đến đây"
+        />
+        <RoomViewer
+          sale={false}
+          tilte="Các chỗ ở được đặt nhiều nhất nhất"
+          sologen="Đây là những chỗ ở nổi bật nhất của lalastay"
+        />
+      </Container>
+    </div>
   );
 }
 
