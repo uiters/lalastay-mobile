@@ -7,3 +7,7 @@
   box-shadow: 2px 4px 8px rgba(211, 211, 211, 0.5);
   position: relative;
 }
+
+.container-city-item:hover{
+  cursor: pointer;
+}

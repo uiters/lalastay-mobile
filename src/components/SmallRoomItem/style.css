@@ -4,8 +4,9 @@
   min-height: 154px;
   max-height: 330px; */
 
-  min-width: 160px;
-  max-width: 290px;
+  /* min-width: 160px;
+  max-width: 290px; */
+  width: 98%;
   max-height: 380px;
   min-height: 230px;
   /* height: 100%;
