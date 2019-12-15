@@ -9,24 +9,22 @@ import {
   Homedetail,
   HomeByArea,
   CompareHomestaty,
+  Payment,
 } from 'routes';
-import { Navbar } from 'components';
 
 function RouterConfig() {
   return (
-    <>
-      <Navbar />
-      <Router>
-        <Login path="/login" />
-        <Home path="/" />
-        <Repos path="/repo" />
-        <RepoDetail path="repo/:name" />
-        <Homedetail path="home-detail" />
-        <HomeByArea path="home-by-area" />
-        <CompareHomestaty path="compare-homestay" />
-        <NotFound default />
-      </Router>
-    </>
+    <Router>
+      <Login path="/login" />
+      <Home path="/" />
+      <Repos path="/repo" />
+      <RepoDetail path="repo/:name" />
+      <Homedetail path="home-detail" />
+      <HomeByArea path="home-by-area" />
+      <CompareHomestaty path="compare-homestay" />
+      <Payment path="payment" />
+      <NotFound default />
+    </Router>
   );
 }
 

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Row, Col, Typography, Card, Spin } from 'antd';
 import { Link } from '@reach/router';
-import { BasicLayout } from 'components';
+import { withLayout } from 'components';
 import { fetchAction } from 'models/repos/actions';
 import './style.css';
 
@@ -17,7 +17,7 @@ function Repos() {
   }, [dispatch]);
 
   return (
-    <BasicLayout>
+    <div>
       <Title level={4}>My Repos</Title>
       {repos.length === 0 && <Spin />}
       <Row gutter={16}>
@@ -34,8 +34,8 @@ function Repos() {
             </Col>
           ))}
       </Row>
-    </BasicLayout>
+    </div>
   );
 }
 
-export default Repos;
+export default withLayout(Repos);

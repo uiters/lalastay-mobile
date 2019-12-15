@@ -3,7 +3,7 @@
 import React from 'react';
 import './style.css';
 import { Grid, Box, Container } from '@material-ui/core';
-import { SmallRoomItem, VideoIntro } from 'components';
+import { SmallRoomItem, VideoIntro, withLayout } from 'components';
 
 function HomeByArea() {
   const renderRom = () => {
@@ -53,4 +53,4 @@ function HomeByArea() {
   );
 }
 
-export default HomeByArea;
+export default withLayout(HomeByArea);
