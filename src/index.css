@@ -1,6 +1,18 @@
 @font-face {
   font-family: 'Harmonia';
-  src: local('Harmonia') url(./fonts/Harmonia-Regular.ttf) format('truetype');
+  src: local('RV Harmonia'), url(./fonts/Harmonia-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Harmonia';
+  src: local('RV Harmonia'), url(./fonts/Harmonia-Light.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Harmonia';
+  src: local('RV Harmonia'), url(./fonts/Harmonia-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Harmonia';
+  src: local('RV Harmonia'), url(./fonts/Harmonia-SemiBold.ttf) format('truetype');
 }
 
 body {
