@@ -63,19 +63,6 @@ function SmallRoomItem(props) {
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
             />
-            <div className="container-top">
-              <div className="province">Đồng nai</div>
-              {props.sale && (
-                <div className="sale">
-                  <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <ArrowDownwardIcon
-                      style={{ color: '#1BE72F', fontSize: '15px', fontWeight: '700' }}
-                    />
-                    <div>35%</div>
-                  </div>
-                </div>
-              )}
-            </div>
           </div>
           <div>
             <img
@@ -83,19 +70,6 @@ function SmallRoomItem(props) {
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
             />
-            <div className="container-top">
-              <div className="province">Đồng nai</div>
-              {props.sale && (
-                <div className="sale">
-                  <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <ArrowDownwardIcon
-                      style={{ color: '#1BE72F', fontSize: '15px', fontWeight: '700' }}
-                    />
-                    <div>35%</div>
-                  </div>
-                </div>
-              )}
-            </div>
           </div>
           <div>
             <img
@@ -103,19 +77,6 @@ function SmallRoomItem(props) {
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
             />
-            <div className="container-top">
-              <div className="province">Đồng nai</div>
-              {props.sale && (
-                <div className="sale">
-                  <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <ArrowDownwardIcon
-                      style={{ color: '#1BE72F', fontSize: '15px', fontWeight: '700' }}
-                    />
-                    <div>35%</div>
-                  </div>
-                </div>
-              )}
-            </div>
           </div>
           <div>
             <img
@@ -123,19 +84,6 @@ function SmallRoomItem(props) {
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
             />
-            <div className="container-top">
-              <div className="province">Đồng nai</div>
-              {props.sale && (
-                <div className="sale">
-                  <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <ArrowDownwardIcon
-                      style={{ color: '#1BE72F', fontSize: '15px', fontWeight: '700' }}
-                    />
-                    <div>35%</div>
-                  </div>
-                </div>
-              )}
-            </div>
           </div>
           <div>
             <img
@@ -143,19 +91,6 @@ function SmallRoomItem(props) {
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
             />
-            <div className="container-top">
-              <div className="province">Đồng nai</div>
-              {props.sale && (
-                <div className="sale">
-                  <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <ArrowDownwardIcon
-                      style={{ color: '#1BE72F', fontSize: '15px', fontWeight: '700' }}
-                    />
-                    <div>35%</div>
-                  </div>
-                </div>
-              )}
-            </div>
           </div>
           <div>
             <img
@@ -163,19 +98,6 @@ function SmallRoomItem(props) {
               style={{ width: '100%', height: '100%' }}
               alt="img"
             />
-            <div className="container-top">
-              <div className="province">Đồng nai</div>
-              {props.sale && (
-                <div className="sale">
-                  <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <ArrowDownwardIcon
-                      style={{ color: '#1BE72F', fontSize: '15px', fontWeight: '700' }}
-                    />
-                    <div>35%</div>
-                  </div>
-                </div>
-              )}
-            </div>
           </div>
           <div>
             <img
@@ -183,21 +105,21 @@ function SmallRoomItem(props) {
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
             />
-            <div className="container-top">
-              <div className="province">Đồng nai</div>
-              {props.sale && (
-                <div className="sale">
-                  <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <ArrowDownwardIcon
-                      style={{ color: '#1BE72F', fontSize: '15px', fontWeight: '700' }}
-                    />
-                    <div>35%</div>
-                  </div>
-                </div>
-              )}
-            </div>
           </div>
         </Swiper>
+        <div className="container-top">
+          <div className="province">Đồng nai</div>
+          {props.sale && (
+            <div className="sale">
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <ArrowDownwardIcon
+                  style={{ color: '#1BE72F', fontSize: '15px', fontWeight: '700' }}
+                />
+                <div>35%</div>
+              </div>
+            </div>
+          )}
+        </div>
         {props.compare && (
           <div>
             <HighlightOffIcon
@@ -212,25 +134,30 @@ function SmallRoomItem(props) {
 
       <div style={{ padding: '0 4px' }} onClick={() => navigate('/home-detail')}>
         <Grid container direction="row" justify="space-between" alignItems="center">
-          <Box fontWeight={600} fontSize={props.width === 'xs' ? 15 : 18} lineHeight={2}>
+          <Box fontWeight={600} fontSize={props.width === 'xs' ? 14 : 18}>
             <Box display="inline" color="#9708CC" style={{ marginLeft: '5px' }}>
               $
             </Box>
-            <Box display="inline"> 1.5tr {props.width === 'xs' ? '' : '/đêm'}</Box>
+            <Box display="inline" color="#2B2B2B">
+              {' '}
+              1.5tr {props.width === 'xs' ? '' : '/đêm'}
+            </Box>
             {props.sale === true && (
               <Box display="inline" fontWeight={300}>
                 <strike style={{ marginLeft: '5px' }}> 2.5tr</strike>
               </Box>
             )}
           </Box>
-          <Box style={{ fontSize: '14px' }}>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-              <StarIcon style={{ color: '#9708CC', fontSize: '15px' }} />
+          <Box style={{ fontSize: props.width === 'xs' ? '12px' : '14px' }}>
+            <div style={{ display: 'flex' }}>
+              <StarIcon
+                style={{ color: '#9708CC', fontSize: props.width === 'xs' ? '12px' : '14px' }}
+              />
               <div>4.95</div>
             </div>
           </Box>
         </Grid>
-        <div style={{ display: 'flex', fontSize: '15px' }}>
+        <div style={{ display: 'flex', fontSize: '14px' }}>
           <PersonIcon
             style={{ color: '#9708CC', fontSize: props.width === 'xs' ? '15px' : '18px' }}
           />
