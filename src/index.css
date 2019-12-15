@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'Harmonia';
-  src: local('Harmonia') url(./fonts/Harmonia-Regular.ttf) format('truetype');
+  font-family: 'RV Harmonia';
+  src: local('RV Harmonia'), url(./fonts/Harmonia-Regular.ttf) format('truetype');
 }
 
-body {
-  font-family: Harmonia;
+* {
+  font-family: RV Harmonia;
 }
 textarea:focus,
 input:focus {
