@@ -137,11 +137,6 @@ only screen and (min-device-pixel-ratio : 1.5) {
   cursor: pointer;
 }
 
-.price {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 18px;
-}
 .swiper-container {
   height: 100%;
 }
@@ -168,7 +163,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
   position: absolute;
   top: 5px;
   left: 5px;
-  z-index: 200;
+  z-index: 10;
   display: flex;
 }
 
