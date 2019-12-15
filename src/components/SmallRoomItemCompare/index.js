@@ -6,7 +6,7 @@ import './style.css';
 
 function SmallRoomItemCompare() {
   return (
-    <div>
+    <>
       <SmallRoomItem sale={false} />
       <button
         className="compare-button"
@@ -15,7 +15,7 @@ function SmallRoomItemCompare() {
       >
         SO SÁNH
       </button>
-    </div>
+    </>
   );
 }
 
