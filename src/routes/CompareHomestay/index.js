@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-boolean-value */
 import React, { useState, useEffect } from 'react';
 import { SmallRoomItem, InputSearchForCompare, withLayout } from 'components';
@@ -112,10 +113,7 @@ function CompareHomestaty() {
           <TableRow>
             <TableCell style={{ width: '15%' }} />
             <TableCell style={{ width: '40%' }}>
-              <div>
-                {' '}
-                <SmallRoomItem sale />
-              </div>
+              <div>{/* <SmallRoomItem sale /> */}</div>
             </TableCell>
             <TableCell style={{ width: '40%' }}>
               {close && (
@@ -129,8 +127,7 @@ function CompareHomestaty() {
                 <div
                   style={{ position: 'relative', display: 'flex', justifyContent: 'space-between' }}
                 >
-                  {' '}
-                  <SmallRoomItem sale={false} compare={true} close={closeHome} />
+                  {/* <SmallRoomItem sale={false} compare={true} close={closeHome} /> */}
                 </div>
               )}
             </TableCell>
@@ -138,7 +135,6 @@ function CompareHomestaty() {
         </TableHead>
         <TableRow>
           <TableCell>
-            {' '}
             <Box fontWeight={600}>Tên homestay</Box>
           </TableCell>
           <TableCell>
@@ -169,18 +165,15 @@ function CompareHomestaty() {
               <Box fontWeight={600}>Loại homestay</Box>
             </TableCell>
             <TableCell>
-              {' '}
               <Box> Nhà riêng</Box>
             </TableCell>
             <TableCell> {!close && <Box> Phòng riêng</Box>}</TableCell>
           </TableRow>
           <TableRow>
             <TableCell>
-              {' '}
               <Box fontWeight={600}> Chi phí</Box>
             </TableCell>
             <TableCell>
-              {' '}
               <Box>2,340,000VNĐ/ ngày</Box>
             </TableCell>
             <TableCell> {!close && <Box>2,340,000VNĐ/ ngày</Box>}</TableCell>
@@ -190,14 +183,12 @@ function CompareHomestaty() {
               <Box fontWeight={600}> Số khách tối đa</Box>
             </TableCell>
             <TableCell>
-              {' '}
               <Box>3 người</Box>
             </TableCell>
             <TableCell> {!close && <Box>2 người</Box>}</TableCell>
           </TableRow>
           <TableRow>
             <TableCell>
-              {' '}
               <Box fontWeight={600}>Quy định</Box>
             </TableCell>
             <TableCell>
