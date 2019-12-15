@@ -210,9 +210,9 @@ function SmallRoomItem(props) {
         )}
       </div>
 
-      <div style={{ padding: '0 5px' }} onClick={() => navigate('/home-detail')}>
+      <div style={{ padding: '0 4px' }} onClick={() => navigate('/home-detail')}>
         <Grid container direction="row" justify="space-between" alignItems="center">
-          <Box className="price" fontSize={18} lineHeight={2}>
+          <Box fontWeight={600} fontSize={props.width === 'xs' ? 15 : 18} lineHeight={2}>
             <Box display="inline" color="#9708CC" style={{ marginLeft: '5px' }}>
               $
             </Box>
@@ -225,13 +225,15 @@ function SmallRoomItem(props) {
           </Box>
           <Box style={{ fontSize: '14px' }}>
             <div style={{ display: 'flex', alignItems: 'center' }}>
-              <StarIcon style={{ color: '#9708CC', fontSize: '18px' }} />
+              <StarIcon style={{ color: '#9708CC', fontSize: '15px' }} />
               <div>4.95</div>
             </div>
           </Box>
         </Grid>
-        <div style={{ display: 'flex', fontSize: '14px' }}>
-          <PersonIcon style={{ color: '#9708CC', fontSize: '20px' }} />
+        <div style={{ display: 'flex', fontSize: '15px' }}>
+          <PersonIcon
+            style={{ color: '#9708CC', fontSize: props.width === 'xs' ? '15px' : '18px' }}
+          />
           <Box>3 người - 1 phòng</Box>
         </div>
         <Box fontWeight={600} fontSize={18} style={{ lineHeight: '25px' }}>
