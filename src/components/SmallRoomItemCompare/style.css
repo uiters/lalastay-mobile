@@ -1,0 +1,11 @@
+.compare-button {
+  background-color: #fc6c85;
+  color: #ffffff;
+  border: none !important;
+  font-size: 18px;
+  width: 99%;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  padding: 5px 0;
+}

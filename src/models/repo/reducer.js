@@ -1,4 +1,4 @@
-import { FETCH_SUCCESS, FETCH_ERROR, CLEAR } from './constants';
+import { FETCH_SUCCESS, FETCH_ERROR, CLEAR, CLOSE } from './constants';
 
 const reducer = (state = {}, action) => {
   switch (action.type) {
@@ -8,6 +8,8 @@ const reducer = (state = {}, action) => {
       return {};
     case CLEAR:
       return {};
+    case CLOSE:
+      return action.payload;
     default:
       return state;
   }

@@ -18,3 +18,8 @@ export const fetchErrorAction = error => ({
 export const clearAction = () => ({
   type: CLEAR,
 });
+
+export const close = value => ({
+  type: CLEAR,
+  payload: value,
+});

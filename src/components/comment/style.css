@@ -1,0 +1,25 @@
+.avatar {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.comment-content {
+  background-color: #ffffff;
+}
+
+.comment {
+  border: none !important;
+}
+.container-comment {
+  background-color: #c4c4c4;
+  margin: 10px;
+}
+
+.comment-content {
+  background-color: transparent !important;
+  border: none !important;
+  width: 100%;
+}

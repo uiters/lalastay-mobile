@@ -11,6 +11,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Popper from '@material-ui/core/Popper';
 import './style.css';
 import RoomIcon from '@material-ui/icons/Room';
+import { navigate } from '@reach/router';
 import logo from '../../assets/logo.jpg';
 
 const useStyles = makeStyles(() => ({
@@ -23,6 +24,9 @@ const useStyles = makeStyles(() => ({
     height: '100%',
     padding: '10px',
     borderRadius: '50%',
+    '&:hover': {
+      cursor: 'pointer',
+    },
   },
   searchIcon: {
     color: '#FC6C85',
@@ -54,7 +58,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 const suggestions = [
-  { label: 'Đà Lạt' },
+  { label: 'Đà lạt' },
   { label: 'TP HCM' },
   { label: 'Vũng Tàu' },
   { label: 'Đồng nai' },
@@ -99,7 +103,7 @@ function renderSuggestion(suggestion, { query, isHighlighted }) {
   const parts = parse(suggestion.label, matches);
 
   return (
-    <MenuItem selected={isHighlighted} component="div">
+    <MenuItem selected={isHighlighted} component="div" onClick={() => navigate('/home-by-area')}>
       <div>
         <RoomIcon style={{ color: '#FC6C85', fontSize: '18px', marginRight: '10px' }} />
         {parts.map(part => (
@@ -177,7 +181,12 @@ function Navbar() {
           <Grid item xs={6}>
             <Grid container direction="row" alignItems="center" justify="flex-start">
               <Box className={classes.logo}>
-                <img src={logo} className={classes.logoImg} alt="img" />
+                <img
+                  src={logo}
+                  className={classes.logoImg}
+                  alt="img"
+                  onClick={() => navigate('/')}
+                />
               </Box>
               <Box display="inline" className="search-container">
                 <Autosuggest

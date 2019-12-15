@@ -1,0 +1,62 @@
+.icon-style {
+  font-size: 20px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  color: #fc6c85;
+}
+.flex-content {
+  float: left;
+  margin-right: 30px;
+}
+.text-footer {
+  font-size: 18px;
+  font-weight: 500;
+  width: 50%;
+}
+.icon-contact {
+  font-size: 25px;
+  margin-right: 20px;
+  color: #fc6c85 !important;
+}
+.text-end {
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+}
+.margin-bottom-0 {
+  margin-bottom: 0px;
+}
+
+.container-footer {
+  padding: 30px;
+  background-color: #000000;
+  color: white;
+  width: 100% !important;
+}
+
+.infor {
+  width: 50%;
+  border: none !important;
+}
+
+.end-footer {
+  width: 100% !important;
+  text-align: center !important;
+  border: none !important;
+}
+
+.container-end-footer {
+  clear: both !important;
+  display: block;
+  margin-top: 20px;
+}
+
+.container-contact-footer {
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.contact-item {
+  display: flex;
+}

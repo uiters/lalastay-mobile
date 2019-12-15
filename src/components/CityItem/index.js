@@ -1,9 +1,10 @@
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/self-closing-comp */
 import React from 'react';
 import { Box } from '@material-ui/core';
+import { navigate } from '@reach/router';
 import { makeStyles } from '@material-ui/styles';
-import city from '../../assets/city.jpg';
 import './style.css';
 
 const useStyles = makeStyles(() => ({
@@ -14,11 +15,10 @@ const useStyles = makeStyles(() => ({
     alignItems: 'center',
     color: '#FAFAFA',
     fontSize: '20px',
-    fontWeight: 600,
   },
 }));
 
-function CityItem() {
+function CityItem(props) {
   const classes = useStyles();
   return (
     <div className="container-city-item">
@@ -31,11 +31,14 @@ function CityItem() {
           position: 'absolute',
           objectFit: 'cover',
         }}
-        src={city}
+        onClick={() => navigate('/home-by-area')}
+        src={props.image}
       />
       <div className={classes.content}>
-        <Box textAlign="center">Đồng nai</Box>
-        <Box textAlign="center">3550 chỗ ở</Box>
+        <Box textAlign="center" fontWeight={600}>
+          {props.province}
+        </Box>
+        <Box textAlign="center">410k/1 phòng</Box>
       </div>
     </div>
   );
