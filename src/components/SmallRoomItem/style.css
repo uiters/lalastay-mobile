@@ -47,6 +47,17 @@ width: 100%; */
   } */
 /* } */
 
+/* iphone 5 */
+/* @media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+  .container-room-item {
+    width: 320px;
+    height: 320px;
+    margin: 10px;
+  }
+} */
+
 /* Màn hình Ipad */
 /* @media (min-width: 768px) and (max-width: 1023px) { */
 /* .container-room-item {

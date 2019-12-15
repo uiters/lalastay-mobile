@@ -10044,6 +10044,8 @@ react-error-overlay@^5.1.6:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.6.tgz#0cd73407c5d141f9638ae1e0c63e7b2bf7e9929d"
   integrity sha512-X1Y+0jR47ImDVr54Ab6V9eGk0Hnu7fVWGeHQSOXHf/C2pF9c6uy3gef8QUeuUiWlNb0i08InPSE5a/KJzNzw1Q==
 
+<<<<<<< HEAD
+=======
 react-full-screen@^0.2.2:
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/react-full-screen/-/react-full-screen-0.2.4.tgz#e5bda9535abb6523b65e0e46526c8f21be65ef7e"
@@ -10052,6 +10054,7 @@ react-full-screen@^0.2.2:
     "@types/react" "*"
     fscreen "^1.0.1"
 
+>>>>>>> f6a43444f475f1678071e72cc2ccf5fbe646d096
 react-id-swiper@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/react-id-swiper/-/react-id-swiper-2.4.0.tgz#7080b2e49f2a6db82649360c2ac218eb50facd21"
@@ -10059,6 +10062,8 @@ react-id-swiper@^2.4.0:
   dependencies:
     object-assign "^4.1.1"
 
+<<<<<<< HEAD
+=======
 react-image-gallery@^0.9.1:
   version "0.9.1"
   resolved "https://registry.yarnpkg.com/react-image-gallery/-/react-image-gallery-0.9.1.tgz#3ac75af700ce671d82aae1e2ad8226c0e1379ad1"
@@ -10085,6 +10090,7 @@ react-images@^1.0.0:
     react-transition-group "^2.2.1"
     react-view-pager "^0.6.0"
 
+>>>>>>> f6a43444f475f1678071e72cc2ccf5fbe646d096
 react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
@@ -10247,6 +10253,8 @@ react-themeable@^1.1.0:
   dependencies:
     object-assign "^3.0.0"
 
+<<<<<<< HEAD
+=======
 react-transition-group@^2.2.1:
   version "2.9.0"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.9.0.tgz#df9cdb025796211151a436c69a8f3b97b5b07c8d"
@@ -10257,6 +10265,7 @@ react-transition-group@^2.2.1:
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
+>>>>>>> f6a43444f475f1678071e72cc2ccf5fbe646d096
 react-transition-group@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.3.0.tgz#fea832e386cf8796c58b61874a3319704f5ce683"
@@ -10267,6 +10276,8 @@ react-transition-group@^4.3.0:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
+<<<<<<< HEAD
+=======
 react-view-pager@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/react-view-pager/-/react-view-pager-0.6.0.tgz#6c6be04b0cc3b907b5ceafec7b2ab6e7228df650"
@@ -10279,6 +10290,7 @@ react-view-pager@^0.6.0:
     resize-observer-polyfill "1.5.0"
     tabbable "1.1.2"
 
+>>>>>>> f6a43444f475f1678071e72cc2ccf5fbe646d096
 react-youtube@^7.9.0:
   version "7.9.0"
   resolved "https://registry.yarnpkg.com/react-youtube/-/react-youtube-7.9.0.tgz#cf513c253581e1e45aa412a77d03420dfd7f7ba7"
