@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-boolean-value */
 import React, { useState, useEffect } from 'react';
-import { SmallRoomItem, InputSearchForCompare } from 'components';
+import { SmallRoomItem, InputSearchForCompare, withLayout } from 'components';
 import Swiper from 'react-id-swiper';
 import {
   Table,
@@ -342,4 +342,4 @@ function CompareHomestaty() {
   );
 }
 
-export default CompareHomestaty;
+export default withLayout(CompareHomestaty);

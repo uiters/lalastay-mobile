@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Breadcrumb, Icon, Typography, Spin } from 'antd';
 import { Link } from '@reach/router';
-import { BasicLayout } from 'components';
+import { withLayout } from 'components';
 import { fetchAction, clearAction } from 'models/repo/actions';
 import './style.css';
 
@@ -19,7 +19,7 @@ function RepoDetail({ name }) {
   }, [dispatch, name]);
 
   return (
-    <BasicLayout>
+    <div>
       <Breadcrumb>
         <Link to="/">
           <Breadcrumb.Item href="">
@@ -41,8 +41,8 @@ function RepoDetail({ name }) {
           </Text>
         </>
       )}
-    </BasicLayout>
+    </div>
   );
 }
 
-export default RepoDetail;
+export default withLayout(RepoDetail);

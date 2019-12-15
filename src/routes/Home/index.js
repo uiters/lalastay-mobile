@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-boolean-value */
 import React from 'react';
-import { CityViewer, RoomViewer, VideoIntro } from 'components';
+import { CityViewer, RoomViewer, VideoIntro, withLayout } from 'components';
 import { Container } from '@material-ui/core';
 
 function Home() {
@@ -33,4 +33,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default withLayout(Home);

@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 // import ImageForDetail from 'components/ImageForDetail';
-import { BodyHomedetail, ShowImageForDetail } from 'components';
+import { BodyHomedetail, ShowImageForDetail, withLayout } from 'components';
 import { Container } from '@material-ui/core';
 
 function Homedetail() {
@@ -15,4 +15,4 @@ function Homedetail() {
   );
 }
 
-export default Homedetail;
+export default withLayout(Homedetail);
