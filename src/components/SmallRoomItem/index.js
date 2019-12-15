@@ -1,12 +1,13 @@
 /* eslint-disable react/destructuring-assignment */
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box, Grid } from '@material-ui/core';
 import StarIcon from '@material-ui/icons/Star';
 import Swiper from 'react-id-swiper';
-import { Link } from '@reach/router';
+import { Link, navigate } from '@reach/router';
 import PersonIcon from '@material-ui/icons/Person';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import withWidth from '@material-ui/core/withWidth';
 import smallRoom from '../../assets/small_room.jpg';
 import 'swiper/css/swiper.css';
 import './style.css';
@@ -22,6 +23,19 @@ import ss8 from '../../assets/ss8.jpg';
 import ss9 from '../../assets/ss9.jpg';
 
 function SmallRoomItem(props) {
+  useEffect(() => {
+    try {
+      // trying to use new API - https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      });
+    } catch (error) {
+      // just a fallback for older browsers
+      window.scrollTo(0, 0);
+    }
+  }, []);
   const imgs = [ss1, ss2, ss3, ss4, ss5, ss6, ss7, ss8, ss9];
   const params = {
     slidesPerView: 1,
@@ -196,16 +210,16 @@ function SmallRoomItem(props) {
         )}
       </div>
 
-      <div style={{ padding: '0 5px' }}>
+      <div style={{ padding: '0 5px' }} onClick={() => navigate('/home-detail')}>
         <Grid container direction="row" justify="space-between" alignItems="center">
           <Box className="price" fontSize={18} lineHeight={2}>
             <Box display="inline" color="#9708CC" style={{ marginLeft: '5px' }}>
               $
             </Box>
-            <Box display="inline"> 1.5tr/đêm</Box>
+            <Box display="inline"> 1.5tr {props.width === 'xs' ? '' : '/đêm'}</Box>
             {props.sale === true && (
-              <Box display="inline" marginLeft={1} fontWeight={300}>
-                <strike> 2.5tr</strike>
+              <Box display="inline" fontWeight={300}>
+                <strike style={{ marginLeft: '5px' }}> 2.5tr</strike>
               </Box>
             )}
           </Box>
@@ -232,4 +246,4 @@ function SmallRoomItem(props) {
   );
 }
 
-export default SmallRoomItem;
+export default withWidth()(SmallRoomItem);
