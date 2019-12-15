@@ -8,7 +8,7 @@ function VideoIntro() {
     height: '500px',
     width: '100%',
     playerVars: {
-      autoplay: false,
+      autoplay: true,
     },
   };
   const _onReady = () => {
@@ -22,7 +22,7 @@ function VideoIntro() {
         position: 'relative',
       }}
     >
-      <YouTube videoId="NVk6tRk89xw" opts={opts} onReady={_onReady} />
+      <YouTube videoId="CC0ywOEAsIE" opts={opts} onReady={_onReady} />
       {/* <div
         style={{
           height: '500px',
