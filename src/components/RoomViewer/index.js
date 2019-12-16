@@ -18,7 +18,7 @@ function RoomViewer({ tilte, sologen }) {
   return (
     <>
       <div style={{ width: '100%', marginTop: '40px', marginBottom: '40px' }}>
-        <Grid direction="row" container justify="center" alignItems="center" spacing={1}>
+        <Grid direction="row" container justify="center" alignItems="center" spacing={2}>
           <Grid item sm={12}>
             <div style={{ marginBottom: '20px' }}>
               <Box fontWeight={600} fontSize={24} color="#2B2B2B">
