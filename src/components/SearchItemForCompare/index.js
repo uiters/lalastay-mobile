@@ -7,31 +7,30 @@ import './style.css';
 
 function SearchItemForCompare() {
   return (
-    <div>
-      <Grid container direction="row" justify="center" alignItems="center">
-        <Grid className="img-item">
-          <img src={ss1} alt="ảnh" style={{ width: '100%', height: '100%' }} />
-        </Grid>
-        <Grid style={{ marginLeft: '15px' }}>
+    <Grid direction="row" container justify="center" alignItems="center">
+      <Grid item md={3}>
+        <img src={ss1} alt="ảnh" style={{ width: '100%', height: '100%', borderRadius: '4px' }} />
+      </Grid>
+      <Grid item md={7}>
+        <div style={{ paddingLeft: '10px' }}>
           <Box fontSize={18} fontWeight={600}>
-            Biệt thự ngôi nhà ma
+            Tuấn Vũ Homestay Đà Lạt
+          </Box>
+          <Box fontSize={18} fontWeight={600}>
+            Double Doraemon Room 2
           </Box>
           <Box fontSize={12} fontWeight={600}>
             Đà lạt , Lâm đồng Việt nam
           </Box>
-          <Box fontSize={12}>2 người - 1 phòng</Box>
-          <Box fontSize={20} fontWeight={600}>
-            1.5Tr/đêm <strike> 2.5tr</strike>
-          </Box>
-        </Grid>
-        <Grid style={{ marginTop: '-50px' }}>
-          <div style={{ display: 'flex' }}>
-            <StarIcon style={{ color: '#9708CC', fontSize: '18px', marginLeft: '30px' }} />
-            <div>4.9</div>
-          </div>
-        </Grid>
+        </div>
       </Grid>
-    </div>
+      <Grid item md={2}>
+        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <StarIcon style={{ color: '#9708CC', fontSize: '18px' }} />
+          <div>4.9</div>
+        </div>
+      </Grid>
+    </Grid>
   );
 }
 
