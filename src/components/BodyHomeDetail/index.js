@@ -7,6 +7,7 @@ import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
 import GavelIcon from '@material-ui/icons/Gavel';
 import HomeIcon from '@material-ui/icons/Home';
+import { navigate } from '@reach/router';
 import { Comments, HomestaySimilar } from '../index';
 import garden from '../../assets/garden.png';
 import parking from '../../assets/parking.png';
@@ -21,7 +22,13 @@ function BodyHomedetail() {
         <Box className="name-home" fontSize={26} fontWeight="bold">
           Home statay Gâu đần
         </Box>
-        <button className="variant-button" type="button">
+        <button
+          className="variant-button"
+          type="button"
+          onClick={() => {
+            navigate('/payment');
+          }}
+        >
           ĐẶT NGAY
         </button>
       </Grid>

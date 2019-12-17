@@ -6,7 +6,7 @@
   font-size: 24px !important;
 }
 .container-show-image > .swiper-container {
-  height: 300px !important;
+  height: 250px !important;
   margin-bottom: 10px !important;
 }
 .slide-under {
@@ -34,4 +34,31 @@
 
 .container-thum {
   height: 150px !important;
+}
+
+.divde_200 {
+  width: 200px;
+  height: 2px;
+  background-color: #c4c4c4;
+}
+.divde_150 {
+  width: 150px;
+  height: 2px;
+  background-color: #c4c4c4;
+}
+.content-compare{
+  margin-top: 80px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+
+.datcho{
+  width: 350px !important;
+  text-align: center !important;
 }
