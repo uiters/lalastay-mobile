@@ -1,21 +1,29 @@
 @font-face {
   font-family: 'Harmonia';
+  font-weight: normal;
+  font-style: normal;
   src: local('RV Harmonia'), url(./fonts/Harmonia-Regular.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Harmonia';
+  font-weight: lighter;
+  font-style: normal;
   src: local('RV Harmonia'), url(./fonts/Harmonia-Light.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Harmonia';
+  font-weight: bold;
+  font-style: normal;
   src: local('RV Harmonia'), url(./fonts/Harmonia-Bold.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Harmonia';
+  font-weight: bolder;
+  font-style: normal;
   src: local('RV Harmonia'), url(./fonts/Harmonia-SemiBold.ttf) format('truetype');
 }
 
-body {
+* {
   font-family: Harmonia;
 }
 textarea:focus,

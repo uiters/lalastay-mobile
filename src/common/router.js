@@ -10,6 +10,7 @@ import {
   HomeByArea,
   CompareHomestaty,
   Payment,
+  Invoice,
 } from 'routes';
 
 function RouterConfig() {
@@ -23,6 +24,7 @@ function RouterConfig() {
       <HomeByArea path="home-by-area" />
       <CompareHomestaty path="compare-homestay" />
       <Payment path="payment" />
+      <Invoice path="invoice" />
       <NotFound default />
     </Router>
   );

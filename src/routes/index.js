@@ -8,3 +8,4 @@ export { default as Homedetail } from './HomeDetail';
 export { default as HomeByArea } from './HomeByArea';
 export { default as CompareHomestaty } from './CompareHomestay';
 export { default as Payment } from './Payment';
+export { default as Invoice } from './Invoice';
