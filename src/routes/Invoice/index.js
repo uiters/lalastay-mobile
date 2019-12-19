@@ -23,7 +23,7 @@ const Payment = () => {
   return (
     <>
       <Breadcrumb />
-      <div className="container">
+      <div className="x-container">
         <p className="x-title">Hóa đơn đặt phòng</p>
         <div className="x-left-section">
           <div className="avatar-section">
