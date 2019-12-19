@@ -185,7 +185,7 @@ function BodyHomedetail() {
             <Grid container spacing={3}>
               <Grid item xs={12}>
                 <Box fontWeight={600} marginTop={5}>
-                  Bản đổ
+                  Bản đồ
                 </Box>
               </Grid>
               <Grid item xs={12}>
@@ -203,7 +203,7 @@ function BodyHomedetail() {
             </Box>
             <div style={{ display: 'flex' }}>
               <Box display="inline" className="space-between" width={500}>
-                <input placeholder="Nhâp email ...  " className="search-input" />
+                <input placeholder="Nhập email ...  " className="search-input" />
               </Box>
               <Box display="inline" className="button-search-container">
                 <button className="button-send-email" type="button" />
@@ -220,7 +220,7 @@ function BodyHomedetail() {
         </div>
         <div>
           <Box marginTop={5} marginBottom={2} fontSize={22} fontWeight={500}>
-            Đánh giá và bình luận
+            12 bình luận
           </Box>
           <div>
             <Comments />

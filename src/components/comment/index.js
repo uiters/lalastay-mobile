@@ -7,6 +7,9 @@ import StarIcon from '@material-ui/icons/Star';
 import './style.css';
 
 function Comment(props) {
+  function random(length) {
+    return Math.floor(Math.random() * length);
+  }
   return (
     <>
       <div
@@ -46,6 +49,11 @@ function Comment(props) {
             )}
           </div>
         </div>
+        {props.content && (
+          <Box style={{ padding: '10px', paddingRight: '40px' }}>
+            <p className="comment-time">{`${random(59)} phút`}</p>
+          </Box>
+        )}
       </div>
     </>
   );

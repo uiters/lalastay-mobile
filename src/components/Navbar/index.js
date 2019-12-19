@@ -234,7 +234,7 @@ function Navbar() {
           <Grid item xs={6} container direction="row" justify="flex-end" alignItems="center">
             <Button className={classes.button}>Chủ nhà</Button>
             <Button className={classes.button}>Đăng kí</Button>
-            <Button className={classes.button}>Đăng nhập</Button>
+            <Button className={classes.button}>Đâng nhập</Button>
           </Grid>
         </Grid>
       </nav>
