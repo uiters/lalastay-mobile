@@ -29,7 +29,7 @@ function HomeByArea() {
       <VideoIntro />
       <Container>
         <div style={{ marginBottom: '20px' }}>
-          <Grid direction="row" container justify="center" alignItems="center" spacing={1}>
+          <Grid direction="row" container justify="flex-start" alignItems="center" spacing={1}>
             <Grid item>
               <button
                 type="button"
