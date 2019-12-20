@@ -108,7 +108,7 @@ function SmallRoomItem(props) {
           </div>
         </Swiper>
         <div className="container-top">
-          <div className="province">Đồng nai</div>
+          <div className="province">Đồng Nai</div>
           {props.sale && (
             <div className="sale">
               <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -134,7 +134,7 @@ function SmallRoomItem(props) {
 
       <div style={{ padding: '0 4px' }} onClick={() => navigate('/home-detail')}>
         <Grid container direction="row" justify="space-between" alignItems="center">
-          <Box fontWeight={600} fontSize={props.width === 'xs' ? 14 : 18}>
+          <Box fontWeight={600} fontSize={18}>
             <Box display="inline" color="#9708CC" style={{ marginLeft: '5px' }}>
               $
             </Box>
@@ -148,19 +148,21 @@ function SmallRoomItem(props) {
               </Box>
             )}
           </Box>
-          <Box style={{ fontSize: props.width === 'xs' ? '12px' : '14px' }}>
+          <Box style={{ fontSize: '14px' }}>
             <div style={{ display: 'flex' }}>
-              <StarIcon
-                style={{ color: '#9708CC', fontSize: props.width === 'xs' ? '12px' : '14px' }}
-              />
+              <div>
+                <StarIcon style={{ color: '#9708CC', fontSize: '14px' }} />
+              </div>
+
               <div>4.95</div>
             </div>
           </Box>
         </Grid>
-        <div style={{ display: 'flex', fontSize: '14px' }}>
-          <PersonIcon
-            style={{ color: '#9708CC', fontSize: props.width === 'xs' ? '15px' : '18px' }}
-          />
+        <div style={{ display: 'flex', fontSize: '14px', alignItems: 'center' }}>
+          <Box>
+            <PersonIcon style={{ color: '#9708CC', fontSize: '18px' }} />
+          </Box>
+
           <Box>3 người - 1 phòng</Box>
         </div>
         <Box fontWeight={600} fontSize={18} style={{ lineHeight: '25px' }}>

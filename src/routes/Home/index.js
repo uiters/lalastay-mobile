@@ -2,6 +2,7 @@
 import React from 'react';
 import { CityViewer, RoomViewer, withLayout } from 'components';
 import { Container } from '@material-ui/core';
+import './style.css';
 
 function Home() {
   return (
@@ -28,6 +29,16 @@ function Home() {
           frameBorder={0}
           allow="autoplay; encrypted-media "
         />
+      </div>
+      <div className="img-introduce">
+        <div className="title-introduce">
+          <div>Đồng Nai đang chờ bạn khám phá, còn chờ đợi gì nữa?</div>
+          <div className="button-xemngay">
+            <button type="button" className="variant-button">
+              XEM NGAY {'>'}
+            </button>
+          </div>
+        </div>
       </div>
       <Container>
         <CityViewer
