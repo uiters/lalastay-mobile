@@ -145,7 +145,12 @@ function Navbar() {
   const classes = useStyles();
   // const opacity = props.opacity;
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorElMin, setAnchorElMin] = React.useState(null);
   const [state, setState] = React.useState({
+    single: '',
+    popper: '',
+  });
+  const [stateMin, setStateMin] = React.useState({
     single: '',
     popper: '',
   });
@@ -166,7 +171,23 @@ function Navbar() {
     });
   };
 
+  const handleChangeMin = name => (event, { newValue }) => {
+    setStateMin({
+      ...stateMin,
+      [name]: newValue,
+    });
+  };
+
   const autosuggestProps = {
+    renderInputComponent,
+    suggestions: stateSuggestions,
+    onSuggestionsFetchRequested: handleSuggestionsFetchRequested,
+    onSuggestionsClearRequested: handleSuggestionsClearRequested,
+    getSuggestionValue,
+    renderSuggestion,
+  };
+
+  const autosuggestMinProps = {
     renderInputComponent,
     suggestions: stateSuggestions,
     onSuggestionsFetchRequested: handleSuggestionsFetchRequested,
@@ -227,7 +248,7 @@ function Navbar() {
                 />
                 {/* <input placeholder="Tìm kiếm" className="search-input" /> */}
               </Box>
-              <Box className="button-search-container">
+              <Box display="inline" className="button-search-container">
                 <button className="button-search" type="button" />
               </Box>
             </Grid>
@@ -245,18 +266,17 @@ function Navbar() {
             <Box marginTop={1}>
               <MenuIcon style={{ color: '#FC6C85' }} />
             </Box>
-
             <Box>
               <Autosuggest
-                {...autosuggestProps}
+                {...autosuggestMinProps}
                 inputProps={{
                   classes,
                   id: 'react-autosuggest-popper',
                   placeholder: 'Đà lạt',
-                  value: state.popper,
-                  onChange: handleChange('popper'),
+                  value: stateMin.popper,
+                  onChange: handleChangeMin('popper'),
                   inputRef: node => {
-                    setAnchorEl(node);
+                    setAnchorElMin(node);
                   },
                   InputLabelProps: {
                     shrink: true,
@@ -268,14 +288,14 @@ function Navbar() {
                 }}
                 renderSuggestionsContainer={options => (
                   <Popper
-                    anchorEl={anchorEl}
+                    anchorEl={anchorElMin}
                     open={Boolean(options.children)}
                     style={{ zIndex: 100, top: '40px' }}
                   >
                     <Paper
                       square
                       {...options.containerProps}
-                      style={{ width: anchorEl ? anchorEl.clientWidth : undefined }}
+                      style={{ width: anchorElMin ? anchorElMin.clientWidth : undefined }}
                     >
                       {options.children}
                     </Paper>
