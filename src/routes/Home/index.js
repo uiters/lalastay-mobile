@@ -13,6 +13,7 @@ function Home() {
           paddingBottom: '42.857142857%' /* 21:9 */,
           height: '0px',
           overflow: 'hidden',
+          marginBottom: '40px',
         }}
       >
         <iframe
