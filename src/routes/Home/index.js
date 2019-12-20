@@ -25,7 +25,7 @@ function Home() {
             width: '100%',
             height: '100%',
           }}
-          src="https://www.youtube.com/embed/M1RzzcFqBHs?rel=0&amp;controls=0&amp;autoplay=1&amp;loop=1&amp;mute=1&amp;showinfo=0&amp;start=12&amp;"
+          src="https://www.youtube.com/embed/NU5ff6vRktI?rel=0&amp;controls=0&amp;autoplay=1&amp;loop=1000&amp;mute=1&amp;showinfo=0&amp;start=12&amp;"
           frameBorder={0}
           allow="autoplay; encrypted-media "
         />

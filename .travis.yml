@@ -6,5 +6,11 @@ cache:
     - node_modules
 script:
   - npm test
+  - npm run build
+deploy:
+  provider: surge
+  skip_cleanup: true
+  domain: http://lalastay.surge.sh
+  project: ./build/
 on:
   branch: master
