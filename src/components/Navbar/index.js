@@ -9,6 +9,8 @@ import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
 import MenuItem from '@material-ui/core/MenuItem';
 import Popper from '@material-ui/core/Popper';
+import MenuIcon from '@material-ui/icons/Menu';
+import SearchIcon from '@material-ui/icons/Search';
 import './style.css';
 import RoomIcon from '@material-ui/icons/Room';
 import { navigate } from '@reach/router';
@@ -174,8 +176,7 @@ function Navbar() {
   };
 
   return (
-    <>
-      {/* <nav className="menu" style={{ background: `rgba(250, 250, 250, ${opacity})` }}> */}
+    <div>
       <nav className="menu" style={{ background: '#FFFFFF' }}>
         <Grid container direction="row" justify="space-between" alignItems="center">
           <Grid item xs={6}>
@@ -226,7 +227,7 @@ function Navbar() {
                 />
                 {/* <input placeholder="Tìm kiếm" className="search-input" /> */}
               </Box>
-              <Box display="inline" className="button-search-container">
+              <Box className="button-search-container">
                 <button className="button-search" type="button" />
               </Box>
             </Grid>
@@ -238,7 +239,58 @@ function Navbar() {
           </Grid>
         </Grid>
       </nav>
-    </>
+      <nav className="menu-min" style={{ background: '#FFFFFF' }}>
+        <Box className="search-container-min">
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <Box marginTop={1}>
+              <MenuIcon style={{ color: '#FC6C85' }} />
+            </Box>
+
+            <Box>
+              <Autosuggest
+                {...autosuggestProps}
+                inputProps={{
+                  classes,
+                  id: 'react-autosuggest-popper',
+                  placeholder: 'Đà lạt',
+                  value: state.popper,
+                  onChange: handleChange('popper'),
+                  inputRef: node => {
+                    setAnchorEl(node);
+                  },
+                  InputLabelProps: {
+                    shrink: true,
+                  },
+                }}
+                theme={{
+                  suggestionsList: classes.suggestionsList,
+                  suggestion: classes.suggestion,
+                }}
+                renderSuggestionsContainer={options => (
+                  <Popper
+                    anchorEl={anchorEl}
+                    open={Boolean(options.children)}
+                    style={{ zIndex: 100, top: '40px' }}
+                  >
+                    <Paper
+                      square
+                      {...options.containerProps}
+                      style={{ width: anchorEl ? anchorEl.clientWidth : undefined }}
+                    >
+                      {options.children}
+                    </Paper>
+                  </Popper>
+                )}
+              />
+            </Box>
+          </div>
+
+          <Box marginTop={1}>
+            <SearchIcon style={{ color: '#FC6C85' }} />
+          </Box>
+        </Box>
+      </nav>
+    </div>
   );
 }
 

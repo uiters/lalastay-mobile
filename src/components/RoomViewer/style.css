@@ -1,0 +1,12 @@
+@media (max-width: 375px) {
+  .container-room-view {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 376px) {
+  .container-room-view {
+    width: 50% !important;
+  }
+}
+

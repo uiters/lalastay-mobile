@@ -1,0 +1,38 @@
+@media (max-width: 375px) {
+  .video {
+    display: none;
+    margin: 10px;
+  }
+  .img-introduce {
+    background-image: url('../../assets/hoian.png');
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    margin: 10px;
+    border-radius: 6px;
+    margin: 15px;
+  }
+}
+
+@media (min-width: 376px) {
+  .video {
+    display: block;
+  }
+  .img-introduce {
+    display: none;
+  }
+}
+
+.title-introduce {
+  bottom: 100px;
+  text-align: center;
+  font-size: 24px;
+  color: #fafafa;
+  padding-top: 150px;
+}
+.button-xemngay {
+  font-size: 20px;
+}
+.title-introduce > .button-xemngay:hover {
+  cursor: pointer;
+}

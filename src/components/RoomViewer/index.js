@@ -1,13 +1,14 @@
 import React from 'react';
 import { Grid, Box } from '@material-ui/core';
 import { SmallRoomItem } from 'components';
+import './style.css';
 
 function RoomViewer({ tilte, sologen }) {
   const renderRom = () => {
     const result = [];
     for (let i = 0; i < 16; i += 1) {
       const item = (
-        <Grid item md={3} xs={6} lg={3} sm={4} key={i}>
+        <Grid item md={3} lg={3} sm={4} key={i} className="container-room-view">
           <SmallRoomItem sale={i % 3 === 0} />
         </Grid>
       );

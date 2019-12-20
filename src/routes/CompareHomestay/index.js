@@ -355,7 +355,13 @@ function CompareHomestaty() {
             <Box>4 người</Box>
           </Box>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', padding: '15px 0px' }}>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            padding: '15px 0px',
+          }}
+        >
           <Box marginRight={3}>
             <Box>Nhà riêng</Box>
           </Box>
@@ -379,6 +385,49 @@ function CompareHomestaty() {
           }}
         >
           <Box marginRight={3}>
+            <Box>2 km</Box>
+          </Box>
+          <Box className="divde_200 " />
+          <Box fontSize={24} marginLeft={3} marginRight={3}>
+            Khoảng cách từ bạn
+          </Box>
+          <Box className="divde_200 " />
+          <Box marginLeft={3}>
+            <Box> 3 km</Box>
+          </Box>
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            padding: '15px 0px',
+            width: '100%',
+            justifyContent: 'center',
+          }}
+        >
+          <Box marginRight={3}>
+            <Box>Thung lũng tình yêu, Quảng trường, chợ đêm</Box>
+          </Box>
+          <Box className="divde_200 " />
+          <Box fontSize={24} marginLeft={3} marginRight={3}>
+            Gần với
+          </Box>
+          <Box className="divde_200 " />
+          <Box marginLeft={3}>
+            <Box>Cáp treo, Sân bay, núi langbian, Thác Preen</Box>
+          </Box>
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            padding: '15px 0px',
+            width: '100%',
+            justifyContent: 'center',
+            backgroundColor: 'rgba(196, 196, 196, 0.15)',
+          }}
+        >
+          <Box marginRight={3}>
             Không được hút thuốc lá, không lớn tiếng ồn ào khi qua 11 giờ đêm và sau 5 giờ sáng.
             Phải trả tiền trước khi ở không được đem các chất cấm vào khu vực homesta
           </Box>
@@ -390,19 +439,6 @@ function CompareHomestaty() {
           <Box marginLeft={3}>
             Không được hút thuốc lá, không lớn tiếng ồn ào khi qua 11 giờ đêm và sau 5 giờ sáng.
             Phải trả tiền trước khi ở không được đem các chất cấm vào khu vực homestay
-          </Box>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', padding: '15px 0px' }}>
-          <Box marginRight={3}>
-            <Box>2 km</Box>
-          </Box>
-          <Box className="divde_200 " />
-          <Box fontSize={24} marginLeft={3} marginRight={3}>
-            Khoảng cách
-          </Box>
-          <Box className="divde_200 " />
-          <Box marginLeft={3}>
-            <Box> 3 km</Box>
           </Box>
         </div>
       </div>
