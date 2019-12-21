@@ -11,3 +11,9 @@
 .container-city-item:hover {
   cursor: pointer;
 }
+
+@media (max-width: 375px) {
+  .container-city-item {
+    height: 280px !important;
+  }
+}

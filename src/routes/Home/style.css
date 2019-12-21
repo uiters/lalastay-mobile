@@ -1,16 +1,18 @@
-@media (max-width: 375px) {
+@media (max-width: 767px) {
   .video {
-    display: none;
+    display: none !important;
     margin: 10px;
   }
   .img-introduce {
     background-image: url('../../assets/hoian.png');
     height: 400px;
     object-fit: cover;
-    display: block;
+    display: block !important;
     margin: 10px;
     border-radius: 6px;
     margin: 15px;
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
 }
 
@@ -24,15 +26,13 @@
 }
 
 .title-introduce {
-  bottom: 100px;
   text-align: center;
   font-size: 24px;
   color: #fafafa;
-  padding-top: 150px;
+  padding-top: 80px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 .button-xemngay {
   font-size: 20px;
-}
-.title-introduce > .button-xemngay:hover {
-  cursor: pointer;
 }
