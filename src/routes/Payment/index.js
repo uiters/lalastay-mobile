@@ -3,6 +3,7 @@ import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import DateRangeIcon from '@material-ui/icons/DateRange';
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import WarningOutlinedIcon from '@material-ui/icons/WarningOutlined';
+import { navigate } from '@reach/router';
 import Breadcrumb from './components/Breadcrumb';
 import './style.css';
 
@@ -74,7 +75,12 @@ const Payment = () => {
             <input className="input" style={{ width: '50%' }} value="6969" />
             <input className="button1" type="button" value="ÁP DỤNG" />
           </div>
-          <input className="button2" type="button" value="ĐẶT NGAY" />
+          <input
+            className="button2"
+            type="button"
+            value="ĐẶT NGAY"
+            onClick={() => navigate('/invoice')}
+          />
         </div>
         <div className="right-section">
           <div className="avatar-section">

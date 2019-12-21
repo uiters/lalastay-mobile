@@ -305,7 +305,7 @@ function Navbar() {
             </Box>
           </div>
 
-          <Box marginTop={1}>
+          <Box marginTop={1} marginRight={1}>
             <SearchIcon style={{ color: '#FC6C85' }} />
           </Box>
         </Box>

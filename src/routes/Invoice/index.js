@@ -3,6 +3,7 @@ import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import DateRangeIcon from '@material-ui/icons/DateRange';
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import WarningOutlinedIcon from '@material-ui/icons/WarningOutlined';
+import { navigate } from '@reach/router';
 import Breadcrumb from './components/Breadcrumb';
 import './style.css';
 
@@ -118,7 +119,12 @@ const Payment = () => {
           </p>
         </div>
         <div className="x-right-section">
-          <input className="x-button2" type="button" value="TRANG CHỦ" />
+          <input
+            className="x-button2"
+            type="button"
+            value="TRANG CHỦ"
+            onClick={() => navigate('/')}
+          />
           <input className="x-button1" type="button" value="TIẾP TỤC XEM" />
         </div>
       </div>

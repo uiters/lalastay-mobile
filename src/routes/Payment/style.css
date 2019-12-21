@@ -222,6 +222,9 @@
   color: #ffffff;
 }
 
+.button2:hover{
+  cursor: pointer;
+}
 .location {
   font-style: normal;
   font-weight: normal;
