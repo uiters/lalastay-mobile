@@ -43,7 +43,7 @@ function Home() {
       <Container>
         <CityViewer
           tilte="Địa điểm nổi bật hôm nay"
-          sologen="Đây là những địa điểm nổi bật nhất Lalasttay"
+          sologen="Đây là những địa điểm nổi bật nhất Lalastay"
         />
         <RoomViewer
           sale={true}
