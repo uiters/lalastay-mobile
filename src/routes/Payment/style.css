@@ -1,16 +1,4 @@
-.container {
-  display: flex;
-  flex-direction: row;
-  padding: 48px 96px;
-}
-
-.left-section {
-  width: 66.67%;
-  margin-right: 192px;
-}
-
 .right-section {
-  width: 33.33%;
   border: 1px solid #b3b3b3;
   box-sizing: border-box;
   padding: 26px 34px;
@@ -168,14 +156,13 @@
 }
 
 .input {
-  padding: 5px;
+  padding: 9px 12px;
   background: #ffffff;
   border: 1px solid #000000;
   box-sizing: border-box;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  line-height: 23px;
   display: flex;
   align-items: center;
   color: #000000;
@@ -189,8 +176,7 @@
 }
 
 .button1 {
-  width: 127px;
-  height: 40px;
+  padding: 5px;
   right: 0;
   position: absolute;
   background: #fc6c85;
@@ -200,15 +186,13 @@
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
-  line-height: 24px;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
 }
 
 .button2 {
-  width: 127px;
-  height: 40px;
+  padding: 5px;
   background: #fc6c85;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   border: none;
@@ -216,7 +200,6 @@
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
-  line-height: 24px;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
