@@ -2,24 +2,23 @@
   font-size: 20px;
   margin-right: 30px;
   margin-bottom: 20px;
-  color: #fc6c85;
+  color: #F65E39;
 }
 .flex-content {
   float: left;
   margin-right: 30px;
 }
 .text-footer {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
-  width: 50%;
 }
 .icon-contact {
   font-size: 25px;
   margin-right: 20px;
-  color: #fc6c85 !important;
+  color: #F65E39 !important;
 }
 .text-end {
-  font-size: 18px;
+  font-size: 12px;
   margin-top: 10px;
   text-align: center;
 }
@@ -32,11 +31,7 @@
   background-color: #000000;
   color: white;
   width: 100% !important;
-}
-
-.infor {
-  width: 50%;
-  border: none !important;
+  margin-top: 15px;
 }
 
 .end-footer {
@@ -46,9 +41,9 @@
 }
 
 .container-end-footer {
-  clear: both !important;
-  display: block;
+  width: 100%;
   margin-top: 20px;
+  text-align: center;
 }
 
 .container-contact-footer {
@@ -59,4 +54,22 @@
 
 .contact-item {
   display: flex;
+}
+
+.container-left {
+  padding-left: 5% !important;
+  padding-right: 5%;
+}
+.container-right {
+  padding-right: 5% !important;
+  padding-left: 5%;
+}
+
+@media (max-width: 768px) {
+  .container-left {
+    padding-right: 10%;
+  }
+  .container-right {
+    padding-left: 10%;
+  }
 }

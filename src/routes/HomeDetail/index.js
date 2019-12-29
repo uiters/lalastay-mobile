@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 // import ImageForDetail from 'components/ImageForDetail';
-import { BodyHomedetail, ShowImageForDetail, withLayout } from 'components';
+import { BodyHomedetail, ShowImageForDetail, withLayout, Footer } from 'components';
 import { Container } from '@material-ui/core';
 
 function Homedetail() {
@@ -11,6 +11,7 @@ function Homedetail() {
       <Container>
         <BodyHomedetail />
       </Container>
+      <Footer />
     </div>
   );
 }

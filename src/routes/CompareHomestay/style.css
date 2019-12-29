@@ -40,7 +40,7 @@
   height: 2px;
   background-color: #c4c4c4;
 }
-.content-compare{
+.content-compare {
   margin-top: 80px;
   text-align: center;
   width: 100%;
@@ -51,8 +51,7 @@
   font-size: 18px;
 }
 
-
-.datcho{
+.datcho {
   width: 350px !important;
   text-align: center !important;
 }

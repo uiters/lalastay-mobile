@@ -1,0 +1,76 @@
+.container-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-bottom: 1px solid #e9e9e9 !important;
+  margin-bottom: 20px !important;
+}
+
+.container-content li {
+  margin-right: 40px;
+  font-size: 20px;
+}
+a {
+  color: #3a3a32 !important;
+}
+
+#description-content {
+  width: 90%;
+  /* transition: all 10s;
+  animation-name: slideInUp; */
+}
+#adventange-content {
+  width: 90%;
+  /* transition: all 10s;
+  animation-name: slideInUp; */
+}
+
+#comment-content {
+  width: 90%;
+
+  /* transition: all 10s;
+  animation-name: slideInUp; */
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.MuiAppBar-colorPrimary {
+  background-color: transparent !important;
+  color: #595969 !important;
+}
+
+.MuiAppBar-colorPrimary {
+  box-shadow: none !important;
+}

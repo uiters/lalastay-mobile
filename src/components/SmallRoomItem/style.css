@@ -173,3 +173,11 @@ only screen and (min-device-pixel-ratio : 1.5) {
   overflow: hidden !important;
   display: -webkit-box;
 }
+
+.compare-function {
+  color: rgba(252, 108, 133, 1);
+}
+
+.compare-function:hover {
+  text-decoration: underline;
+}

@@ -63,3 +63,37 @@ td:nth-child(1) {
   border-radius: 0px 4px 4px 0px;
   background-color: #fc6c85;
 }
+
+.show-compare {
+  background-image: url('../../assets/compare.png');
+  width: 80px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.button-compare {
+  border: none !important;
+  background-color: #fc6c85;
+  /* padding: 20px; */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  color: #ffffff;
+  animation: scalebuton;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes scalebuton {
+  /* from {
+    transform: scale(0.8);
+  }
+
+  to {
+    transform: scale(1);
+  } */
+}
+
+.compare-now :hover {
+  cursor: pointer;
+}
