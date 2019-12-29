@@ -135,10 +135,13 @@ function SmallRoomItem(props) {
 
       <div style={{ padding: '0 4px' }}>
         <Grid container direction="row" justify="space-between" alignItems="center">
-          <Box fontWeight={600} fontSize={18} style={{ display: 'flex', alignItems: 'center' }}>
-            <Box style={{ width: '25px' }}>
+
+          <div
+            style={{ display: 'flex', alignItems: 'center', fontSize: '18px', fontWeight: '600' }}
+          >
+            <div style={{ width: '25px', display: 'flex' }}>
               <AttachMoneyIcon style={{ color: 'rgba(151,8,204,0.8)', fontSize: '22px' }} />
-            </Box>
+            </div>
             <Box color="rgba(43, 43, 43, 0.8)">1.450k {props.width === 'xs' ? '' : '/đêm'}</Box>
             {props.sale === true && (
               <Box display="inline" className="check-show-sale" fontWeight={600}>
@@ -148,19 +151,15 @@ function SmallRoomItem(props) {
                 </strike>
               </Box>
             )}
-          </Box>
-          <Box style={{ fontSize: '14px' }}>
-            <div style={{ display: 'flex' }}>
-              <div style={{ marginTop: '2px' }}>
-                <Box>
-                  <StarIcon style={{ color: '#FC6C85', fontSize: '16px' }} />
-                </Box>
-              </div>
-              <div>
-                <Box>4.95</Box>
-              </div>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <StarIcon style={{ color: '#FC6C85', fontSize: '16px' }} 
             </div>
-          </Box>
+            <div>
+              <Box>4.95</Box>
+            </div>
+          </div>
         </Grid>
         <div style={{ display: 'flex', fontSize: '14px', alignItems: 'center' }}>
           <Box style={{ width: '25px' }}>

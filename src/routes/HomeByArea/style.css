@@ -19,3 +19,25 @@
   border-radius: 4px;
   margin-right: 5px;
 }
+
+@media (max-width: 375px) {
+  .container-room-view {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 376px) and (max-width:767px) {
+  .container-room-view {
+    width: 50% !important;
+  }
+  .container-img {
+    height: 50% !important;
+  }
+  .container-room-item {
+    height: 280px !important;
+  }
+  .check-show-sale{
+    display: none !important;
+  }
+
+}

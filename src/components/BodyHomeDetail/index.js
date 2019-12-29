@@ -52,7 +52,7 @@ function BodyHomedetail() {
             <Grid container>
               <Grow in={checked}>
                 <Grid item md={3} lg={3} sm={4} className="container-room-view">
-                  <SmallRoomItem compareShow tilte="Apartment Newlife Bãi Cháy Hạ Long" />
+                  <SmallRoomItem compareShow tilte="Apartment Newlife" />
                 </Grid>
               </Grow>
               {/* Conditionally applies the timeout prop to change the entry speed. */}
