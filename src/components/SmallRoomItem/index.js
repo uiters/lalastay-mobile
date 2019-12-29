@@ -132,7 +132,7 @@ function SmallRoomItem(props) {
         )}
       </div>
 
-      <div style={{ padding: '0 4px' }} onClick={() => navigate('/home-detail')}>
+      <div style={{ padding: '0 4px' }}>
         <Grid container direction="row" justify="space-between" alignItems="center">
           <Box fontWeight={600} fontSize={18}>
             <Box display="inline" color="#9708CC" style={{ marginLeft: '5px' }}>
@@ -172,6 +172,11 @@ function SmallRoomItem(props) {
             </div>
           </Link>
         </Box>
+        {props.compareShow && (
+          <Box className="compare-function" onClick={() => navigate('/compare-homestay')}>
+            So sánh với homestay này
+          </Box>
+        )}
       </div>
     </div>
   );
