@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import Grid from '@material-ui/core/Grid';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import DateRangeIcon from '@material-ui/icons/DateRange';
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import WarningOutlinedIcon from '@material-ui/icons/WarningOutlined';
+import { navigate } from '@reach/router';
 import Breadcrumb from './components/Breadcrumb';
 import './style.css';
 
@@ -20,11 +23,12 @@ const Payment = () => {
       window.scrollTo(0, 0);
     }
   }, []);
+  const matches = useMediaQuery('(min-width:768px)');
   return (
     <>
       <Breadcrumb />
-      <div className="container">
-        <div className="left-section">
+      <Grid container spacing={0} style={{ padding: matches ? '48px 96px' : '15px' }}>
+        <Grid item xs={12} sm={5} md={5}>
           <p className="title">Thông tin đặt phòng</p>
           <p className="sub-title1">4 ngày tại Xinh Homestay</p>
           <div className="checkin-checkout">
@@ -74,9 +78,9 @@ const Payment = () => {
             <input className="input" style={{ width: '50%' }} value="6969" />
             <input className="button1" type="button" value="ÁP DỤNG" />
           </div>
-          <input className="button2" type="button" value="ĐẶT NGAY" />
-        </div>
-        <div className="right-section">
+        </Grid>
+        <Grid item xs={0} sm={2} md={2} />
+        <Grid item xs={12} sm={5} md={5} className="right-section">
           <div className="avatar-section">
             <div>
               <p className="homestay-name">Xinh Homestay</p>
@@ -167,8 +171,18 @@ const Payment = () => {
             phòng và ít nhất 24 giờ trước khi nhận phòng. Nếu khách hàng không thoả được các điểm
             nêu trên sẽ không được hoàn lại phí dịch vụ.
           </p>
-        </div>
-      </div>
+        </Grid>
+      </Grid>
+      <input
+        style={{
+          marginLeft: matches ? '96px' : '15px',
+          marginBottom: matches ? '48px' : '15px',
+        }}
+        className="button2"
+        type="button"
+        value="ĐẶT NGAY"
+        onClick={() => navigate('/invoice')}
+      />
     </>
   );
 };

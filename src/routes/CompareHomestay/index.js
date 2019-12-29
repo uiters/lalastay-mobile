@@ -306,12 +306,12 @@ function CompareHomestaty() {
               </Box>
               <Box>Wifi miễn phí</Box>
             </Box>
-            <Box style={{ display: 'flex' }}>
+            {/* <Box style={{ display: 'flex' }}>
               <Box display="inline">
                 <img alt="img" src={garden} style={{ marginRight: '5px' }} />
               </Box>
               <Box display="inline">Có sân vườn</Box>
-            </Box>
+            </Box> */}
             <Box style={{ display: 'flex' }}>
               <Box>
                 <img alt="img" src={parking} style={{ marginRight: '5px' }} />

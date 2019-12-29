@@ -256,7 +256,7 @@ function Navbar() {
           <Grid item xs={6} container direction="row" justify="flex-end" alignItems="center">
             <Button className={classes.button}>Chủ nhà</Button>
             <Button className={classes.button}>Đăng kí</Button>
-            <Button className={classes.button}>Đâng nhập</Button>
+            <Button className={classes.button}>Đăng nhập</Button>
           </Grid>
         </Grid>
       </nav>
@@ -305,7 +305,7 @@ function Navbar() {
             </Box>
           </div>
 
-          <Box marginTop={1}>
+          <Box marginTop={1} marginRight={1}>
             <SearchIcon style={{ color: '#FC6C85' }} />
           </Box>
         </Box>

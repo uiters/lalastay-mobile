@@ -13,7 +13,6 @@
 }
 
 .notfound .notfound-404 h1 {
-  font-family: 'Kanit', sans-serif;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -31,7 +30,6 @@
 }
 
 .notfound h2 {
-  font-family: 'Kanit', sans-serif;
   font-size: 33px;
   font-weight: 200;
   text-transform: uppercase;
@@ -41,7 +39,6 @@
 }
 
 .notfound p {
-  font-family: 'Kanit', sans-serif;
   font-size: 16px;
   font-weight: 200;
   margin-top: 0px;
@@ -49,7 +46,6 @@
 }
 
 .notfound a {
-  font-family: 'Kanit', sans-serif;
   color: #f27c52;
   font-weight: 200;
   text-decoration: none;
