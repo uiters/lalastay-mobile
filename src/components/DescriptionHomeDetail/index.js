@@ -104,10 +104,10 @@ function DescriptionHomeDetail() {
           <Grid>
             {/* Tiện nghi */}
             <Grid container spacing={3}>
-              <Grid item xs={2}>
+              <Grid item xs={3}>
                 <Box fontWeight={600}>Tiện nghi</Box>
               </Grid>
-              <Grid item xs={10} style={{ lineHeight: '30px' }}>
+              <Grid item xs={9} style={{ lineHeight: '30px' }}>
                 <Box style={{ display: 'flex' }}>
                   <Box display="inline">
                     <WifiIcon style={{ color: '#9708CC', marginRight: '5px' }} />
@@ -138,10 +138,10 @@ function DescriptionHomeDetail() {
               justify="center"
               alignItems="center"
             >
-              <Grid item xs={2}>
+              <Grid item xs={3}>
                 <Box fontWeight={600}>Số khách</Box>
               </Grid>
-              <Grid item xs={10}>
+              <Grid item xs={9}>
                 <Box style={{ display: 'flex' }}>
                   <Box display="inline">
                     <PersonIcon style={{ color: '#9708CC', marginRight: '5px' }} />
@@ -158,10 +158,10 @@ function DescriptionHomeDetail() {
               justify="center"
               alignItems="center"
             >
-              <Grid item xs={2}>
+              <Grid item xs={3}>
                 <Box fontWeight={600}>Thông tin giá</Box>
               </Grid>
-              <Grid item xs={10}>
+              <Grid item xs={9}>
                 <Box style={{ display: 'flex' }}>
                   <Box display="inline">
                     <AttachMoneyIcon style={{ color: '#9708CC', marginRight: '5px' }} />
@@ -172,10 +172,10 @@ function DescriptionHomeDetail() {
             </Grid>
             {/* Thông tin chi tiết */}
             <Grid container spacing={3} style={{ background: 'rgba(43, 43, 43, 0.04)' }}>
-              <Grid item xs={2}>
+              <Grid item xs={3}>
                 <Box fontWeight={600}>Thông tin chi tiết</Box>
               </Grid>
-              <Grid item xs={10}>
+              <Grid item xs={9}>
                 <Box style={{ display: 'flex' }}>
                   <Box display="inline">
                     <HomeIcon style={{ color: '#9708CC', marginRight: '5px' }} />
@@ -195,10 +195,10 @@ function DescriptionHomeDetail() {
               spacing={3}
               style={{ height: '80px', marginTop: '10px', marginBottom: '10px' }}
             >
-              <Grid item xs={2}>
+              <Grid item xs={3}>
                 <Box fontWeight={600}>Liên hệ</Box>
               </Grid>
-              <Grid item xs={10}>
+              <Grid item xs={9}>
                 <Box style={{ display: 'flex' }}>
                   <Box display="inline">
                     <PhoneIcon style={{ color: '#9708CC', marginRight: '5px' }} />
@@ -215,10 +215,10 @@ function DescriptionHomeDetail() {
             </Grid>
             {/* Quy định */}
             <Grid container spacing={3} style={{ background: 'rgba(43, 43, 43, 0.04)' }}>
-              <Grid item xs={2}>
+              <Grid item xs={3}>
                 <Box fontWeight={600}>Quy định</Box>
               </Grid>
-              <Grid item xs={10}>
+              <Grid item xs={9}>
                 <Box style={{ display: 'flex' }}>
                   <Box display="inline">
                     <GavelIcon style={{ color: '#9708CC', marginRight: '5px' }} />

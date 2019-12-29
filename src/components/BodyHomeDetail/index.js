@@ -17,12 +17,12 @@ function BodyHomedetail() {
   return (
     <div>
       <Grid container spacing={2}>
-        <Grid item md={8}>
+        <Grid item md={8} sm={8} xs={12}>
           <div style={{ marginBottom: '15px' }}>
             <Box fontSize={25} fontWeight={600}>
               Homestay Ngọc Nữ
             </Box>
-            <Box style={{ display: 'flex', justifyItems: 'center', alignItems: 'center' }}>
+            <Box style={{ display: 'flex' }}>
               <Box>
                 <RoomIcon style={{ fontSize: '18px', color: 'rgba(253, 136, 156, 1)' }} />
               </Box>
@@ -33,7 +33,7 @@ function BodyHomedetail() {
 
           <DescriptionHomeDetail />
         </Grid>
-        <Grid item md={4} style={{ marginTop: '30px' }}>
+        <Grid item md={4} sm={4} xs={12} style={{ marginTop: '30px' }}>
           <ReservationForm />
           <div style={{ height: '50px' }} />
           <InformationUserForm />
@@ -52,7 +52,7 @@ function BodyHomedetail() {
             <Grid container>
               <Grow in={checked}>
                 <Grid item md={3} lg={3} sm={4} className="container-room-view">
-                  <SmallRoomItem compareShow />
+                  <SmallRoomItem compareShow tilte="Apartment Newlife" />
                 </Grid>
               </Grow>
               {/* Conditionally applies the timeout prop to change the entry speed. */}
@@ -62,7 +62,7 @@ function BodyHomedetail() {
                 {...(checked ? { timeout: 1000 } : {})}
               >
                 <Grid item md={3} lg={3} sm={4} className="container-room-view">
-                  <SmallRoomItem compareShow />
+                  <SmallRoomItem compareShow tilte="Aloha Hanoi Homestay 24" />
                 </Grid>
               </Grow>
               <Grow
@@ -71,7 +71,7 @@ function BodyHomedetail() {
                 {...(checked ? { timeout: 1000 } : {})}
               >
                 <Grid item md={3} lg={3} sm={4} className="container-room-view">
-                  <SmallRoomItem compareShow />
+                  <SmallRoomItem compareShow tilte="Gom Homestay Vũng Tàu" />
                 </Grid>
               </Grow>
               <Grow
@@ -80,7 +80,7 @@ function BodyHomedetail() {
                 {...(checked ? { timeout: 1000 } : {})}
               >
                 <Grid item md={3} lg={3} sm={4} className="container-room-view">
-                  <SmallRoomItem compareShow />
+                  <SmallRoomItem compareShow sale tilte="[Lily Home] căn 1 ngủ tầng 4" />
                 </Grid>
               </Grow>
             </Grid>

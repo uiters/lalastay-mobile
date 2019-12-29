@@ -13,11 +13,22 @@ function HomeByArea() {
   const [luaChonKhac, setuLuaChonKhac] = useState(false);
 
   const renderRom = () => {
+    const titles = [
+      '[Lily Home] căn 1 ngủ tầng 4',
+      'Hanami Service Apartment',
+      'Home Sweet Home High Floor 1Br Apartment',
+      'Mây homestay Vũng Tàu',
+      'CityHomes ⭐️ Vinhomes Metropolis Hà Nội',
+      'Apartment Newlife Bãi Cháy Hạ Long',
+      'Gom Homestay Vũng Tàu',
+      'Aloha Hanoi Homestay 24',
+    ];
     const result = [];
     for (let i = 1; i < 53; i++) {
+      const index = Math.floor(Math.random() * 7);
       const item = (
-        <Grid item md={3} xs={6} lg={3} sm={4} key={i}>
-          <SmallRoomItem sale={i % 3 === 0 ? true : false} />
+        <Grid item md={3} lg={3} sm={4} key={i} xs={12}>
+          <SmallRoomItem sale={i % 3 === 0 ? true : false} tilte={titles[index]} />
         </Grid>
       );
       result.push(item);
