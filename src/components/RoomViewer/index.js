@@ -4,12 +4,23 @@ import { SmallRoomItem } from 'components';
 import './style.css';
 
 function RoomViewer({ tilte, sologen }) {
+  const titles = [
+    '[Lily Home] căn 1 ngủ tầng 4',
+    'Hanami Service Apartment',
+    'Home Sweet Home High Floor 1Br Apartment',
+    'Mây homestay Vũng Tàu',
+    'CityHomes ⭐️ Vinhomes Metropolis Hà Nội',
+    'Apartment Newlife Bãi Cháy Hạ Long',
+    'Gom Homestay Vũng Tàu',
+    'Aloha Hanoi Homestay 24',
+  ];
   const renderRom = () => {
     const result = [];
     for (let i = 0; i < 16; i += 1) {
+      const index = Math.floor(Math.random() * 7);
       const item = (
         <Grid item md={3} lg={3} sm={4} key={i} className="container-room-view">
-          <SmallRoomItem sale={i % 3 === 0} />
+          <SmallRoomItem sale={i % 3 === 0} tilte={titles[index]} />
         </Grid>
       );
       result.push(item);

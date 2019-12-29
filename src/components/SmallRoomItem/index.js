@@ -6,7 +6,7 @@ import Swiper from 'react-id-swiper';
 import { Link, navigate } from '@reach/router';
 import PersonIcon from '@material-ui/icons/Person';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 import withWidth from '@material-ui/core/withWidth';
 import smallRoom from '../../assets/small_room.jpg';
 import 'swiper/css/swiper.css';
@@ -55,7 +55,7 @@ function SmallRoomItem(props) {
   };
   return (
     <div container className="container-room-item">
-      <div className="container-img">
+      <div className="container-img" style={{ height: props.width === 'sm' ? '55%' : '' }}>
         <Swiper {...params} style={{ width: '100%', height: '100%' }}>
           <div>
             <img
@@ -111,12 +111,13 @@ function SmallRoomItem(props) {
           <div className="province">Đồng Nai</div>
           {props.sale && (
             <div className="sale">
-              <div style={{ display: 'flex', alignItems: 'center' }}>
+              {/* <div style={{ display: 'flex', alignItems: 'center' }}>
                 <ArrowDownwardIcon
                   style={{ color: '#1BE72F', fontSize: '15px', fontWeight: '700' }}
                 />
                 <div>35%</div>
-              </div>
+              </div> */}
+              Giảm 35%
             </div>
           )}
         </div>
@@ -134,41 +135,47 @@ function SmallRoomItem(props) {
 
       <div style={{ padding: '0 4px' }}>
         <Grid container direction="row" justify="space-between" alignItems="center">
-          <Box fontWeight={600} fontSize={18}>
-            <Box display="inline" color="#9708CC" style={{ marginLeft: '5px' }}>
-              $
+          <Box fontWeight={600} fontSize={18} style={{ display: 'flex', alignItems: 'center' }}>
+            <Box style={{ width: '25px' }}>
+              <AttachMoneyIcon style={{ color: 'rgba(151,8,204,0.8)', fontSize: '22px' }} />
             </Box>
-            <Box display="inline" color="#2B2B2B">
-              {' '}
-              1.5tr {props.width === 'xs' ? '' : '/đêm'}
-            </Box>
+            <Box color="rgba(43, 43, 43, 0.8)">1.450k {props.width === 'xs' ? '' : '/đêm'}</Box>
             {props.sale === true && (
-              <Box display="inline" fontWeight={300}>
-                <strike style={{ marginLeft: '5px' }}> 2.5tr</strike>
+              <Box display="inline" className="check-show-sale" fontWeight={600}>
+                <strike style={{ marginLeft: '5px', color: 'rgba(43, 43, 43, 0.6)' }}>
+                  {' '}
+                  1.000k
+                </strike>
               </Box>
             )}
           </Box>
           <Box style={{ fontSize: '14px' }}>
             <div style={{ display: 'flex' }}>
-              <div>
-                <StarIcon style={{ color: '#9708CC', fontSize: '14px' }} />
+              <div style={{ marginTop: '2px' }}>
+                <Box>
+                  <StarIcon style={{ color: '#FC6C85', fontSize: '16px' }} />
+                </Box>
               </div>
-
-              <div>4.95</div>
+              <div>
+                <Box>4.95</Box>
+              </div>
             </div>
           </Box>
         </Grid>
         <div style={{ display: 'flex', fontSize: '14px', alignItems: 'center' }}>
-          <Box>
-            <PersonIcon style={{ color: '#9708CC', fontSize: '18px' }} />
+          <Box style={{ width: '25px' }}>
+            <PersonIcon style={{ color: 'rgba(151,8,204,0.8)', fontSize: '22px' }} />
           </Box>
 
           <Box>3 người - 1 phòng</Box>
         </div>
         <Box fontWeight={600} fontSize={18} style={{ lineHeight: '25px' }}>
-          <Link to="/home-detail" style={{ color: 'rgba(43, 43, 43, 0.8)' }}>
-            <div className="showMore" style={{ webkitBoxOrient: 'vertical' }}>
-              PVL service apartment near Thảo Điền - Sunshine With Bacony - 301
+          <Link to="/home-detail">
+            <div
+              className="showMore"
+              style={{ webkitBoxOrient: 'vertical', color: 'rgba(43, 43, 43, 0.85)' }}
+            >
+              {props.tilte}
             </div>
           </Link>
         </Box>
