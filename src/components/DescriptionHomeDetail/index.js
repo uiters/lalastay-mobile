@@ -16,6 +16,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import garden from '../../assets/garden.png';
 import parking from '../../assets/parking.png';
 import bando from '../../assets/bando.png';
+import Comments from '../../routes/HomeDetail/components/Comments';
 
 import './style.css';
 
@@ -110,7 +111,7 @@ function DescriptionHomeDetail() {
               <Grid item xs={9} style={{ lineHeight: '30px' }}>
                 <Box style={{ display: 'flex' }}>
                   <Box display="inline">
-                    <WifiIcon style={{ color: '#9708CC', marginRight: '5px' }} />
+                    <WifiIcon style={{ color: 'rgb(151, 8, 204,.7)', marginRight: '5px' }} />
                   </Box>
                   <Box display="inline">Wifi miễn phí</Box>
                 </Box>
@@ -144,7 +145,7 @@ function DescriptionHomeDetail() {
               <Grid item xs={9}>
                 <Box style={{ display: 'flex' }}>
                   <Box display="inline">
-                    <PersonIcon style={{ color: '#9708CC', marginRight: '5px' }} />
+                    <PersonIcon style={{ color: 'rgb(151, 8, 204,.7)', marginRight: '5px' }} />
                   </Box>
                   <Box display="inline"> 1 người</Box>
                 </Box>
@@ -164,7 +165,7 @@ function DescriptionHomeDetail() {
               <Grid item xs={9}>
                 <Box style={{ display: 'flex' }}>
                   <Box display="inline">
-                    <AttachMoneyIcon style={{ color: '#9708CC', marginRight: '5px' }} />
+                    <AttachMoneyIcon style={{ color: 'rgb(151, 8, 204,.7)', marginRight: '5px' }} />
                   </Box>
                   <Box display="inline"> 2,340,000 VNĐ/ ngày</Box>
                 </Box>
@@ -178,7 +179,7 @@ function DescriptionHomeDetail() {
               <Grid item xs={9}>
                 <Box style={{ display: 'flex' }}>
                   <Box display="inline">
-                    <HomeIcon style={{ color: '#9708CC', marginRight: '5px' }} />
+                    <HomeIcon style={{ color: 'rgb(151, 8, 204,.7)', marginRight: '5px' }} />
                   </Box>
                   <Box display="inline">
                     <Box>1 phòng khách</Box>
@@ -201,13 +202,13 @@ function DescriptionHomeDetail() {
               <Grid item xs={9}>
                 <Box style={{ display: 'flex' }}>
                   <Box display="inline">
-                    <PhoneIcon style={{ color: '#9708CC', marginRight: '5px' }} />
+                    <PhoneIcon style={{ color: 'rgb(151, 8, 204,.7)', marginRight: '5px' }} />
                   </Box>
                   <Box display="inline">0981853641</Box>
                 </Box>
                 <Box style={{ display: 'flex' }}>
                   <Box display="inline">
-                    <EmailIcon style={{ color: '#9708CC', marginRight: '5px' }} />
+                    <EmailIcon style={{ color: 'rgb(151, 8, 204,.7)', marginRight: '5px' }} />
                   </Box>
                   <Box display="inline">16521214@gmail.com</Box>
                 </Box>
@@ -221,7 +222,7 @@ function DescriptionHomeDetail() {
               <Grid item xs={9}>
                 <Box style={{ display: 'flex' }}>
                   <Box display="inline">
-                    <GavelIcon style={{ color: '#9708CC', marginRight: '5px' }} />
+                    <GavelIcon style={{ color: 'rgb(151, 8, 204,.7)', marginRight: '5px' }} />
                   </Box>
                   <Box display="inline">
                     Không được hút thuốc lá, không lớn tiếng ồn ào khi qua 11 giờ đêm và sau 5 giờ
@@ -245,7 +246,7 @@ function DescriptionHomeDetail() {
           </Grid>
         </TabPanel>
         <TabPanel value={value} index={2}>
-          Item Three
+          <Comments />
         </TabPanel>
       </div>
     </div>
