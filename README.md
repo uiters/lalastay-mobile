@@ -1,6 +1,7 @@
 ﻿# lalastay
  
 [![Build Status](https://travis-ci.org/cuongw/react-boilerplate.svg?branch=master)](https://travis-ci.org/cuongw/react-boilerplate)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/977f8955-2363-4107-9cc4-dfc8bb003294/deploy-status)](https://app.netlify.com/sites/islalastay/deploys)
 [![Hits-of-Code](https://hitsofcode.com/github/cuongw/react-boilerplate)](https://hitsofcode.com/view/github/cuongw/react-boilerplate)
 [![GitHub](https://img.shields.io/github/license/cuongw/react-boilerplate.svg)](https://github.com/cuongw/react-boilerplate/blob/master/LICENSE)
 
