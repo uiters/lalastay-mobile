@@ -24,6 +24,7 @@
     "react-youtube": "^7.9.0",
     "redux": "^4.0.1",
     "redux-saga": "^1.0.5",
+    "styled-components": "^4.4.1",
     "swiper": "^5.2.0"
   },
   "devDependencies": {
