@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import DateRangeIcon from '@material-ui/icons/DateRange';
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
@@ -21,10 +22,11 @@ const Payment = () => {
       window.scrollTo(0, 0);
     }
   }, []);
+  const matches = useMediaQuery('(min-width:768px)');
   return (
     <>
       <Breadcrumb />
-      <div className="x-container">
+      <div className="x-container" style={{ padding: matches ? '48px 96px' : '15px' }}>
         <p className="x-title">Hóa đơn đặt phòng</p>
         <div className="x-left-section">
           <div className="avatar-section">
