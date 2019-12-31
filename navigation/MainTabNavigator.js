@@ -1,21 +1,21 @@
 import React from 'react';
 import { Platform } from 'react-native';
-import {
-  createStackNavigator,
-  createBottomTabNavigator,
-  createDrawerNavigator
-} from 'react-navigation';
+import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/main/HomeScreen';
 import SettingsScreen from '../screens/main/SettingsScreen';
-import LeftSliderScreen from '../screens/main/LeftSliderScreen';
 import { addHeaderLeftNavigator } from '../helpers';
 import ChangePassword from '../screens/main/profile/ChangePassword';
 import EditProfile from '../screens/main/profile/EditProfile';
 
 const HomeStack = createStackNavigator({
-  Home: HomeScreen,
+  Home: {
+    screen: HomeScreen,
+    navigationOptions: {
+      header: null
+    }
+  },
   ChangePassword,
   EditProfile
 });
@@ -57,11 +57,4 @@ const BottomTabNavigator = createBottomTabNavigator({
   SettingsStack
 });
 
-export default createDrawerNavigator(
-  {
-    BottomTabNavigator: BottomTabNavigator
-  },
-  {
-    contentComponent: LeftSliderScreen
-  }
-);
+export default BottomTabNavigator;

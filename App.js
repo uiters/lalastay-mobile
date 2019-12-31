@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, StatusBar, StyleSheet, View, YellowBox } from 'react-native';
+import { StyleSheet, View, YellowBox } from 'react-native';
 import { AppLoading } from 'expo';
 import { Asset } from 'expo-asset';
 import * as Font from 'expo-font';
@@ -45,7 +45,6 @@ export default class App extends React.Component {
           <InAppNotificationProvider height={150}>
             <NetworkInterceptor>
               <View style={styles.container}>
-                {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
                 <AppNavigator
                   ref={navigatorRef => {
                     NavigationService.setTopLevelNavigator(navigatorRef);
