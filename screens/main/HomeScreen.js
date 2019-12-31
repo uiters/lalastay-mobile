@@ -1,9 +1,8 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import { View } from 'react-native';
+import { View, WebView } from 'react-native';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { WebView } from 'react-native-webview';
 import StatusBar from '../../components/StatusBar';
 
 import { logout } from '../../store/actions/UserActions';
@@ -32,7 +31,7 @@ class HomeScreen extends React.Component {
     return (
       <View style={{ flex: 1 }}>
         <StatusBar />
-        <WebView style={{ flex: 1 }} source={{ uri: 'https://facebook.github.io/react-native/' }} />
+        <WebView style={{ flex: 1 }} source={{ uri: 'https://islalastay.netlify.com/' }} />
       </View>
     );
   }
