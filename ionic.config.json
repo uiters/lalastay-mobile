@@ -1,5 +1,7 @@
 {
   "name": "lalastay_mobile",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "react"
 }
