@@ -3,10 +3,10 @@
   "baseref": "master",
   "tarignore": [
     "node_modules",
-    "package-lock.json",
+    "yarn.lock",
     "www"
   ],
   "scripts": {
-    "test": "npm run build"
+    "test": "yarn build"
   }
 }
