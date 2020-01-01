@@ -1,0 +1,7 @@
+.container-similar-scroll:hover .swiper-button-next {
+  display: block !important;
+}
+
+.container-similar-scroll:hover .swiper-button-prev {
+  display: block !important;
+}

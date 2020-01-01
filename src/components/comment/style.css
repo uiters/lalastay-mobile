@@ -1,0 +1,40 @@
+.avatar {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.comment-content {
+  background-color: #ffffff;
+}
+
+.comment {
+  border: none !important;
+}
+.container-comment {
+  background-color: #c4c4c4;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.comment-content {
+  background-color: transparent !important;
+  border: none !important;
+  width: 100%;
+}
+
+.comment-time {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: rgba(43, 43, 43, 0.4);
+}

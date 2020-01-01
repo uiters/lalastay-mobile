@@ -1,0 +1,57 @@
+.MuiTableCell-body {
+  font-size: 20px !important;
+}
+
+.MuiTableCell-root {
+  font-size: 24px !important;
+}
+.container-show-image > .swiper-container {
+  height: 250px !important;
+  margin-bottom: 10px !important;
+}
+.slide-under {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.container-show-image:hover .swiper-button-next {
+  display: block !important;
+}
+.container-show-image:hover .swiper-button-prev {
+  display: block !important;
+}
+
+.MuiTableCell-root {
+  font-size: 20px !important;
+  color: rgba(43, 43, 43, 0.8) !important;
+}
+
+.container-thum {
+  height: 150px !important;
+}
+
+.divde_200 {
+  width: 200px;
+  height: 2px;
+  background-color: #c4c4c4;
+}
+.divde_150 {
+  width: 150px;
+  height: 2px;
+  background-color: #c4c4c4;
+}
+.content-compare {
+  margin-top: 80px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.datcho {
+  width: 350px !important;
+  text-align: center !important;
+}
