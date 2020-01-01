@@ -1,0 +1,7 @@
+* {
+  font-family: 'Sarabun', sans-serif;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
