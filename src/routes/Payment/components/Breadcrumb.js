@@ -16,20 +16,23 @@ const Breadcrumb = () => {
         1. Thông tin đặt phòng
       </Link>
       <ChevronRightIcon />
-      <p style={styles.childLink}>2. Thông tin đặt phòng</p>
+      <p style={styles.childLink}>2. Hóa đơn đặt phòng</p>
     </div>
   );
 };
 
 const styles = {
   container: {
+    position: 'sticky',
+    top: '0px',
+    backgroundColor: '#fff',
+    zIndex: 9999,
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    marginLeft: '4px',
-    marginRight: '4px',
     padding: '5px',
-    boxShadow: '2px 4px 8px rgba(211, 211, 211, 0.5)',
+    border: '0.5px solid rgba(150, 150, 150, 0.4)',
+    borderRadius: '4px',
   },
   logo: {
     left: '1.32%',
@@ -38,6 +41,7 @@ const styles = {
     bottom: '10.42%',
     marginLeft: '10px',
     color: '#000',
+    borderRadius: '4px',
   },
   rootLink: {
     fontSize: '18px',

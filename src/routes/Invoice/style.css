@@ -1,17 +1,18 @@
-.x-container {
+.invoice-container {
   display: flex;
   flex-direction: column;
 }
 
-.x-left-section {
-  border: 1px solid #b3b3b3;
+.invoice-left-section {
+  border: 1px solid rgba(150, 150, 150, 0.4);
+  border-radius: 4px;
   box-sizing: border-box;
   padding: 26px 34px;
   height: fit-content;
   max-width: 573px;
 }
 
-.x-right-section {
+.invoice-right-section {
   margin-top: 30px;
   display: flex;
   flex-direction: row;
@@ -19,14 +20,14 @@
   max-width: 573px;
 }
 
-.x-title {
+.invoice-title {
   font-weight: bold;
   font-size: 32px;
   line-height: 43px;
   color: #000000;
 }
 
-.sub-title1 {
+.invoice-sub-title1 {
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -39,7 +40,7 @@
   color: #000000;
 }
 
-.sub-title2 {
+.invoice-sub-title2 {
   font-style: normal;
   font-weight: normal;
   font-size: 22px;
@@ -51,7 +52,7 @@
   color: #000000;
 }
 
-.sub-title3 {
+.invoice-sub-title3 {
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -63,7 +64,7 @@
   color: #000000;
 }
 
-.sub-title4 {
+.invoice-sub-title4 {
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -76,14 +77,14 @@
   color: #000000;
 }
 
-.container-content1 {
+.invoice-container-content1 {
   background: rgba(196, 196, 196, 0.2);
   height: 133px;
   display: flex;
   align-items: center;
 }
 
-.content1 {
+.invoice-content1 {
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -93,12 +94,12 @@
   color: #000000;
 }
 
-.checkin-checkout {
+.invoice-checkin-checkout {
   display: flex;
   flex-direction: row;
 }
 
-.checkin {
+.invoice-checkin {
   background: #ffffff;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
   display: flex;
@@ -109,7 +110,7 @@
   padding-left: 4px;
 }
 
-.checkin-line {
+.invoice-checkin-line {
   background-color: #0008c2;
   height: 1px;
   width: 72.14px;
@@ -117,7 +118,7 @@
   margin-bottom: 6px;
 }
 
-.checkin-title {
+.invoice-checkin-title {
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
@@ -127,7 +128,7 @@
   color: #000000;
 }
 
-.checkin-date {
+.invoice-checkin-date {
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -136,7 +137,7 @@
   color: #000000;
 }
 
-.checkin-day {
+.invoice-checkin-day {
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
@@ -146,15 +147,15 @@
   color: #000000;
 }
 
-.form {
+.invoice-form {
   margin-bottom: 46px;
 }
 
-.form-field {
+.invoice-form-field {
   margin-bottom: 18px;
 }
 
-.title {
+.invoice-title {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -163,7 +164,7 @@
   align-items: center;
 }
 
-.input {
+.invoice-input {
   padding: 5px;
   background: #ffffff;
   border: 1px solid #000000;
@@ -178,13 +179,13 @@
   width: 100%;
 }
 
-.coupon {
+.invoice-coupon {
   display: flex;
   margin-bottom: 46px;
   position: relative;
 }
 
-.x-button1 {
+.invoice-button1 {
   cursor: pointer;
   padding: 10px;
   height: 40px;
@@ -202,7 +203,7 @@
   margin-left: 40px;
 }
 
-.x-button2 {
+.invoice-button2 {
   cursor: pointer;
   padding: 10px;
   height: 40px;
@@ -219,7 +220,7 @@
   margin-right: 40px;
 }
 
-.location {
+.invoice-location {
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
@@ -227,7 +228,7 @@
   color: #000000;
 }
 
-.avatar-section {
+.invoice-avatar-section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -236,7 +237,7 @@
   margin-bottom: 7px;
 }
 
-.homestay-name {
+.invoice-homestay-name {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -246,13 +247,13 @@
   color: #000000;
 }
 
-.customer-section {
+.invoice-customer-section {
   border-bottom: 1px solid #b3b3b3;
   padding-bottom: 12px;
   margin-bottom: 7px;
 }
 
-.daterange {
+.invoice-daterange {
   font-style: normal;
   font-weight: 300;
   font-size: 10px;
@@ -260,7 +261,7 @@
   color: #000000;
 }
 
-.people {
+.invoice-people {
   font-style: normal;
   font-weight: 600;
   font-size: 10px;
@@ -268,7 +269,7 @@
   color: #000000;
 }
 
-.fee-section {
+.invoice-fee-section {
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #b3b3b3;
@@ -276,7 +277,7 @@
   margin-bottom: 7px;
 }
 
-.fee-item {
+.invoice-fee-item {
   flex: 1;
   display: flex;
   flex-direction: row;
@@ -285,7 +286,7 @@
   margin-bottom: 7px;
 }
 
-.fee-name {
+.invoice-fee-name {
   font-style: normal;
   font-weight: 300;
   font-size: 10px;
@@ -293,7 +294,7 @@
   color: #000000;
 }
 
-.fee-price {
+.invoice-fee-price {
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
@@ -302,7 +303,7 @@
   color: #000000;
 }
 
-.rule {
+.invoice-rule {
   font-style: normal;
   font-weight: normal;
   font-size: 10px;

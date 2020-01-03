@@ -64,26 +64,26 @@ const Time = styled.p`
   font-size: 12px;
 `;
 
-function Comment() {
+function Comment({ avatar, name, message, numLikes, numComments, minutes }) {
   return (
     <Main style={{ marginTop: '5px', marginBottom: '5px' }}>
-      <Image alt="avatar" src="https://avatars0.githubusercontent.com/u/34389409?v=4" />
+      <Image alt="avatar" src={avatar} />
       <Container>
         <Main>
           <Content>
-            <Name href="http://github.com/cuongw">Cuong Duy Nguyen</Name>
-            <Message>Ngon lành cành đào, quá xịn!</Message>
+            <Name href="http://github.com/cuongw">{name}</Name>
+            <Message>{message}</Message>
           </Content>
           <WrappedOption>
             <Option>...</Option>
           </WrappedOption>
         </Main>
         <Main>
-          <Action>Thích(1)</Action>
+          <Action>{!numLikes ? 'Thích' : `Thích(${numLikes})`}</Action>
           <Action style={{ fontSize: '10px' }}>.</Action>
-          <Action>Bình luận(2)</Action>
+          <Action>{!numComments ? 'Bình luận' : `Bình luận(${numComments})`}</Action>
           <Time style={{ fontSize: '10px', fontWeight: 'bold' }}>.</Time>
-          <Time>5 phút</Time>
+          <Time>{`${minutes} phút`}</Time>
         </Main>
       </Container>
     </Main>
