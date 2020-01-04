@@ -46,3 +46,9 @@
   height: 450px;
   overflow: hidden;
 }
+
+@media (max-width: 767px) {
+  .slie-img {
+    height: 300px !important;
+  }
+}

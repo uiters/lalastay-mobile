@@ -5,7 +5,6 @@ import Grow from '@material-ui/core/Grow';
 import RoomIcon from '@material-ui/icons/Room';
 import SmallRoomItem from '../SmallRoomItem';
 import { ReservationForm, DescriptionHomeDetail, InformationUserForm } from '../index';
-import Comments from '../../routes/HomeDetail/components/Comments';
 import './style.css';
 
 function BodyHomedetail() {
@@ -20,9 +19,20 @@ function BodyHomedetail() {
       <Grid container spacing={2}>
         <Grid item md={8} sm={8} xs={12}>
           <div style={{ marginBottom: '15px' }}>
-            <Box fontSize={25} fontWeight={600}>
-              Homestay Ngọc Nữ
-            </Box>
+            <Grid container direction="row" justify="space-between" alignItems="center">
+              <Box fontSize={25} fontWeight={600}>
+                Homestay Ngọc Nữ
+              </Box>
+              <Box fontSize={20} fontWeight={600}>
+                <span
+                  style={{ textDecoration: 'line-through', marginRight: '10px', fontWeight: '400' }}
+                >
+                  1.500k/đêm
+                </span>
+                <span>1.235k/đêm</span>
+              </Box>
+            </Grid>
+
             <Box style={{ display: 'flex' }}>
               <Box>
                 <RoomIcon style={{ fontSize: '18px', color: 'rgba(253, 136, 156, 1)' }} />
@@ -34,7 +44,7 @@ function BodyHomedetail() {
 
           <DescriptionHomeDetail />
         </Grid>
-        <Grid item md={4} sm={4} xs={12} style={{ marginTop: '30px' }}>
+        <Grid item md={4} sm={4} xs={12}>
           <ReservationForm />
           <div style={{ height: '50px' }} />
           <InformationUserForm />
@@ -47,7 +57,7 @@ function BodyHomedetail() {
             label="H"
           /> */}
           <Box onClick={handleChange} fontWeight={500} fontSize={20} className="compare-now">
-            Homestay nào phù hợp với bạn? <b>Hiển thị</b>
+            Homestay nào phù hợp với bạn? <b>Tìm hiểu thêm</b>
           </Box>
           <div style={{ display: checked ? 'block' : 'none' }}>
             <Grid container>
@@ -86,7 +96,6 @@ function BodyHomedetail() {
               </Grow>
             </Grid>
           </div>
-          <Comments />
         </div>
       </div>
     </div>

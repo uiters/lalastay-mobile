@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Grid from '@material-ui/core/Grid';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
@@ -10,6 +10,8 @@ import Breadcrumb from './components/Breadcrumb';
 import './style.css';
 
 const Payment = () => {
+  const [value, setValue] = useState('');
+  const [doCancel, setDoCancel] = useState(false);
   useEffect(() => {
     try {
       // trying to use new API - https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
@@ -24,81 +26,120 @@ const Payment = () => {
     }
   }, []);
   const matches = useMediaQuery('(min-width:768px)');
+  const fixedStyle = matches
+    ? {
+        position: 'fixed',
+        right: '96px',
+      }
+    : {};
   return (
     <>
       <Breadcrumb />
-      <Grid container spacing={0} style={{ padding: matches ? '48px 96px' : '15px' }}>
-        <Grid item xs={12} sm={5} md={5}>
-          <p className="title">Thông tin đặt phòng</p>
-          <p className="sub-title1">4 ngày tại Xinh Homestay</p>
-          <div className="checkin-checkout">
-            <div className="checkin" style={{ marginRight: '10px' }}>
-              <p className="checkin-line" />
-              <p className="checkin-title">Check in</p>
-              <p className="checkin-date">22/11/2019</p>
-              <p className="checkin-day">Tuesday</p>
+      <Grid
+        container
+        spacing={0}
+        style={{ padding: matches ? '48px 96px' : '16px', position: 'relative' }}
+      >
+        <Grid item xs={12} sm={6} md={6}>
+          <p className="payment-top-title">Thông tin đặt phòng</p>
+          <p className="payment-sub-title1">4 ngày tại Xinh Homestay</p>
+          <div className="payment-checkin-checkout">
+            <div className="payment-checkin" style={{ marginRight: '10px' }}>
+              <p className="payment-checkin-line" />
+              <p className="payment-checkin-title">Check in</p>
+              <p className="payment-checkin-date">22/11/2019</p>
+              <p className="payment-checkin-day">Thứ 2</p>
             </div>
-            <div className="checkin">
-              <p className="checkin-line" style={{ backgroundColor: '#C2000C' }} />
-              <p className="checkin-title">Check out</p>
-              <p className="checkin-date">22/11/2019</p>
-              <p className="checkin-day">Tuesday</p>
+            <div className="payment-checkin">
+              <p className="payment-checkin-line" style={{ backgroundColor: '#27C200' }} />
+              <p className="payment-checkin-title">Check out</p>
+              <p className="payment-checkin-date">25/11/2019</p>
+              <p className="payment-checkin-day">Thứ 5</p>
             </div>
           </div>
-          <p className="sub-title2">Những điều cần chú ý</p>
-          <div className="container-content1">
-            <p className="content1">
-              Bạn sẽ chịu trách nhiệm cho bất kỳ thiệt hại nào đối với tài sản cho thuê do bạn hoặc
-              nhóm của bạn gây ra trong thời gian lưu trú.
+          <p className="payment-sub-title2">Những điều cần chú ý</p>
+          <div className="payment-container-content1">
+            <p className="payment-content1">
+              <p style={{ fontWeight: 'bold', margin: '0px' }}>Trách nhiệm vật chất</p>
+              Khách hàng chịu mọi trách nhiệm thiệt hại về tài sản đã gây ra tại chỗ ở trong thời
+              gian lưu trú.
+            </p>
+            <p className="payment-content1">
+              <p style={{ fontWeight: 'bold', margin: '0px' }}>Nội quy chổ ở</p>
+              Cho phép hút thuốc lá Không khuyến khích mang vật nuôi vào nhà
             </p>
           </div>
-          <p className="sub-title3">Thông tin của bạn</p>
-          <div className="form">
-            <div className="form-field">
-              <p className="title">
+          <p className="payment-sub-title3">Thông tin của bạn</p>
+          <div className="payment-form">
+            <div className="payment-form-field">
+              <p className="payment-title">
                 <span style={{ color: '#EA2F2F' }}>*</span>Họ tên
               </p>
-              <input className="input" value="Thien Chi Vi" />
+              <input className="payment-input" value="Thien Chi Vi" />
             </div>
-            <div className="form-field">
-              <p className="title">
+            <div className="payment-form-field">
+              <p className="payment-title">
                 <span style={{ color: '#EA2F2F' }}>*</span>Email
               </p>
-              <input className="input" value="moemoecf98@gmail.com" />
+              <input className="payment-input" value="moemoecf98@gmail.com" />
             </div>
-            <div className="form-field">
-              <p className="title">
+            <div className="payment-form-field">
+              <p className="payment-title">
                 <span style={{ color: '#EA2F2F' }}>*</span>Số điện thoại
               </p>
-              <input className="input" value="84124545453" />
+              <input className="payment-input" value="84124545453" />
             </div>
           </div>
-          <p className="sub-title4">Mã khuyến mãi</p>
-          <div className="coupon">
-            <input className="input" style={{ width: '50%' }} value="6969" />
-            <input className="button1" type="button" value="ÁP DỤNG" />
+          <p className="payment-sub-title4">Mã giảm giá</p>
+          <div className="payment-coupon">
+            <input
+              className="payment-input"
+              disabled={doCancel}
+              style={
+                doCancel
+                  ? {
+                      backgroundColor: 'rgba(150, 150, 150, 0.2)',
+                      borderColor: 'rgba(150, 150, 150, 0.2)',
+                      width: '50%',
+                    }
+                  : { width: '50%' }
+              }
+              onChange={e => setValue(e.target.value)}
+              value={value}
+            />
+            <input
+              className="payment-button1"
+              type="button"
+              onClick={() => {
+                // eslint-disable-next-line no-unused-expressions
+                doCancel && setValue('');
+                setDoCancel(!doCancel);
+              }}
+              value={doCancel ? 'LOẠI BỎ' : 'ÁP DỤNG'}
+            />
           </div>
         </Grid>
         <Grid item xs={0} sm={2} md={2} />
-        <Grid item xs={12} sm={5} md={5} className="right-section">
-          <div className="avatar-section">
+        <Grid item xs={12} sm={4} md={4} className="payment-right-section" style={fixedStyle}>
+          <div className="payment-avatar-section">
             <div>
-              <p className="homestay-name">Xinh Homestay</p>
+              <p className="payment-homestay-name">Xinh Homestay</p>
               <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                 <LocationOnOutlinedIcon style={{ color: '#DADADA', fontSize: '16px' }} />
-                <span className="location">Biên Hòa, Đồng Nai</span>
+                <span className="payment-location">Biên Hòa, Đồng Nai</span>
               </div>
             </div>
             <div>
               <img
+                style={{ borderRadius: '4px' }}
                 alt="logo"
                 height="90"
-                width="90"
-                src="https://images.unsplash.com/photo-1503431128871-cd250803fa41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                width="120"
+                src="https://images.unsplash.com/photo-1521184353961-da28cce0de77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
               />
             </div>
           </div>
-          <div className="customer-section">
+          <div className="payment-customer-section">
             <div
               style={{
                 display: 'flex',
@@ -108,7 +149,7 @@ const Payment = () => {
               }}
             >
               <DateRangeIcon style={{ color: '#DADADA', fontSize: '16px', marginRight: '4px' }} />
-              <span className="daterange">4 đêm • 22/11/2019 - 26/11/2019</span>
+              <span className="payment-daterange">4 đêm • 22/11/2019 - 26/11/2019</span>
             </div>
             <div
               style={{
@@ -121,7 +162,7 @@ const Payment = () => {
               <PersonOutlineOutlinedIcon
                 style={{ color: '#DADADA', fontSize: '16px', marginRight: '4px' }}
               />
-              <span className="people">4 người</span>
+              <span className="payment-people">4 người</span>
             </div>
             <div
               style={{
@@ -134,39 +175,41 @@ const Payment = () => {
               <WarningOutlinedIcon
                 style={{ color: '#DADADA', fontSize: '16px', marginRight: '4px' }}
               />
-              <span className="daterange">Không vật nuôi, không hút thuốc</span>
+              <span className="payment-daterange">Không vật nuôi, không hút thuốc</span>
             </div>
           </div>
-          <div className="fee-section">
-            <div className="fee-item">
-              <p className="fee-name">Chi phí thuê 4 đêm</p>
-              <p className="fee-price" style={{ fontWeight: 600 }}>
+          <div className="payment-fee-section">
+            <div className="payment-fee-item">
+              <p className="payment-fee-name">Chi phí thuê 4 đêm</p>
+              <p className="payment-fee-price" style={{ fontWeight: 600 }}>
                 15 000đ
               </p>
             </div>
-            <div className="fee-item">
-              <p className="fee-name">Dọn dẹp</p>
-              <p className="fee-price">1 000đ</p>
+            <div className="payment-fee-item">
+              <p className="payment-fee-name">Dọn dẹp</p>
+              <p className="payment-fee-price">1 000đ</p>
             </div>
-            <div className="fee-item">
-              <p className="fee-name">Ăn trưa</p>
-              <p className="fee-price">12 000đ</p>
+            <div className="payment-fee-item">
+              <p className="payment-fee-name">Ăn trưa</p>
+              <p className="payment-fee-price">12 000đ</p>
             </div>
-            <div className="fee-item">
-              <p className="fee-name">Nước</p>
-              <p className="fee-price">200đ</p>
+            <div className="payment-fee-item">
+              <p className="payment-fee-name">Nước</p>
+              <p className="payment-fee-price">200đ</p>
             </div>
-            <div className="fee-item">
-              <p className="fee-name" style={{ fontWeight: 700 }}>
+            <div className="payment-fee-item">
+              <p className="payment-fee-name" style={{ fontWeight: 700 }}>
                 Toàn bộ chi phí
               </p>
-              <p className="fee-price" style={{ fontWeight: 700 }}>
+              <p className="payment-fee-price" style={{ fontWeight: 700 }}>
                 28 200đ
               </p>
             </div>
           </div>
-          <p className="rule">Chính sách hủy</p>
-          <p className="rule">
+          <p className="payment-rule" style={{ fontWeight: 'bold' }}>
+            Chính sách hủy
+          </p>
+          <p className="payment-rule">
             Linh hoạt : Khách sẽ được hoàn trả lại tiền đầy đủ nếu huỷ trong vòng 48 giờ sau khi đặt
             phòng và ít nhất 24 giờ trước khi nhận phòng. Nếu khách hàng không thoả được các điểm
             nêu trên sẽ không được hoàn lại phí dịch vụ.
@@ -175,10 +218,10 @@ const Payment = () => {
       </Grid>
       <input
         style={{
-          marginLeft: matches ? '96px' : '15px',
-          marginBottom: matches ? '48px' : '15px',
+          marginLeft: matches ? '96px' : '16px',
+          marginBottom: matches ? '48px' : '16px',
         }}
-        className="button2"
+        className="payment-button2"
         type="button"
         value="ĐẶT NGAY"
         onClick={() => navigate('/invoice')}

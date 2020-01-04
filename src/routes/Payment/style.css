@@ -1,11 +1,12 @@
-.right-section {
-  border: 1px solid #b3b3b3;
+.payment-right-section {
+  border: 1px solid rgba(150, 150, 150, 0.4);
+  border-radius: 4px;
   box-sizing: border-box;
   padding: 26px 34px;
   height: fit-content;
 }
 
-.title {
+.payment-top-title {
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
@@ -18,7 +19,7 @@
   color: #000000;
 }
 
-.sub-title1 {
+.payment-sub-title1 {
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -31,19 +32,19 @@
   color: #000000;
 }
 
-.sub-title2 {
+.payment-sub-title2 {
   font-style: normal;
   font-weight: normal;
-  font-size: 22px;
+  font-size: 24px;
   line-height: 31px;
   display: flex;
   align-items: center;
   margin-top: 17px;
   margin-bottom: 9px;
-  color: #000000;
+  color: rgba(43, 43, 43, 0.6);
 }
 
-.sub-title3 {
+.payment-sub-title3 {
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -55,7 +56,7 @@
   color: #000000;
 }
 
-.sub-title4 {
+.payment-sub-title4 {
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -68,29 +69,27 @@
   color: #000000;
 }
 
-.container-content1 {
-  background: rgba(196, 196, 196, 0.2);
-  height: 133px;
+.payment-container-content1 {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  background: rgba(196, 196, 196, 0.2);
+  display: flex;
+  justify-items: center;
+  padding: 20px 15px;
 }
 
-.content1 {
-  font-style: normal;
-  font-weight: normal;
+.payment-content1 {
   font-size: 18px;
   line-height: 23px;
-  display: flex;
-  align-items: center;
-  color: #000000;
+  color: rgba(43, 43, 43, 0.6);
 }
 
-.checkin-checkout {
+.payment-checkin-checkout {
   display: flex;
   flex-direction: row;
 }
 
-.checkin {
+.payment-checkin {
   background: #ffffff;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
   display: flex;
@@ -101,15 +100,15 @@
   padding-left: 4px;
 }
 
-.checkin-line {
+.payment-checkin-line {
   background-color: #0008c2;
-  height: 1px;
+  height: 2px;
   width: 72.14px;
   margin-top: 8px;
   margin-bottom: 6px;
 }
 
-.checkin-title {
+.payment-checkin-title {
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
@@ -119,7 +118,7 @@
   color: #000000;
 }
 
-.checkin-date {
+.payment-checkin-date {
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -128,7 +127,7 @@
   color: #000000;
 }
 
-.checkin-day {
+.payment-checkin-day {
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
@@ -138,15 +137,15 @@
   color: #000000;
 }
 
-.form {
+.payment-form {
   margin-bottom: 46px;
 }
 
-.form-field {
+.payment-form-field {
   margin-bottom: 18px;
 }
 
-.title {
+.payment-title {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -155,10 +154,11 @@
   align-items: center;
 }
 
-.input {
-  padding: 9px 12px;
+.payment-input {
+  padding: 5px 15px;
   background: #ffffff;
-  border: 1px solid #000000;
+  border: 1px solid #969696;
+  border-radius: 4px;
   box-sizing: border-box;
   font-style: normal;
   font-weight: normal;
@@ -169,13 +169,13 @@
   width: 100%;
 }
 
-.coupon {
+.payment-coupon {
   display: flex;
   margin-bottom: 46px;
   position: relative;
 }
 
-.button1 {
+.payment-button1 {
   padding: 10px;
   right: 0;
   position: absolute;
@@ -188,9 +188,10 @@
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
+  cursor: pointer;
 }
 
-.button2 {
+.payment-button2 {
   padding: 10px;
   background: #fc6c85;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
@@ -203,10 +204,10 @@
   color: #ffffff;
 }
 
-.button2:hover {
+.payment-button2:hover {
   cursor: pointer;
 }
-.location {
+.payment-location {
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
@@ -214,7 +215,7 @@
   color: #000000;
 }
 
-.avatar-section {
+.payment-avatar-section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -223,7 +224,7 @@
   margin-bottom: 7px;
 }
 
-.homestay-name {
+.payment-homestay-name {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -233,13 +234,13 @@
   color: #000000;
 }
 
-.customer-section {
+.payment-customer-section {
   border-bottom: 1px solid #b3b3b3;
   padding-bottom: 12px;
   margin-bottom: 7px;
 }
 
-.daterange {
+.payment-daterange {
   font-style: normal;
   font-weight: 300;
   font-size: 10px;
@@ -247,7 +248,7 @@
   color: #000000;
 }
 
-.people {
+.payment-people {
   font-style: normal;
   font-weight: 600;
   font-size: 10px;
@@ -255,7 +256,7 @@
   color: #000000;
 }
 
-.fee-section {
+.payment-fee-section {
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #b3b3b3;
@@ -263,7 +264,7 @@
   margin-bottom: 7px;
 }
 
-.fee-item {
+.payment-fee-item {
   flex: 1;
   display: flex;
   flex-direction: row;
@@ -272,7 +273,7 @@
   margin-bottom: 7px;
 }
 
-.fee-name {
+.payment-fee-name {
   font-style: normal;
   font-weight: 300;
   font-size: 10px;
@@ -280,7 +281,7 @@
   color: #000000;
 }
 
-.fee-price {
+.payment-fee-price {
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
@@ -289,7 +290,7 @@
   color: #000000;
 }
 
-.rule {
+.payment-rule {
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
