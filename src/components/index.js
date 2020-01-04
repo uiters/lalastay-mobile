@@ -17,3 +17,4 @@ export { default as HomestaySimilar } from './HomestaySimilar';
 export { default as ReservationForm } from './FormReservation';
 export { default as DescriptionHomeDetail } from './DescriptionHomeDetail';
 export { default as InformationUserForm } from './FormInformationUser';
+export { default as BottomNavigation } from './BottomNavigation'
