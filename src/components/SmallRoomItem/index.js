@@ -201,7 +201,7 @@ function SmallRoomItem(props) {
           </Box>
           <Box>3 người - 1 phòng</Box>
         </div>
-        <Box fontWeight={600} fontSize={18} style={{ lineHeight: '25px' }}>
+        <Box fontWeight={600} fontSize={18}>
           <Link to="/home-detail">
             <p
               className="showMore"
