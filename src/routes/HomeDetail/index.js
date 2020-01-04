@@ -1,18 +1,20 @@
 import React from 'react';
-import './style.css';
-// import ImageForDetail from 'components/ImageForDetail';
-import { BodyHomedetail, ShowImageForDetail, withLayout } from 'components';
+import { IonContent } from '@ionic/react';
 import { Container } from '@material-ui/core';
+import { BodyHomedetail, ShowImageForDetail } from 'components';
+import Header from './components/Header';
+import './style.css';
 
 function Homedetail() {
   return (
-    <div>
+    <IonContent>
+      <Header title='DIAMOND 💎 HOMESTAY SAPA' />
       <ShowImageForDetail />
       <Container>
         <BodyHomedetail />
       </Container>
-    </div>
+    </IonContent>
   );
 }
 
-export default withLayout(Homedetail);
+export default Homedetail;

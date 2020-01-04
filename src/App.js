@@ -4,7 +4,6 @@ import { IonApp } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import {
   Home,
-  NotFound,
   HomeDetail,
   HomeByArea,
   Payment,
@@ -12,7 +11,6 @@ import {
   CompareHomestay,
   ComingSoon
 } from 'routes';
-import { BottomNavigation } from 'components';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -44,9 +42,8 @@ const App = () => (
         <Route path="/payment" component={Payment} />
         <Route path="/invoice" component={Invoice} />
         <Route path="/coming-soon" component={ComingSoon} />
-        <Route component={NotFound} />
+        <Route component={ComingSoon} />
       </Switch>
-      <BottomNavigation />
     </IonReactRouter>
   </IonApp>
 );
