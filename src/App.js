@@ -11,6 +11,7 @@ import {
   Invoice,
   CompareHomestay
 } from 'routes';
+import { BottomNavigation } from 'components';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -32,19 +33,22 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 
 const App = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route path="/" component={Home} exact={true} />
-        <Route path="/home-detail" component={HomeDetail} />
-        <Route path="/home-by-area" component={HomeByArea} />
-        <Route path="/compare-homestay" component={CompareHomestay} />
-        <Route path="/payment" component={Payment} />
-        <Route path="/invoice" component={Invoice} />
-        <Route component={NotFound} />
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
+  <>
+    <IonApp>
+      <IonReactRouter>
+        <IonRouterOutlet>
+          <Route path="/" component={Home} exact={true} />
+          <Route path="/home-detail" component={HomeDetail} />
+          <Route path="/home-by-area" component={HomeByArea} />
+          <Route path="/compare-homestay" component={CompareHomestay} />
+          <Route path="/payment" component={Payment} />
+          <Route path="/invoice" component={Invoice} />
+          <Route component={NotFound} />
+        </IonRouterOutlet>
+      </IonReactRouter>
+    </IonApp>
+    <BottomNavigation />
+  </>
 );
 
 export default App;
