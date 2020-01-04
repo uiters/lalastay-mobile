@@ -9,7 +9,7 @@
   width: 98%;
   /* max-height: 380px;
   min-height: 230px; */
-  height: 350px;
+  height: 330px;
   /* height: 100%;
 width: 100%; */
   margin: 5px;
@@ -121,7 +121,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
   display: flex;
   /* padding: 4px; */
   border-radius: 4px;
-  height: 64%;
+  height: 60%;
 }
 
 .swiper-button-next:after,
@@ -147,7 +147,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
 }
 
 .province {
-  background-image: linear-gradient(90deg, #fad7a1 0.58%, #e96d71 100.58%);
+  background-image: linear-gradient(270deg, #E96D71 -0.56%, #FAD7A1 100%);;
   border-radius: 10px;
   padding: 3px 6px;
   color: #ffffff;
