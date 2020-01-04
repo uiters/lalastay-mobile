@@ -18,3 +18,5 @@ export { default as ReservationForm } from './FormReservation';
 export { default as DescriptionHomeDetail } from './DescriptionHomeDetail';
 export { default as InformationUserForm } from './FormInformationUser';
 export { default as BottomNavigation } from './BottomNavigation'
+export { default as Header } from './Header';
+export { default as Breadcrumb } from './Breadcrumb';
