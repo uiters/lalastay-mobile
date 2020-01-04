@@ -1,4 +1,5 @@
 import React from 'react';
+import { IonContent } from '@ionic/react'
 import { Navbar } from 'components';
 
 function withLayout(WrappedComponent) {
@@ -7,7 +8,9 @@ function withLayout(WrappedComponent) {
       return (
         <>
           <Navbar />
-          <WrappedComponent {...this.props} />
+          <IonContent>
+            <WrappedComponent {...this.props} />
+          </IonContent>
         </>
       );
     }

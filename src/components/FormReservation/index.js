@@ -1,10 +1,11 @@
 import React from 'react';
 import { Box } from '@material-ui/core';
-import { navigate } from '@reach/router';
+import { useHistory } from 'react-router-dom';
 import DateRangeIcon from '@material-ui/icons/DateRange';
 import './style.css';
 
 function InformationUserForm() {
+  const history = useHistory()
   return (
     <div style={{ position: 'relative' }}>
       <div className="conatiner-reservation">
@@ -48,7 +49,7 @@ function InformationUserForm() {
             </li>
             <li className="magin-15">
               <div>
-                <button className="book-room" type="button" onClick={() => navigate('/payment')}>
+                <button className="book-room" type="button" onClick={() => history.push('/payment')}>
                   ĐẶT PHÒNG
                 </button>
               </div>

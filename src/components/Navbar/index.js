@@ -13,7 +13,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import './style.css';
 import RoomIcon from '@material-ui/icons/Room';
-import { navigate } from '@reach/router';
+import { useHistory } from 'react-router-dom';
 import logo from '../../assets/logo.jpg';
 
 const useStyles = makeStyles(() => ({
@@ -79,69 +79,8 @@ const suggestions = [
   { label: 'Bến Tre' },
 ];
 
-function renderInputComponent(inputProps) {
-  const { classes, inputRef = () => {}, ref, ...other } = inputProps;
-
-  return (
-    <TextField
-      fullWidth
-      InputProps={{
-        inputRef: node => {
-          ref(node);
-          inputRef(node);
-        },
-        classes: {
-          input: classes.input,
-        },
-        disableUnderline: true,
-      }}
-      {...other}
-    />
-  );
-}
-
-function renderSuggestion(suggestion, { query, isHighlighted }) {
-  const matches = match(suggestion.label, query);
-  const parts = parse(suggestion.label, matches);
-
-  return (
-    <MenuItem selected={isHighlighted} component="div" onClick={() => navigate('/home-by-area')}>
-      <div>
-        <RoomIcon style={{ color: '#FC6C85', fontSize: '18px', marginRight: '10px' }} />
-        {parts.map(part => (
-          <span key={part.text} style={{ fontWeight: part.highlight ? 500 : 400 }}>
-            {part.text}
-          </span>
-        ))}
-      </div>
-    </MenuItem>
-  );
-}
-
-function getSuggestions(value) {
-  const inputValue = deburr(value.trim()).toLowerCase();
-  const inputLength = inputValue.length;
-  let count = 0;
-
-  return inputLength === 0
-    ? []
-    : suggestions.filter(suggestion => {
-        const keep =
-          count < 5 && suggestion.label.slice(0, inputLength).toLowerCase() === inputValue;
-
-        if (keep) {
-          count += 1;
-        }
-
-        return keep;
-      });
-}
-
-function getSuggestionValue(suggestion) {
-  return suggestion.label;
-}
-
 function Navbar() {
+  const history = useHistory();
   const classes = useStyles();
   // const opacity = props.opacity;
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -196,6 +135,70 @@ function Navbar() {
     renderSuggestion,
   };
 
+
+
+  function renderInputComponent(inputProps) {
+    const { classes, inputRef = () => { }, ref, ...other } = inputProps;
+
+    return (
+      <TextField
+        fullWidth
+        InputProps={{
+          inputRef: node => {
+            ref(node);
+            inputRef(node);
+          },
+          classes: {
+            input: classes.input,
+          },
+          disableUnderline: true,
+        }}
+        {...other}
+      />
+    );
+  }
+
+  function getSuggestions(value) {
+    const inputValue = deburr(value.trim()).toLowerCase();
+    const inputLength = inputValue.length;
+    let count = 0;
+
+    return inputLength === 0
+      ? []
+      : suggestions.filter(suggestion => {
+        const keep =
+          count < 5 && suggestion.label.slice(0, inputLength).toLowerCase() === inputValue;
+
+        if (keep) {
+          count += 1;
+        }
+
+        return keep;
+      });
+  }
+
+  function getSuggestionValue(suggestion) {
+    return suggestion.label;
+  }
+
+  function renderSuggestion(suggestion, { query, isHighlighted }) {
+    const matches = match(suggestion.label, query);
+    const parts = parse(suggestion.label, matches);
+
+    return (
+      <MenuItem selected={isHighlighted} component="div" onClick={() => history.push('/home-by-area')}>
+        <div>
+          <RoomIcon style={{ color: '#FC6C85', fontSize: '18px', marginRight: '10px' }} />
+          {parts.map(part => (
+            <span key={part.text} style={{ fontWeight: part.highlight ? 500 : 400 }}>
+              {part.text}
+            </span>
+          ))}
+        </div>
+      </MenuItem>
+    );
+  }
+
   return (
     <div>
       <nav className="menu" style={{ background: '#FFFFFF' }}>
@@ -207,7 +210,7 @@ function Navbar() {
                   src={logo}
                   className={classes.logoImg}
                   alt="img"
-                  onClick={() => navigate('/')}
+                  onClick={() => history.push('/')}
                 />
               </Box>
               <Box display="inline" className="search-container">

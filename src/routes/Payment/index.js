@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import {IonContent} from '@ionic/react'
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Grid from '@material-ui/core/Grid';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import DateRangeIcon from '@material-ui/icons/DateRange';
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import WarningOutlinedIcon from '@material-ui/icons/WarningOutlined';
-import { navigate } from '@reach/router';
+import { useHistory } from 'react-router-dom'
 import Breadcrumb from './components/Breadcrumb';
 import './style.css';
 
 const Payment = () => {
+  const history = useHistory();
   const [value, setValue] = useState('');
   const [doCancel, setDoCancel] = useState(false);
   useEffect(() => {
@@ -28,12 +30,12 @@ const Payment = () => {
   const matches = useMediaQuery('(min-width:768px)');
   const fixedStyle = matches
     ? {
-        position: 'fixed',
-        right: '96px',
-      }
+      position: 'fixed',
+      right: '96px',
+    }
     : {};
   return (
-    <>
+    <IonContent>
       <Breadcrumb />
       <Grid
         container
@@ -98,10 +100,10 @@ const Payment = () => {
               style={
                 doCancel
                   ? {
-                      backgroundColor: 'rgba(150, 150, 150, 0.2)',
-                      borderColor: 'rgba(150, 150, 150, 0.2)',
-                      width: '50%',
-                    }
+                    backgroundColor: 'rgba(150, 150, 150, 0.2)',
+                    borderColor: 'rgba(150, 150, 150, 0.2)',
+                    width: '50%',
+                  }
                   : { width: '50%' }
               }
               onChange={e => setValue(e.target.value)}
@@ -224,9 +226,9 @@ const Payment = () => {
         className="payment-button2"
         type="button"
         value="ĐẶT NGAY"
-        onClick={() => navigate('/invoice')}
+        onClick={() => history.push('/invoice')}
       />
-    </>
+    </IonContent>
   );
 };
 

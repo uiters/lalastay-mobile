@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Breadcrumb, Icon, Typography, Spin } from 'antd';
-import { Link } from '@reach/router';
+import { Link } from 'react-router-dom';
 import { withLayout } from 'components';
 import { fetchAction, clearAction } from 'models/repo/actions';
 import './style.css';
