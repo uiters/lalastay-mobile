@@ -1,5 +1,4 @@
 import React from 'react';
-import _ from 'lodash';
 import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
 import { Color } from 'config';
@@ -12,7 +11,7 @@ const Container = styled.div`
   display: flex;
   align-item: center;
   height: 57px;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1), 0 1px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 6px rgba(43, 43, 43, 0.2);
   background-color: #fff;
 `;
 const HeaderTitle = styled.p`
