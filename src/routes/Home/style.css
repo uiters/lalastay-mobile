@@ -1,11 +1,11 @@
-@media (max-width: 767px) {
+@media (min-width: 376px) and (max-width: 767px) {
   .video {
     display: none !important;
     margin: 10px;
   }
   .img-introduce {
     background-image: url('../../assets/hoian.png');
-    height: 400px;
+    height: 350px;
     object-fit: cover;
     display: block !important;
     border-radius: 6px !important;
@@ -15,15 +15,25 @@
   }
 }
 
-@media (min-width: 376px) {
+@media (max-width: 375px) {
   .video {
-    display: block;
+    display: none !important;
   }
   .img-introduce {
-    display: none;
+    background-image: url('../../assets/hoian.png');
+    height: 300px;
+    object-fit: cover;
+    display: block !important;
+    border-radius: 6px !important;
+    margin: 15px;
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
 }
 
+.img-introduce {
+  display: none ;
+}
 .title-introduce {
   text-align: center;
   font-size: 24px;

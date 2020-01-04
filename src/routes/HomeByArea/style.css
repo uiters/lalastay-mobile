@@ -26,7 +26,7 @@
   }
 }
 
-@media (min-width: 376px) and (max-width:767px) {
+@media (min-width: 376px) and (max-width: 767px) {
   .container-room-view {
     width: 50% !important;
   }
@@ -34,10 +34,9 @@
     height: 62% !important;
   }
   .container-room-item {
-    height: 250px !important;
+    height: 260px !important;
   }
-  .check-show-sale{
+  .check-show-sale {
     display: none !important;
   }
-
 }

@@ -75,7 +75,9 @@ function SmallRoomItem(props) {
               src={imgs ? imgs[Math.floor(Math.random() * 8)] : smallRoom}
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
-              onClick={() => navigate('/home-detail')}
+              onClick={() => {
+                if (props.width !== 'xs' || props.width !== 'sm') navigate('/home-detail');
+              }}
             />
           </div>
           <div>
@@ -83,7 +85,9 @@ function SmallRoomItem(props) {
               src={imgs ? imgs[Math.floor(Math.random() * 8)] : smallRoom}
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
-              onClick={() => navigate('/home-detail')}
+              onClick={() => {
+                if (props.width !== 'xs' || props.width !== 'sm') navigate('/home-detail');
+              }}
             />
           </div>
           <div>
@@ -91,7 +95,9 @@ function SmallRoomItem(props) {
               src={imgs ? imgs[Math.floor(Math.random() * 8)] : smallRoom}
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
-              onClick={() => navigate('/home-detail')}
+              onClick={() => {
+                if (props.width !== 'xs' || props.width !== 'sm') navigate('/home-detail');
+              }}
             />
           </div>
           <div>
@@ -99,7 +105,9 @@ function SmallRoomItem(props) {
               src={imgs ? imgs[Math.floor(Math.random() * 8)] : smallRoom}
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
-              onClick={() => navigate('/home-detail')}
+              onClick={() => {
+                if (props.width !== 'xs' || props.width !== 'sm') navigate('/home-detail');
+              }}
             />
           </div>
           <div>
@@ -107,7 +115,9 @@ function SmallRoomItem(props) {
               src={smallRoom}
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
-              onClick={() => navigate('/home-detail')}
+              onClick={() => {
+                if (props.width !== 'xs' || props.width !== 'sm') navigate('/home-detail');
+              }}
             />
           </div>
           <div>
@@ -115,7 +125,9 @@ function SmallRoomItem(props) {
               src={imgs ? imgs[Math.floor(Math.random() * 8)] : smallRoom}
               style={{ width: '100%', height: '100%' }}
               alt="img"
-              onClick={() => navigate('/home-detail')}
+              onClick={() => {
+                if (props.width !== 'xs' || props.width !== 'sm') navigate('/home-detail');
+              }}
             />
           </div>
           <div>
@@ -123,7 +135,9 @@ function SmallRoomItem(props) {
               src={imgs ? imgs[Math.floor(Math.random() * 8)] : smallRoom}
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
-              onClick={() => navigate('/home-detail')}
+              onClick={() => {
+                if (props.width !== 'xs' || props.width !== 'sm') navigate('/home-detail');
+              }}
             />
           </div>
         </Swiper>
