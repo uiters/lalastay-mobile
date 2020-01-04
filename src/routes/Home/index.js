@@ -6,6 +6,7 @@ import './style.css';
 
 function Home() {
   return (
+
     <div style={{ position: 'relative' }}>
       <div
         className="video"

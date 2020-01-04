@@ -3,7 +3,7 @@
 /* eslint-disable react/self-closing-comp */
 import React from 'react';
 import { Box } from '@material-ui/core';
-import { navigate } from '@reach/router';
+import { useHistory } from 'react-router-dom'
 import { makeStyles } from '@material-ui/styles';
 import './style.css';
 
@@ -19,6 +19,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 function CityItem(props) {
+  const history = useHistory();
   const classes = useStyles();
   return (
     <div className="container-city-item">
@@ -31,7 +32,7 @@ function CityItem(props) {
           position: 'absolute',
           objectFit: 'cover',
         }}
-        onClick={() => navigate('/home-by-area')}
+        onClick={() => history.push('/home-by-area')}
         src={props.image}
       />
       <div className={classes.content}>

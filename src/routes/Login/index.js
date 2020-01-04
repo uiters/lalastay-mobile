@@ -1,5 +1,5 @@
 import React from 'react';
-import { navigate } from '@reach/router';
+import { useHistory } from 'react-router-dom';
 import { Form, Icon, Input, Button, Checkbox, Typography } from 'antd';
 import ReactCanvasNest from 'react-canvas-nest';
 import './style.css';
@@ -7,9 +7,10 @@ import './style.css';
 const { Text } = Typography;
 
 function Login({ form }) {
+  const history = useHistory();
   function handleSubmit(event) {
     event.preventDefault();
-    form.validateFields().then(() => navigate('/'));
+    form.validateFields().then(() => history.push('/'));
   }
   const { getFieldDecorator } = form;
 

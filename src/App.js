@@ -1,8 +1,16 @@
 import React from 'react';
-import { Redirect, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Home from './routes/Home';
+import {
+  Home,
+  NotFound,
+  HomeDetail,
+  HomeByArea,
+  Payment,
+  Invoice,
+  CompareHomestay
+} from 'routes';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -27,8 +35,13 @@ const App = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route path="/home" component={Home} exact={true} />
-        <Route exact path="/" render={() => <Redirect to="/home" />} />
+        <Route path="/" component={Home} exact={true} />
+        <Route path="/home-detail" component={HomeDetail} />
+        <Route path="/home-by-area" component={HomeByArea} />
+        <Route path="/compare-homestay" component={CompareHomestay} />
+        <Route path="/payment" component={Payment} />
+        <Route path="/invoice" component={Invoice} />
+        <Route component={NotFound} />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>

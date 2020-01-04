@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-boolean-value */
 import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom'
 import { InputSearchForCompare, withLayout } from 'components';
 import Swiper from 'react-id-swiper';
 import { Box, Container, Grid } from '@material-ui/core';
-import { navigate } from '@reach/router';
 import WifiIcon from '@material-ui/icons/Wifi';
 import StarIcon from '@material-ui/icons/Star';
 import ss1 from '../../assets/ss1.jpg';
@@ -23,6 +23,8 @@ import parking from '../../assets/parking.png';
 import './style.css';
 
 function CompareHomestaty() {
+  const history = useHistory();
+
   const [gallerySwiper, setGallerySwiper] = useState(null);
   const [thumbnailSwiper, setThumbnailSwiper] = useState(null);
   const [_gallerySwiper, setGallerySwiper_] = useState(null);
@@ -161,7 +163,7 @@ function CompareHomestaty() {
             <button
               className="variant-button"
               type="button"
-              onClick={() => navigate('/home-detail')}
+              onClick={() => history.push('/home-detail')}
             >
               CHI TIẾT {'>>'}
             </button>
@@ -234,7 +236,7 @@ function CompareHomestaty() {
                 <button
                   className="variant-button"
                   type="button"
-                  onClick={() => navigate('/home-detail')}
+                  onClick={() => history.push('/home-detail')}
                 >
                   CHI TIẾT {'>>'}
                 </button>
@@ -454,7 +456,7 @@ function CompareHomestaty() {
           <button
             className="variant-button datcho"
             type="button"
-            onClick={() => navigate('/payment')}
+            onClick={() => history.push('/payment')}
           >
             ĐẶT NGAY
           </button>
@@ -463,7 +465,7 @@ function CompareHomestaty() {
           <button
             className="variant-button datcho"
             type="button"
-            onClick={() => navigate('/payment')}
+            onClick={() => history.push('/payment')}
           >
             ĐẶT NGAY
           </button>

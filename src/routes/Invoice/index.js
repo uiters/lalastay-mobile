@@ -1,14 +1,16 @@
 import React, { useEffect } from 'react';
+import { IonContent } from '@ionic/react';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import DateRangeIcon from '@material-ui/icons/DateRange';
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import WarningOutlinedIcon from '@material-ui/icons/WarningOutlined';
-import { navigate } from '@reach/router';
+import { useHistory } from 'react-router-dom'
 import Breadcrumb from './components/Breadcrumb';
 import './style.css';
 
 const Payment = () => {
+  const history = useHistory();
   useEffect(() => {
     try {
       // trying to use new API - https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
@@ -24,7 +26,7 @@ const Payment = () => {
   }, []);
   const matches = useMediaQuery('(min-width:768px)');
   return (
-    <>
+    <IonContent>
       <Breadcrumb />
       <div className="invoice-container" style={{ padding: matches ? '48px 96px' : '16px' }}>
         <p className="invoice-title">Hóa đơn đặt phòng</p>
@@ -128,12 +130,12 @@ const Payment = () => {
             className="invoice-button2"
             type="button"
             value="TRANG CHỦ"
-            onClick={() => navigate('/')}
+            onClick={() => history.push('/')}
           />
           <input className="invoice-button1" type="button" value="TIẾP TỤC XEM" />
         </div>
       </div>
-    </>
+    </IonContent>
   );
 };
 

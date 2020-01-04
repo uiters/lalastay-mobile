@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { Box, Grid } from '@material-ui/core';
 import StarIcon from '@material-ui/icons/Star';
 import Swiper from 'react-id-swiper';
-import { Link, navigate } from '@reach/router';
+import { Link, useHistory } from 'react-router-dom';
 import PersonIcon from '@material-ui/icons/Person';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
@@ -23,6 +23,7 @@ import ss8 from '../../assets/ss8.jpg';
 import ss9 from '../../assets/ss9.jpg';
 
 function SmallRoomItem(props) {
+  const history = useHistory();
   useEffect(() => {
     try {
       // trying to use new API - https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
@@ -76,7 +77,7 @@ function SmallRoomItem(props) {
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
               onClick={() => {
-                if (props.width !== 'xs' || props.width !== 'sm') navigate('/home-detail');
+                if (props.width !== 'xs' || props.width !== 'sm') history.push('/home-detail');
               }}
             />
           </div>
@@ -86,7 +87,7 @@ function SmallRoomItem(props) {
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
               onClick={() => {
-                if (props.width !== 'xs' || props.width !== 'sm') navigate('/home-detail');
+                if (props.width !== 'xs' || props.width !== 'sm') history.push('/home-detail');
               }}
             />
           </div>
@@ -96,7 +97,7 @@ function SmallRoomItem(props) {
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
               onClick={() => {
-                if (props.width !== 'xs' || props.width !== 'sm') navigate('/home-detail');
+                if (props.width !== 'xs' || props.width !== 'sm') history.push('/home-detail');
               }}
             />
           </div>
@@ -106,7 +107,7 @@ function SmallRoomItem(props) {
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
               onClick={() => {
-                if (props.width !== 'xs' || props.width !== 'sm') navigate('/home-detail');
+                if (props.width !== 'xs' || props.width !== 'sm') history.push('/home-detail');
               }}
             />
           </div>
@@ -116,7 +117,7 @@ function SmallRoomItem(props) {
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
               onClick={() => {
-                if (props.width !== 'xs' || props.width !== 'sm') navigate('/home-detail');
+                if (props.width !== 'xs' || props.width !== 'sm') history.push('/home-detail');
               }}
             />
           </div>
@@ -126,7 +127,7 @@ function SmallRoomItem(props) {
               style={{ width: '100%', height: '100%' }}
               alt="img"
               onClick={() => {
-                if (props.width !== 'xs' || props.width !== 'sm') navigate('/home-detail');
+                if (props.width !== 'xs' || props.width !== 'sm') history.push('/home-detail');
               }}
             />
           </div>
@@ -136,7 +137,7 @@ function SmallRoomItem(props) {
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
               onClick={() => {
-                if (props.width !== 'xs' || props.width !== 'sm') navigate('/home-detail');
+                if (props.width !== 'xs' || props.width !== 'sm') history.push('/home-detail');
               }}
             />
           </div>
@@ -211,7 +212,7 @@ function SmallRoomItem(props) {
           </Link>
         </Box>
         {props.compareShow && (
-          <Box className="compare-function" onClick={() => navigate('/compare-homestay')}>
+          <Box className="compare-function" onClick={() => history.push('/compare-homestay')}>
             So sánh với homestay này
           </Box>
         )}
