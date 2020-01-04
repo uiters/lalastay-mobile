@@ -6,7 +6,7 @@ import DateRangeIcon from '@material-ui/icons/DateRange';
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import WarningOutlinedIcon from '@material-ui/icons/WarningOutlined';
 import { useHistory } from 'react-router-dom'
-import Breadcrumb from './components/Breadcrumb';
+import { Header } from 'components';
 import './style.css';
 
 const Payment = () => {
@@ -27,9 +27,9 @@ const Payment = () => {
   const matches = useMediaQuery('(min-width:768px)');
   return (
     <IonContent>
-      <Breadcrumb />
+      <Header title='Hóa đơn đặt phòng' />
       <div className="invoice-container" style={{ padding: matches ? '48px 96px' : '16px' }}>
-        <p className="invoice-title">Hóa đơn đặt phòng</p>
+        <p className="invoice-big-title">Hóa đơn đặt phòng</p>
         <div className="invoice-left-section">
           <div className="invoice-avatar-section">
             <div>

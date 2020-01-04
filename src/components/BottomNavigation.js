@@ -11,10 +11,10 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 const useStyles = makeStyles({
   root: {
     width: '100%',
-    position: 'fixed',
+    position: 'sticky',
     bottom: 0,
     zIndex: 9999,
-    marginTop: '56px',
+    boxShadow: '0 1px 6px rgba(0, 0, 0, 0.1), 0 1px 6px rgba(0, 0, 0, 0.2)',
     '&$selected': {
       color: '#FC6C85',
     }
