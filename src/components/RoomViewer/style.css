@@ -16,12 +16,9 @@
     height: 55% !important;
   }
   .container-room-item {
-    height: 250px !important;
+    height: 320px !important;
   }
   .check-show-sale {
     display: none !important;
-  }
-  .showMore {
-    -webkit-line-clamp: 1 !important;
   }
 }

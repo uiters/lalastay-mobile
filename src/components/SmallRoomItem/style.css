@@ -179,6 +179,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
 
 
 .showMore {
+  margin-top: 10px;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical !important;
   overflow: hidden !important;

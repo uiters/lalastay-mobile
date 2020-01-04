@@ -12,9 +12,10 @@ export { default as SmallRoomItemCompare } from './SmallRoomItemCompare';
 export { default as ShowImageForDetail } from './ShowImageForDetail';
 export { default as SearchItemForCompare } from './SearchItemForCompare';
 export { default as InputSearchForCompare } from './InputSearchForCompare';
-export { default as Footer } from './Footer';
 export { default as HomestaySimilar } from './HomestaySimilar';
 export { default as ReservationForm } from './FormReservation';
 export { default as DescriptionHomeDetail } from './DescriptionHomeDetail';
 export { default as InformationUserForm } from './FormInformationUser';
 export { default as BottomNavigation } from './BottomNavigation'
+export { default as Header } from './Header';
+export { default as Breadcrumb } from './Breadcrumb';

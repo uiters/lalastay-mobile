@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {IonContent} from '@ionic/react'
+import { IonContent } from '@ionic/react'
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Grid from '@material-ui/core/Grid';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
@@ -7,7 +7,7 @@ import DateRangeIcon from '@material-ui/icons/DateRange';
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import WarningOutlinedIcon from '@material-ui/icons/WarningOutlined';
 import { useHistory } from 'react-router-dom'
-import Breadcrumb from './components/Breadcrumb';
+import { Header } from 'components';
 import './style.css';
 
 const Payment = () => {
@@ -36,7 +36,7 @@ const Payment = () => {
     : {};
   return (
     <IonContent>
-      <Breadcrumb />
+      <Header title="Thông tin đặt phòng" />
       <Grid
         container
         spacing={0}
