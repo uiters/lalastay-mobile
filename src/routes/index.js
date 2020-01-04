@@ -9,3 +9,4 @@ export { default as HomeByArea } from './HomeByArea';
 export { default as CompareHomestay } from './CompareHomestay';
 export { default as Payment } from './Payment';
 export { default as Invoice } from './Invoice';
+export { default as ComingSoon } from './ComingSoon';

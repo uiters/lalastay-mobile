@@ -1,6 +1,6 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet } from '@ionic/react';
+import { Route, Switch } from 'react-router-dom';
+import { IonApp } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import {
   Home,
@@ -9,7 +9,8 @@ import {
   HomeByArea,
   Payment,
   Invoice,
-  CompareHomestay
+  CompareHomestay,
+  ComingSoon
 } from 'routes';
 import { BottomNavigation } from 'components';
 
@@ -33,22 +34,21 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 
 const App = () => (
-  <>
-    <IonApp>
-      <IonReactRouter>
-        <IonRouterOutlet>
-          <Route path="/" component={Home} exact={true} />
-          <Route path="/home-detail" component={HomeDetail} />
-          <Route path="/home-by-area" component={HomeByArea} />
-          <Route path="/compare-homestay" component={CompareHomestay} />
-          <Route path="/payment" component={Payment} />
-          <Route path="/invoice" component={Invoice} />
-          <Route component={NotFound} />
-        </IonRouterOutlet>
-      </IonReactRouter>
-    </IonApp>
-    <BottomNavigation />
-  </>
+  <IonApp>
+    <IonReactRouter>
+      <Switch>
+        <Route path="/" component={Home} exact={true} />
+        <Route path="/home-detail" component={HomeDetail} />
+        <Route path="/home-by-area" component={HomeByArea} />
+        <Route path="/compare-homestay" component={CompareHomestay} />
+        <Route path="/payment" component={Payment} />
+        <Route path="/invoice" component={Invoice} />
+        <Route path="/coming-soon" component={ComingSoon} />
+        <Route component={NotFound} />
+      </Switch>
+      <BottomNavigation />
+    </IonReactRouter>
+  </IonApp>
 );
 
 export default App;

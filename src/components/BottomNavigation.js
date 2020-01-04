@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
@@ -23,7 +24,8 @@ const useStyles = makeStyles({
   },
 });
 
-export default function BottomNav() {
+function BottomNav() {
+  const history = useHistory();
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -36,10 +38,12 @@ export default function BottomNav() {
       showLabels
       className={classes.root}
     >
-      <BottomNavigationAction style={value === 0 ? { color: '#FC6C85' } : {}} label="Trang chủ" icon={<HomeIcon />} />
-      <BottomNavigationAction style={value === 1 ? { color: '#FC6C85' } : {}} label="Khám phá" icon={<ExploreIcon />} />
-      <BottomNavigationAction style={value === 2 ? { color: '#FC6C85' } : {}} label="Lịch sử xem" icon={<HistoryIcon />} />
-      <BottomNavigationAction style={value === 3 ? { color: '#FC6C85' } : {}} label="Tài khoản" icon={<AccountCircleIcon />} />
+      <BottomNavigationAction onClick={() => history.push('/')} style={value === 0 ? { color: '#FC6C85' } : {}} label="Trang chủ" icon={<HomeIcon />} />
+      <BottomNavigationAction onClick={() => history.push('/coming-soon')} style={value === 1 ? { color: '#FC6C85' } : {}} label="Khám phá" icon={<ExploreIcon />} />
+      <BottomNavigationAction onClick={() => history.push('/coming-soon')} style={value === 2 ? { color: '#FC6C85' } : {}} label="Lịch sử xem" icon={<HistoryIcon />} />
+      <BottomNavigationAction onClick={() => history.push('/coming-soon')} style={value === 3 ? { color: '#FC6C85' } : {}} label="Tài khoản" icon={<AccountCircleIcon />} />
     </BottomNavigation>
   );
 }
+
+export default BottomNav;
