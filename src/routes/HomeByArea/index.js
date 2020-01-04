@@ -27,7 +27,7 @@ function HomeByArea() {
     for (let i = 1; i < 53; i++) {
       const index = Math.floor(Math.random() * 7);
       const item = (
-        <Grid item md={3} lg={3} sm={4} key={i} xs={12}>
+        <Grid item md={3} lg={3} sm={4} key={i} className="container-room-view">
           <SmallRoomItem sale={i % 3 === 0 ? true : false} tilte={titles[index]} />
         </Grid>
       );

@@ -32,7 +32,7 @@ function Footer() {
         </Grid>
         <Grid md={6} xs={12} className="container-right">
           <div className="text-footer">
-            <h3 style={{ color: '#F65E39' }}>About Group</h3>
+            <h3 style={{ color: '#999', fontWeight: '600' }}>About Group</h3>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
               has been the industry's standard dummy text ever since the 1500s,x f

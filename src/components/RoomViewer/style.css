@@ -2,21 +2,26 @@
   .container-room-view {
     width: 100% !important;
   }
+  .container-room-item {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    border: none !important;
+  }
 }
 
-@media (min-width: 376px) and (max-width:767px) {
+@media (min-width: 376px) and (max-width: 767px) {
   .container-room-view {
     width: 50% !important;
   }
   .container-img {
-    height: 50% !important;
+    height: 65% !important;
   }
   .container-room-item {
-    height: 280px !important;
+    height: 250px !important;
   }
-  .check-show-sale{
+  .check-show-sale {
     display: none !important;
   }
-
+  .showMore {
+    -webkit-line-clamp: 1 !important;
+  }
 }
-

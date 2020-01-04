@@ -37,6 +37,19 @@ function SmallRoomItem(props) {
     }
   }, []);
   const imgs = [ss1, ss2, ss3, ss4, ss5, ss6, ss7, ss8, ss9];
+  const city = [
+    'Đồng Nai',
+    'Vũng Tàu',
+    'Đà Lạt',
+    'Huế',
+    'Đà Nẵng',
+    'Bình Định',
+    'Phú Yên',
+    'Hà Nội',
+    'Cà Mau',
+    'Bến Tre',
+  ];
+  const index = Math.floor(Math.random() * city.length);
   const params = {
     slidesPerView: 1,
     spaceBetween: 0,
@@ -62,6 +75,7 @@ function SmallRoomItem(props) {
               src={imgs ? imgs[Math.floor(Math.random() * 8)] : smallRoom}
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
+              onClick={() => navigate('/home-detail')}
             />
           </div>
           <div>
@@ -69,6 +83,7 @@ function SmallRoomItem(props) {
               src={imgs ? imgs[Math.floor(Math.random() * 8)] : smallRoom}
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
+              onClick={() => navigate('/home-detail')}
             />
           </div>
           <div>
@@ -76,6 +91,7 @@ function SmallRoomItem(props) {
               src={imgs ? imgs[Math.floor(Math.random() * 8)] : smallRoom}
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
+              onClick={() => navigate('/home-detail')}
             />
           </div>
           <div>
@@ -83,6 +99,7 @@ function SmallRoomItem(props) {
               src={imgs ? imgs[Math.floor(Math.random() * 8)] : smallRoom}
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
+              onClick={() => navigate('/home-detail')}
             />
           </div>
           <div>
@@ -90,6 +107,7 @@ function SmallRoomItem(props) {
               src={smallRoom}
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
+              onClick={() => navigate('/home-detail')}
             />
           </div>
           <div>
@@ -97,6 +115,7 @@ function SmallRoomItem(props) {
               src={imgs ? imgs[Math.floor(Math.random() * 8)] : smallRoom}
               style={{ width: '100%', height: '100%' }}
               alt="img"
+              onClick={() => navigate('/home-detail')}
             />
           </div>
           <div>
@@ -104,11 +123,12 @@ function SmallRoomItem(props) {
               src={imgs ? imgs[Math.floor(Math.random() * 8)] : smallRoom}
               style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
               alt="img"
+              onClick={() => navigate('/home-detail')}
             />
           </div>
         </Swiper>
         <div className="container-top">
-          <div className="province">Đồng Nai</div>
+          <div className="province">{city[index]}</div>
           {props.sale && (
             <div className="sale">
               {/* <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -152,7 +172,7 @@ function SmallRoomItem(props) {
             )}
           </div>
           <div style={{ display: 'flex', alignItems: 'center' }}>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ display: 'flex', alignItems: 'center', marginRight: '5px' }}>
               <StarIcon style={{ color: '#FC6C85', fontSize: '16px' }} />
             </div>
             <div>
@@ -164,7 +184,6 @@ function SmallRoomItem(props) {
           <Box style={{ width: '25px' }}>
             <PersonIcon style={{ color: 'rgba(151,8,204,0.8)', fontSize: '22px' }} />
           </Box>
-
           <Box>3 người - 1 phòng</Box>
         </div>
         <Box fontWeight={600} fontSize={18} style={{ lineHeight: '25px' }}>

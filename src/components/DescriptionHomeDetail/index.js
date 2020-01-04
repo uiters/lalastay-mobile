@@ -76,26 +76,26 @@ function DescriptionHomeDetail() {
         </AppBar>
         <TabPanel value={value} index={0}>
           <div>
-            <Box fontWeight={300} fontSize={18} lineHeight={1.5} marginBottom={2}>
+            <Box fontWeight={300} fontSize={16} lineHeight={1.5} marginBottom={2}>
               Mia Mia toạ lạc tại Bùi Thị Xuân, phường 8, tp Đà Lạt. Quãng đường bạn cần di chuyển
               rất gần để đến trung tâm tthành phố sương mù sầm uất Đà Lạt mộng mơ chỉ mất từ 8 - 13
               phút.
             </Box>
-            <Box fontWeight={300} fontSize={18} lineHeight={1.5} marginBottom={2}>
+            <Box fontWeight={300} fontSize={16} lineHeight={1.5} marginBottom={2}>
               Chúng tôi có chỗ đậu xe ô tô rộng rãi cho quý khách đi tham quan du lịch theo hội,
               nhóm, theo đoàn hay gia đình,...
             </Box>
-            <Box fontWeight={300} fontSize={18} lineHeight={1.5} marginBottom={2}>
+            <Box fontWeight={300} fontSize={16} lineHeight={1.5} marginBottom={2}>
               Phòng ở tại Mia Mia thì vô cùng sạch sẽ, thoáng mát, có nhà vệ sinh riêng. View xung
               quanh rất thoáng, đa số là Villa và những ngôi nhà lồng bao phủ, 1 trong những nét rất
               đặc trưng của Đà Lạt.
             </Box>
-            <Box fontWeight={300} fontSize={18} lineHeight={1.5} marginBottom={2}>
+            <Box fontWeight={300} fontSize={16} lineHeight={1.5} marginBottom={2}>
               Mia Mia toạ lạc tại Bùi Thị Xuân, phường 8, tp Đà Lạt. Quãng đường bạn cần di chuyển
               rất gần để đến trung tâm tthành phố sương mù sầm uất Đà Lạt mộng mơ chỉ mất từ 8 - 13
               phút.
             </Box>
-            <Box fontWeight={300} fontSize={18} lineHeight={1.5} marginBottom={2}>
+            <Box fontWeight={300} fontSize={16} lineHeight={1.5} marginBottom={2}>
               Chúng tôi có chỗ đậu xe ô tô rộng rãi cho quý khách đi tham quan du lịch theo hội,
               nhóm, theo đoàn hay gia đình,...
             </Box>
@@ -104,7 +104,7 @@ function DescriptionHomeDetail() {
         <TabPanel value={value} index={1}>
           <Grid>
             {/* Tiện nghi */}
-            <Grid container spacing={3}>
+            <Grid container spacing={3} style={{ fontSize: '16px' }}>
               <Grid item xs={3}>
                 <Box fontWeight={600}>Tiện nghi</Box>
               </Grid>
