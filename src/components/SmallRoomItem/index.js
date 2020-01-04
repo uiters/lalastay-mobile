@@ -203,12 +203,12 @@ function SmallRoomItem(props) {
         </div>
         <Box fontWeight={600} fontSize={18} style={{ lineHeight: '25px' }}>
           <Link to="/home-detail">
-            <div
+            <p
               className="showMore"
-              style={{ webkitBoxOrient: 'vertical', color: 'rgba(43, 43, 43, 0.85)' }}
+              style={{ color: 'rgba(43, 43, 43, 0.85)' }}
             >
               {props.tilte}
-            </div>
+            </p>
           </Link>
         </Box>
         {props.compareShow && (
