@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-boolean-value */
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom'
-import { InputSearchForCompare, withLayout } from 'components';
+import { InputSearchForCompare, withLayout, BottomNavigation } from 'components';
 import Swiper from 'react-id-swiper';
 import { Box, Container, Grid } from '@material-ui/core';
 import WifiIcon from '@material-ui/icons/Wifi';
@@ -110,368 +110,371 @@ function CompareHomestaty() {
   };
 
   return (
-    <Container>
-      <div style={{ height: '100px' }} />
-      <Box fontSize={32} fontWeight="bold">
-        So sánh homestay
+    <>
+      <Container>
+        <div style={{ height: '100px' }} />
+        <Box fontSize={32} fontWeight="bold">
+          So sánh homestay
       </Box>
-      <InputSearchForCompare choose={chooseHome} />
+        <InputSearchForCompare choose={chooseHome} />
 
-      {/* slide so sánh hai home stay */}
-      <Grid direction="row" container justify="center" alignItems="center" spacing={1}>
-        <Grid item md={1} />
-        <Grid item md={4}>
-          <div className="container-show-image">
-            <Swiper {...gallerySwiperParams}>
-              <div className="swiper-slide ">
-                <img style={{ width: '100%', height: '100%' }} src={ss1} alt="img" />
-              </div>
-              <div className="swiper-slide">
-                <img style={{ width: '100%', height: '100%' }} src={ss2} alt="img" />
-              </div>
-              <div className="swiper-slide">
-                <img style={{ width: '100%', height: '100%' }} src={ss3} alt="img" />
-              </div>
-              <div className="swiper-slide">
-                <img style={{ width: '100%', height: '100%' }} src={ss4} alt="img" />
-              </div>
-              <div>
-                <img style={{ width: '100%', height: '100%' }} src={ss5} alt="img" />
-              </div>
-            </Swiper>
-            <div className="container-thum">
-              <Swiper {...thumbnailSwiperParams}>
-                <img className="slide-under swiper-slide swiper-slide-active" src={ss1} alt="img" />
-
-                <img className="slide-under swiper-slide" src={ss2} alt="img" />
-
-                <img className="slide-under swiper-slide" src={ss3} alt="img" />
-
-                <img className="slide-under swiper-slide" src={ss4} alt="img" />
-
-                <img className="slide-under swiper-slide" src={ss5} alt="img" />
-              </Swiper>
-            </div>
-          </div>
-          <Box fontSize={25}>Tuấn Vũ Homestay Đà Lạt - Double Doraemon Room 2</Box>
-          <Box fontSize={20}>
-            <i>
-              <u>Đà Lạt, Lâm Đồng Việt Nam</u>
-            </i>
-          </Box>
-          <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px' }}>
-            <button
-              className="variant-button"
-              type="button"
-              onClick={() => history.push('/home-detail')}
-            >
-              CHI TIẾT {'>>'}
-            </button>
-          </div>
-        </Grid>
-        <Grid item md={2} />
-        <Grid item md={4}>
-          {!close && (
+        {/* slide so sánh hai home stay */}
+        <Grid direction="row" container justify="center" alignItems="center" spacing={1}>
+          <Grid item md={1} />
+          <Grid item md={4}>
             <div className="container-show-image">
-              <Swiper {...seGallerySwiperParams}>
-                <div className="swiper-slide">
-                  <img style={{ width: '100%', height: '100%' }} src={ss6} alt="img" />
+              <Swiper {...gallerySwiperParams}>
+                <div className="swiper-slide ">
+                  <img style={{ width: '100%', height: '100%' }} src={ss1} alt="img" />
                 </div>
                 <div className="swiper-slide">
-                  <img style={{ width: '100%', height: '100%' }} src={ss7} alt="img" />
+                  <img style={{ width: '100%', height: '100%' }} src={ss2} alt="img" />
                 </div>
                 <div className="swiper-slide">
-                  <img style={{ width: '100%', height: '100%' }} src={ss8} alt="img" />
+                  <img style={{ width: '100%', height: '100%' }} src={ss3} alt="img" />
                 </div>
                 <div className="swiper-slide">
-                  <img style={{ width: '100%', height: '100%' }} src={ss9} alt="img" />
+                  <img style={{ width: '100%', height: '100%' }} src={ss4} alt="img" />
                 </div>
                 <div>
-                  <img style={{ width: '100%', height: '100%' }} src={ss10} alt="img" />
-                </div>
-                <div className="swiper-slide" />
-                <img style={{ width: '100%', height: '100%' }} src={ss6} alt="img" />
-                <div className="swiper-slide">
-                  <img style={{ width: '100%', height: '100%' }} src={ss7} alt="img" />
-                </div>
-                <div className="swiper-slide">
-                  <img style={{ width: '100%', height: '100%' }} src={ss8} alt="img" />
-                </div>
-                <div className="swiper-slide">
-                  <img style={{ width: '100%', height: '100%' }} src={ss9} alt="img" />
-                </div>
-                <div>
-                  <img style={{ width: '100%', height: '100%' }} src={ss10} alt="img" />
+                  <img style={{ width: '100%', height: '100%' }} src={ss5} alt="img" />
                 </div>
               </Swiper>
               <div className="container-thum">
-                <Swiper {...seThumbnailSwiperParams}>
-                  <img className="slide-under swiper-slide" src={ss6} alt="img" />
+                <Swiper {...thumbnailSwiperParams}>
+                  <img className="slide-under swiper-slide swiper-slide-active" src={ss1} alt="img" />
 
-                  <img className="slide-under swiper-slide" src={ss7} alt="img" />
+                  <img className="slide-under swiper-slide" src={ss2} alt="img" />
 
-                  <img className="slide-under swiper-slide" src={ss8} alt="img" />
+                  <img className="slide-under swiper-slide" src={ss3} alt="img" />
 
-                  <img className="slide-under swiper-slide" src={ss9} alt="img" />
+                  <img className="slide-under swiper-slide" src={ss4} alt="img" />
 
-                  <img className="slide-under swiper-slide" src={ss10} alt="img" />
-                  <img className="slide-under swiper-slide" src={ss6} alt="img" />
-
-                  <img className="slide-under swiper-slide" src={ss7} alt="img" />
-
-                  <img className="slide-under swiper-slide" src={ss8} alt="img" />
-
-                  <img className="slide-under swiper-slide" src={ss9} alt="img" />
-
-                  <img className="slide-under swiper-slide" src={ss10} alt="img" />
+                  <img className="slide-under swiper-slide" src={ss5} alt="img" />
                 </Swiper>
               </div>
-              <Box fontSize={25}>Tuấn Vũ Homestay Đà Lạt - Double Doraemon Room 2</Box>
-              <Box fontSize={20}>
-                <i>
-                  <u>Đà Lạt, Lâm Đồng Việt Nam</u>
-                </i>
-              </Box>
-              <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px' }}>
-                <button
-                  className="variant-button"
-                  type="button"
-                  onClick={() => history.push('/home-detail')}
-                >
-                  CHI TIẾT {'>>'}
-                </button>
-              </div>
             </div>
-          )}
+            <Box fontSize={25}>Tuấn Vũ Homestay Đà Lạt - Double Doraemon Room 2</Box>
+            <Box fontSize={20}>
+              <i>
+                <u>Đà Lạt, Lâm Đồng Việt Nam</u>
+              </i>
+            </Box>
+            <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px' }}>
+              <button
+                className="variant-button"
+                type="button"
+                onClick={() => history.push('/home-detail')}
+              >
+                CHI TIẾT {'>>'}
+              </button>
+            </div>
+          </Grid>
+          <Grid item md={2} />
+          <Grid item md={4}>
+            {!close && (
+              <div className="container-show-image">
+                <Swiper {...seGallerySwiperParams}>
+                  <div className="swiper-slide">
+                    <img style={{ width: '100%', height: '100%' }} src={ss6} alt="img" />
+                  </div>
+                  <div className="swiper-slide">
+                    <img style={{ width: '100%', height: '100%' }} src={ss7} alt="img" />
+                  </div>
+                  <div className="swiper-slide">
+                    <img style={{ width: '100%', height: '100%' }} src={ss8} alt="img" />
+                  </div>
+                  <div className="swiper-slide">
+                    <img style={{ width: '100%', height: '100%' }} src={ss9} alt="img" />
+                  </div>
+                  <div>
+                    <img style={{ width: '100%', height: '100%' }} src={ss10} alt="img" />
+                  </div>
+                  <div className="swiper-slide" />
+                  <img style={{ width: '100%', height: '100%' }} src={ss6} alt="img" />
+                  <div className="swiper-slide">
+                    <img style={{ width: '100%', height: '100%' }} src={ss7} alt="img" />
+                  </div>
+                  <div className="swiper-slide">
+                    <img style={{ width: '100%', height: '100%' }} src={ss8} alt="img" />
+                  </div>
+                  <div className="swiper-slide">
+                    <img style={{ width: '100%', height: '100%' }} src={ss9} alt="img" />
+                  </div>
+                  <div>
+                    <img style={{ width: '100%', height: '100%' }} src={ss10} alt="img" />
+                  </div>
+                </Swiper>
+                <div className="container-thum">
+                  <Swiper {...seThumbnailSwiperParams}>
+                    <img className="slide-under swiper-slide" src={ss6} alt="img" />
+
+                    <img className="slide-under swiper-slide" src={ss7} alt="img" />
+
+                    <img className="slide-under swiper-slide" src={ss8} alt="img" />
+
+                    <img className="slide-under swiper-slide" src={ss9} alt="img" />
+
+                    <img className="slide-under swiper-slide" src={ss10} alt="img" />
+                    <img className="slide-under swiper-slide" src={ss6} alt="img" />
+
+                    <img className="slide-under swiper-slide" src={ss7} alt="img" />
+
+                    <img className="slide-under swiper-slide" src={ss8} alt="img" />
+
+                    <img className="slide-under swiper-slide" src={ss9} alt="img" />
+
+                    <img className="slide-under swiper-slide" src={ss10} alt="img" />
+                  </Swiper>
+                </div>
+                <Box fontSize={25}>Tuấn Vũ Homestay Đà Lạt - Double Doraemon Room 2</Box>
+                <Box fontSize={20}>
+                  <i>
+                    <u>Đà Lạt, Lâm Đồng Việt Nam</u>
+                  </i>
+                </Box>
+                <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px' }}>
+                  <button
+                    className="variant-button"
+                    type="button"
+                    onClick={() => history.push('/home-detail')}
+                  >
+                    CHI TIẾT {'>>'}
+                  </button>
+                </div>
+              </div>
+            )}
+          </Grid>
+          <Grid item md={1} />
         </Grid>
-        <Grid item md={1} />
-      </Grid>
-      <div className="content-compare">
-        <div style={{ display: 'flex', alignItems: 'center', margin: '15px 0px' }}>
-          <Box marginRight={3}>
-            <Box display="inline">
-              <StarIcon style={{ color: '#9708CC', fontSize: '16px' }} />
-            </Box>
-            <Box display="inline">4.95</Box>
-          </Box>
-          <Box className="divde_200 " />
-          <Box fontSize={24} marginLeft={3} marginRight={3}>
-            Đánh giá
-          </Box>
-          <Box className="divde_200 " />
-          <Box>
-            <Box display="inline" marginLeft={3}>
-              <StarIcon style={{ color: '#9708CC', fontSize: '16px' }} />
-            </Box>
-            <Box display="inline">4.95</Box>
-          </Box>
-        </div>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            padding: '15px 0px',
-            backgroundColor: 'rgba(196, 196, 196, 0.15)',
-            width: '100%',
-            justifyContent: 'center',
-          }}
-        >
-          <Box marginRight={3}>
-            <Box style={{ display: 'flex' }}>
-              <Box>
-                <WifiIcon style={{ color: '#9708CC', marginRight: '5px' }} />
-              </Box>
-              <Box>Wifi miễn phí</Box>
-            </Box>
-            <Box style={{ display: 'flex' }}>
+        <div className="content-compare">
+          <div style={{ display: 'flex', alignItems: 'center', margin: '15px 0px' }}>
+            <Box marginRight={3}>
               <Box display="inline">
-                <img alt="img" src={garden} style={{ marginRight: '5px' }} />
+                <StarIcon style={{ color: '#9708CC', fontSize: '16px' }} />
               </Box>
-              <Box display="inline">Có sân vườn</Box>
+              <Box display="inline">4.95</Box>
             </Box>
-            <Box style={{ display: 'flex' }}>
-              <Box>
-                <img alt="img" src={parking} style={{ marginRight: '5px' }} />
-              </Box>
-              <Box marginBottom={1}>Có chỗ đậu xe</Box>
-            </Box>
+            <Box className="divde_200 " />
+            <Box fontSize={24} marginLeft={3} marginRight={3}>
+              Đánh giá
           </Box>
-          <Box className="divde_150 " />
-          <Box fontSize={24} marginLeft={3} marginRight={3}>
-            Tiện nghi
-          </Box>
-          <Box className="divde_150 " />
-          <Box marginLeft={3}>
-            <Box style={{ display: 'flex' }}>
-              <Box>
-                <WifiIcon style={{ color: '#9708CC', marginRight: '5px' }} />
+            <Box className="divde_200 " />
+            <Box>
+              <Box display="inline" marginLeft={3}>
+                <StarIcon style={{ color: '#9708CC', fontSize: '16px' }} />
               </Box>
-              <Box>Wifi miễn phí</Box>
+              <Box display="inline">4.95</Box>
             </Box>
-            {/* <Box style={{ display: 'flex' }}>
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              padding: '15px 0px',
+              backgroundColor: 'rgba(196, 196, 196, 0.15)',
+              width: '100%',
+              justifyContent: 'center',
+            }}
+          >
+            <Box marginRight={3}>
+              <Box style={{ display: 'flex' }}>
+                <Box>
+                  <WifiIcon style={{ color: '#9708CC', marginRight: '5px' }} />
+                </Box>
+                <Box>Wifi miễn phí</Box>
+              </Box>
+              <Box style={{ display: 'flex' }}>
+                <Box display="inline">
+                  <img alt="img" src={garden} style={{ marginRight: '5px' }} />
+                </Box>
+                <Box display="inline">Có sân vườn</Box>
+              </Box>
+              <Box style={{ display: 'flex' }}>
+                <Box>
+                  <img alt="img" src={parking} style={{ marginRight: '5px' }} />
+                </Box>
+                <Box marginBottom={1}>Có chỗ đậu xe</Box>
+              </Box>
+            </Box>
+            <Box className="divde_150 " />
+            <Box fontSize={24} marginLeft={3} marginRight={3}>
+              Tiện nghi
+          </Box>
+            <Box className="divde_150 " />
+            <Box marginLeft={3}>
+              <Box style={{ display: 'flex' }}>
+                <Box>
+                  <WifiIcon style={{ color: '#9708CC', marginRight: '5px' }} />
+                </Box>
+                <Box>Wifi miễn phí</Box>
+              </Box>
+              {/* <Box style={{ display: 'flex' }}>
               <Box display="inline">
                 <img alt="img" src={garden} style={{ marginRight: '5px' }} />
               </Box>
               <Box display="inline">Có sân vườn</Box>
             </Box> */}
-            <Box style={{ display: 'flex' }}>
-              <Box>
-                <img alt="img" src={parking} style={{ marginRight: '5px' }} />
+              <Box style={{ display: 'flex' }}>
+                <Box>
+                  <img alt="img" src={parking} style={{ marginRight: '5px' }} />
+                </Box>
+                <Box marginBottom={1}>Có chỗ đậu xe</Box>
               </Box>
-              <Box marginBottom={1}>Có chỗ đậu xe</Box>
             </Box>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', padding: '15px 0px' }}>
+            <Box marginRight={3}>
+              <Box>2,345,000 VNĐ/ngày</Box>
+            </Box>
+            <Box className="divde_200 " />
+            <Box fontSize={24} marginLeft={3} marginRight={3}>
+              Giá
           </Box>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', padding: '15px 0px' }}>
-          <Box marginRight={3}>
-            <Box>2,345,000 VNĐ/ngày</Box>
-          </Box>
-          <Box className="divde_200 " />
-          <Box fontSize={24} marginLeft={3} marginRight={3}>
-            Giá
-          </Box>
-          <Box className="divde_200 " />
-          <Box>
-            <Box>2,345,000 VNĐ/ngày</Box>
-          </Box>
-        </div>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            padding: '15px 0px',
-            backgroundColor: 'rgba(196, 196, 196, 0.15)',
-            width: '100%',
-            justifyContent: 'center',
-          }}
-        >
-          <Box marginRight={3}>
-            <Box> 3 người</Box>
-          </Box>
-          <Box className="divde_150 " />
-          <Box fontSize={24} marginLeft={3} marginRight={3}>
-            Số khách
-          </Box>
-          <Box className="divde_150 " />
-          <Box display="inline" marginLeft={3}>
-            <Box>4 người</Box>
-          </Box>
-        </div>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            padding: '15px 0px',
-          }}
-        >
-          <Box marginRight={3}>
-            <Box>Nhà riêng</Box>
-          </Box>
-          <Box className="divde_200 " />
-          <Box fontSize={24} marginLeft={3} marginRight={3}>
-            Loại homestay
-          </Box>
-          <Box className="divde_200 " />
-          <Box marginLeft={3}>
-            <Box>Khách sạn</Box>
-          </Box>
-        </div>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            padding: '15px 0px',
-            backgroundColor: 'rgba(196, 196, 196, 0.15)',
-            width: '100%',
-            justifyContent: 'center',
-          }}
-        >
-          <Box marginRight={3}>
-            <Box>2 km</Box>
-          </Box>
-          <Box className="divde_200 " />
-          <Box fontSize={24} marginLeft={3} marginRight={3}>
-            Khoảng cách từ bạn
-          </Box>
-          <Box className="divde_200 " />
-          <Box marginLeft={3}>
-            <Box> 3 km</Box>
-          </Box>
-        </div>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            padding: '15px 0px',
-            width: '100%',
-            justifyContent: 'center',
-          }}
-        >
-          <Box marginRight={3}>
-            <Box>Thung lũng tình yêu, Quảng trường, chợ đêm</Box>
-          </Box>
-          <Box className="divde_200 " />
-          <Box fontSize={24} marginLeft={3} marginRight={3}>
-            Gần với
-          </Box>
-          <Box className="divde_200 " />
-          <Box marginLeft={3}>
-            <Box>Cáp treo, Sân bay, núi langbian, Thác Preen</Box>
-          </Box>
-        </div>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            padding: '15px 0px',
-            width: '100%',
-            justifyContent: 'center',
-            backgroundColor: 'rgba(196, 196, 196, 0.15)',
-          }}
-        >
-          <Box marginRight={3}>
-            Không được hút thuốc lá, không lớn tiếng ồn ào khi qua 11 giờ đêm và sau 5 giờ sáng.
-            Phải trả tiền trước khi ở không được đem các chất cấm vào khu vực homesta
-          </Box>
-          <Box className="divde_150 " />
-          <Box fontSize={24} marginLeft={3} marginRight={3}>
-            Quy định
-          </Box>
-          <Box className="divde_150 " />
-          <Box marginLeft={3}>
-            Không được hút thuốc lá, không lớn tiếng ồn ào khi qua 11 giờ đêm và sau 5 giờ sáng.
-            Phải trả tiền trước khi ở không được đem các chất cấm vào khu vực homestay
-          </Box>
-        </div>
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-around',
-          marginBottom: '50px',
-        }}
-      >
-        <div>
-          <button
-            className="variant-button datcho"
-            type="button"
-            onClick={() => history.push('/payment')}
+            <Box className="divde_200 " />
+            <Box>
+              <Box>2,345,000 VNĐ/ngày</Box>
+            </Box>
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              padding: '15px 0px',
+              backgroundColor: 'rgba(196, 196, 196, 0.15)',
+              width: '100%',
+              justifyContent: 'center',
+            }}
           >
-            ĐẶT NGAY
-          </button>
-        </div>
-        <div>
-          <button
-            className="variant-button datcho"
-            type="button"
-            onClick={() => history.push('/payment')}
+            <Box marginRight={3}>
+              <Box> 3 người</Box>
+            </Box>
+            <Box className="divde_150 " />
+            <Box fontSize={24} marginLeft={3} marginRight={3}>
+              Số khách
+          </Box>
+            <Box className="divde_150 " />
+            <Box display="inline" marginLeft={3}>
+              <Box>4 người</Box>
+            </Box>
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              padding: '15px 0px',
+            }}
           >
-            ĐẶT NGAY
-          </button>
+            <Box marginRight={3}>
+              <Box>Nhà riêng</Box>
+            </Box>
+            <Box className="divde_200 " />
+            <Box fontSize={24} marginLeft={3} marginRight={3}>
+              Loại homestay
+          </Box>
+            <Box className="divde_200 " />
+            <Box marginLeft={3}>
+              <Box>Khách sạn</Box>
+            </Box>
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              padding: '15px 0px',
+              backgroundColor: 'rgba(196, 196, 196, 0.15)',
+              width: '100%',
+              justifyContent: 'center',
+            }}
+          >
+            <Box marginRight={3}>
+              <Box>2 km</Box>
+            </Box>
+            <Box className="divde_200 " />
+            <Box fontSize={24} marginLeft={3} marginRight={3}>
+              Khoảng cách từ bạn
+          </Box>
+            <Box className="divde_200 " />
+            <Box marginLeft={3}>
+              <Box> 3 km</Box>
+            </Box>
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              padding: '15px 0px',
+              width: '100%',
+              justifyContent: 'center',
+            }}
+          >
+            <Box marginRight={3}>
+              <Box>Thung lũng tình yêu, Quảng trường, chợ đêm</Box>
+            </Box>
+            <Box className="divde_200 " />
+            <Box fontSize={24} marginLeft={3} marginRight={3}>
+              Gần với
+          </Box>
+            <Box className="divde_200 " />
+            <Box marginLeft={3}>
+              <Box>Cáp treo, Sân bay, núi langbian, Thác Preen</Box>
+            </Box>
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              padding: '15px 0px',
+              width: '100%',
+              justifyContent: 'center',
+              backgroundColor: 'rgba(196, 196, 196, 0.15)',
+            }}
+          >
+            <Box marginRight={3}>
+              Không được hút thuốc lá, không lớn tiếng ồn ào khi qua 11 giờ đêm và sau 5 giờ sáng.
+              Phải trả tiền trước khi ở không được đem các chất cấm vào khu vực homesta
+          </Box>
+            <Box className="divde_150 " />
+            <Box fontSize={24} marginLeft={3} marginRight={3}>
+              Quy định
+          </Box>
+            <Box className="divde_150 " />
+            <Box marginLeft={3}>
+              Không được hút thuốc lá, không lớn tiếng ồn ào khi qua 11 giờ đêm và sau 5 giờ sáng.
+              Phải trả tiền trước khi ở không được đem các chất cấm vào khu vực homestay
+          </Box>
+          </div>
         </div>
-      </div>
-    </Container>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-around',
+            marginBottom: '50px',
+          }}
+        >
+          <div>
+            <button
+              className="variant-button datcho"
+              type="button"
+              onClick={() => history.push('/payment')}
+            >
+              ĐẶT NGAY
+          </button>
+          </div>
+          <div>
+            <button
+              className="variant-button datcho"
+              type="button"
+              onClick={() => history.push('/payment')}
+            >
+              ĐẶT NGAY
+          </button>
+          </div>
+        </div>
+      </Container>
+      <BottomNavigation />
+    </>
   );
 }
 

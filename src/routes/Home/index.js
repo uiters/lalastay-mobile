@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-boolean-value */
 import React from 'react';
-import { CityViewer, RoomViewer, withLayout } from 'components';
+import { CityViewer, RoomViewer, withLayout, BottomNavigation } from 'components';
 import { Container } from '@material-ui/core';
 import './style.css';
 
@@ -61,6 +61,7 @@ function Home() {
           sologen="Đây là những chỗ ở nổi bật nhất của lalastay"
         />
       </Container>
+      <BottomNavigation />
     </div>
   );
 }

@@ -1,7 +1,5 @@
 /* eslint-disable import/no-cycle */
-export { default as Login } from './Login';
 export { default as Home } from './Home';
-export { default as NotFound } from './NotFound';
 export { default as HomeDetail } from './HomeDetail';
 export { default as HomeByArea } from './HomeByArea';
 export { default as CompareHomestay } from './CompareHomestay';

@@ -21,7 +21,7 @@ function BodyHomedetail() {
           <div style={{ marginBottom: '15px' }}>
             <Grid container direction="row" justify="space-between" alignItems="center">
               <Box fontSize={25} fontWeight={600}>
-                Homestay Ngọc Nữ
+                Homestay Pha Lê
               </Box>
               <Box fontSize={20} fontWeight={600}>
                 <span

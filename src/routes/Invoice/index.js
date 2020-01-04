@@ -6,7 +6,7 @@ import DateRangeIcon from '@material-ui/icons/DateRange';
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import WarningOutlinedIcon from '@material-ui/icons/WarningOutlined';
 import { useHistory } from 'react-router-dom'
-import { Header } from 'components';
+import { Header, BottomNavigation } from 'components';
 import './style.css';
 
 const Payment = () => {
@@ -134,6 +134,7 @@ const Payment = () => {
           <input className="invoice-button1" type="button" value="TIẾP TỤC XEM" />
         </div>
       </div>
+      <BottomNavigation />
     </IonContent>
   );
 };

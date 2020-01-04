@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import CloseIcon from '@material-ui/icons/Close';
 import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
 import { Color } from 'config';
@@ -17,8 +17,8 @@ const Container = styled.div`
 `;
 const HeaderTitle = styled.p`
   text-align: center;
-  width: 60%;
-  font-size: 17px;
+  width: 80%;
+  font-size: 18px;
   color: ${Color.text};
   font-weight: 500;
 `;
@@ -33,12 +33,12 @@ const Icon = styled.div`
   }
 `;
 const LeftContainer = styled.div`
-  width: 20%;
+  width: 10%;
   display: flex;
   align-item: center;
 `;
 const RightContainer = styled.div`
-  width: 20%;
+  width: 10%;
   display: flex;
   align-item: center;
 `;
@@ -48,7 +48,7 @@ const Header = ({ title }) => {
   return (
     <Container>
       <LeftContainer onClick={() => history.goBack()}>
-        <Icon><ArrowBackIosIcon fontSize="inherit" /></Icon>
+        <Icon><CloseIcon fontSize="inherit" /></Icon>
       </LeftContainer>
       <HeaderTitle>
         {title}

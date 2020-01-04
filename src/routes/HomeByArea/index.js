@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import './style.css';
 import { Grid, Box, Container } from '@material-ui/core';
-import { SmallRoomItem, VideoIntro, withLayout } from 'components';
+import { SmallRoomItem, VideoIntro, withLayout, BottomNavigation } from 'components';
 
 function HomeByArea() {
   // Khi su luoi bieng len ngoi
@@ -109,6 +109,7 @@ function HomeByArea() {
           {renderRom()}
         </Grid>
       </Container>
+      <BottomNavigation />
     </>
   );
 }
