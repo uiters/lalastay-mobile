@@ -42,7 +42,7 @@ const Select = styled.select`
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 0px 10px;
+  padding: 5px 10px;
   font-size: 14px;
   border-radius: 5px;
   background-color: #fff;
