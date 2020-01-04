@@ -68,7 +68,7 @@ function SmallRoomItem(props) {
     },
   };
   return (
-    <div container className="container-room-item">
+    <div container="true" className="container-room-item">
       <div className="container-img" style={{ height: props.width === 'sm' ? '55%' : '' }}>
         <Swiper {...params} style={{ width: '100%', height: '100%' }}>
           <div>

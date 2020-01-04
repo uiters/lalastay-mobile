@@ -15,9 +15,6 @@ const useStyles = makeStyles({
     bottom: 0,
     zIndex: 9999,
     boxShadow: '0 1px 6px rgba(0, 0, 0, 0.1), 0 1px 6px rgba(0, 0, 0, 0.2)',
-    '&$selected': {
-      color: '#FC6C85',
-    }
   },
   checked: {
     color: '#FC6C85',
