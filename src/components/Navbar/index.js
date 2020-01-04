@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, Button } from '@material-ui/core';
+import { Box, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import Autosuggest from 'react-autosuggest';
 import match from 'autosuggest-highlight/match';
@@ -13,7 +13,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import './style.css';
 import RoomIcon from '@material-ui/icons/Room';
-import { useHistory } from 'react-router-dom';
+import { navigate } from '@reach/router';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import logo from '../../assets/logo.jpg';
 
 const useStyles = makeStyles(() => ({
@@ -29,6 +30,10 @@ const useStyles = makeStyles(() => ({
     '&:hover': {
       cursor: 'pointer',
     },
+  },
+  avatar: {
+    width: '50px',
+    height: '50px',
   },
   searchIcon: {
     color: '#FC6C85',
@@ -57,6 +62,11 @@ const useStyles = makeStyles(() => ({
   input: {
     paddingLeft: '15px',
   },
+  format_navbar: {
+    fontSize: '16px',
+    fontWeight: '500',
+    height: '100%',
+  },
 }));
 
 const suggestions = [
@@ -79,8 +89,69 @@ const suggestions = [
   { label: 'Bến Tre' },
 ];
 
+function renderInputComponent(inputProps) {
+  const { classes, inputRef = () => {}, ref, ...other } = inputProps;
+
+  return (
+    <TextField
+      fullWidth
+      InputProps={{
+        inputRef: node => {
+          ref(node);
+          inputRef(node);
+        },
+        classes: {
+          input: classes.input,
+        },
+        disableUnderline: true,
+      }}
+      {...other}
+    />
+  );
+}
+
+function renderSuggestion(suggestion, { query, isHighlighted }) {
+  const matches = match(suggestion.label, query);
+  const parts = parse(suggestion.label, matches);
+
+  return (
+    <MenuItem selected={isHighlighted} component="div" onClick={() => navigate('/home-by-area')}>
+      <div>
+        <RoomIcon style={{ color: '#FC6C85', fontSize: '18px', marginRight: '10px' }} />
+        {parts.map(part => (
+          <span key={part.text} style={{ fontWeight: part.highlight ? 500 : 400 }}>
+            {part.text}
+          </span>
+        ))}
+      </div>
+    </MenuItem>
+  );
+}
+
+function getSuggestions(value) {
+  const inputValue = deburr(value.trim()).toLowerCase();
+  const inputLength = inputValue.length;
+  let count = 0;
+
+  return inputLength === 0
+    ? []
+    : suggestions.filter(suggestion => {
+        const keep =
+          count < 5 && suggestion.label.slice(0, inputLength).toLowerCase() === inputValue;
+
+        if (keep) {
+          count += 1;
+        }
+
+        return keep;
+      });
+}
+
+function getSuggestionValue(suggestion) {
+  return suggestion.label;
+}
+
 function Navbar() {
-  const history = useHistory();
   const classes = useStyles();
   // const opacity = props.opacity;
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -135,70 +206,6 @@ function Navbar() {
     renderSuggestion,
   };
 
-
-
-  function renderInputComponent(inputProps) {
-    const { classes, inputRef = () => { }, ref, ...other } = inputProps;
-
-    return (
-      <TextField
-        fullWidth
-        InputProps={{
-          inputRef: node => {
-            ref(node);
-            inputRef(node);
-          },
-          classes: {
-            input: classes.input,
-          },
-          disableUnderline: true,
-        }}
-        {...other}
-      />
-    );
-  }
-
-  function getSuggestions(value) {
-    const inputValue = deburr(value.trim()).toLowerCase();
-    const inputLength = inputValue.length;
-    let count = 0;
-
-    return inputLength === 0
-      ? []
-      : suggestions.filter(suggestion => {
-        const keep =
-          count < 5 && suggestion.label.slice(0, inputLength).toLowerCase() === inputValue;
-
-        if (keep) {
-          count += 1;
-        }
-
-        return keep;
-      });
-  }
-
-  function getSuggestionValue(suggestion) {
-    return suggestion.label;
-  }
-
-  function renderSuggestion(suggestion, { query, isHighlighted }) {
-    const matches = match(suggestion.label, query);
-    const parts = parse(suggestion.label, matches);
-
-    return (
-      <MenuItem selected={isHighlighted} component="div" onClick={() => history.push('/home-by-area')}>
-        <div>
-          <RoomIcon style={{ color: '#FC6C85', fontSize: '18px', marginRight: '10px' }} />
-          {parts.map(part => (
-            <span key={part.text} style={{ fontWeight: part.highlight ? 500 : 400 }}>
-              {part.text}
-            </span>
-          ))}
-        </div>
-      </MenuItem>
-    );
-  }
-
   return (
     <div>
       <nav className="menu" style={{ background: '#FFFFFF' }}>
@@ -210,7 +217,7 @@ function Navbar() {
                   src={logo}
                   className={classes.logoImg}
                   alt="img"
-                  onClick={() => history.push('/')}
+                  onClick={() => navigate('/')}
                 />
               </Box>
               <Box display="inline" className="search-container">
@@ -256,20 +263,56 @@ function Navbar() {
               </Box>
             </Grid>
           </Grid>
-          <Grid item xs={6} container direction="row" justify="flex-end" alignItems="center">
-            <Button className={classes.button}>Chủ nhà</Button>
-            <Button className={classes.button}>Đăng kí</Button>
-            <Button className={classes.button}>Đăng nhập</Button>
+          <Grid
+            item
+            xs={6}
+            container
+            direction="row"
+            justify="flex-end"
+            alignItems="center"
+            className={classes.format_navbar}
+          >
+            <div className="item-navbar">
+              <div>Khám phá</div>
+            </div>
+            <div className="item-navbar">Đã xem</div>
+            <div className="item-navbar">Giúp đỡ</div>
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                height: '60px',
+                borderBottom: '2px solid transparent',
+                marginRight: '20px',
+              }}
+            >
+              <Box display="inline" style = {{marginTop:'-4px'}}>Lyly</Box>
+              <Box className={classes.avatar}>
+                <img
+                  src={logo}
+                  className={classes.logoImg}
+                  alt="img"
+                  onClick={() => navigate('/')}
+                />
+              </Box>
+              <Box display="inline">
+                <ExpandMoreIcon style={{ color: '#969696', fontSize: '16px', marginTop: '10px' }} />
+              </Box>
+            </div>
           </Grid>
         </Grid>
       </nav>
       <nav className="menu-min" style={{ background: '#FFFFFF' }}>
         <Box className="search-container-min">
-          <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div
+            style={{
+              display: 'flex',
+            }}
+          >
             <Box marginTop={1}>
               <MenuIcon style={{ color: '#FC6C85' }} />
             </Box>
-            <Box>
+            <Box style={{ marginTop: '5px' }}>
               <Autosuggest
                 {...autosuggestMinProps}
                 inputProps={{
@@ -308,7 +351,7 @@ function Navbar() {
             </Box>
           </div>
 
-          <Box marginTop={1} marginRight={1}>
+          <Box style={{ marginTop: '5px' }} marginRight={1}>
             <SearchIcon style={{ color: '#FC6C85' }} />
           </Box>
         </Box>

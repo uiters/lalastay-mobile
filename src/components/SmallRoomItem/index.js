@@ -42,7 +42,7 @@ function SmallRoomItem(props) {
     'Đồng Nai',
     'Vũng Tàu',
     'Đà Lạt',
-    'Huế',
+    'Đồng Nai',
     'Đà Nẵng',
     'Bình Định',
     'Phú Yên',
@@ -74,50 +74,55 @@ function SmallRoomItem(props) {
           <div>
             <img
               src={imgs ? imgs[Math.floor(Math.random() * 8)] : smallRoom}
-              style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%',  borderTopLeftRadius: '4px',
+                borderTopRightRadius: '4px', objectFit: 'cover' }}
               alt="img"
               onClick={() => {
-                if (props.width !== 'xs' || props.width !== 'sm') history.push('/home-detail');
+               history.push('/home-detail');
               }}
             />
           </div>
           <div>
             <img
               src={imgs ? imgs[Math.floor(Math.random() * 8)] : smallRoom}
-              style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%',  borderTopLeftRadius: '4px',
+                borderTopRightRadius: '4px', objectFit: 'cover' }}
               alt="img"
               onClick={() => {
-                if (props.width !== 'xs' || props.width !== 'sm') history.push('/home-detail');
+                 history.push('/home-detail');
               }}
             />
           </div>
           <div>
             <img
               src={imgs ? imgs[Math.floor(Math.random() * 8)] : smallRoom}
-              style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%',  borderTopLeftRadius: '4px',
+                borderTopRightRadius: '4px', objectFit: 'cover' }}
               alt="img"
               onClick={() => {
-                if (props.width !== 'xs' || props.width !== 'sm') history.push('/home-detail');
+                 history.push('/home-detail');
               }}
             />
           </div>
           <div>
             <img
               src={imgs ? imgs[Math.floor(Math.random() * 8)] : smallRoom}
-              style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%',  borderTopLeftRadius: '4px',
+                borderTopRightRadius: '4px', objectFit: 'cover' }}
               alt="img"
               onClick={() => {
-                if (props.width !== 'xs' || props.width !== 'sm') history.push('/home-detail');
+                 history.push('/home-detail');
               }}
             />
           </div>
           <div>
             <img
               src={smallRoom}
-              style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%',  borderTopLeftRadius: '4px',
+                borderTopRightRadius: '4px', objectFit: 'cover' }}
               alt="img"
               onClick={() => {
-                if (props.width !== 'xs' || props.width !== 'sm') history.push('/home-detail');
+                 history.push('/home-detail');
               }}
             />
           </div>
@@ -127,17 +132,18 @@ function SmallRoomItem(props) {
               style={{ width: '100%', height: '100%' }}
               alt="img"
               onClick={() => {
-                if (props.width !== 'xs' || props.width !== 'sm') history.push('/home-detail');
+                 history.push('/home-detail');
               }}
             />
           </div>
           <div>
             <img
               src={imgs ? imgs[Math.floor(Math.random() * 8)] : smallRoom}
-              style={{ width: '100%', height: '100%', borderRadius: '4px', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%',  borderTopLeftRadius: '4px',
+                borderTopRightRadius: '4px', objectFit: 'cover' }}
               alt="img"
               onClick={() => {
-                if (props.width !== 'xs' || props.width !== 'sm') history.push('/home-detail');
+                history.push('/home-detail');
               }}
             />
           </div>
@@ -146,12 +152,6 @@ function SmallRoomItem(props) {
           <div className="province">{city[index]}</div>
           {props.sale && (
             <div className="sale">
-              {/* <div style={{ display: 'flex', alignItems: 'center' }}>
-                <ArrowDownwardIcon
-                  style={{ color: '#1BE72F', fontSize: '15px', fontWeight: '700' }}
-                />
-                <div>35%</div>
-              </div> */}
               Giảm 35%
             </div>
           )}
@@ -202,7 +202,7 @@ function SmallRoomItem(props) {
           <Box>3 người - 1 phòng</Box>
         </div>
         <Box fontWeight={600} fontSize={18} style={{ lineHeight: '25px' }}>
-          <Link to="/home-detail">
+          <Link to="/home-detail" style={{textDecoration:'none'}}>
             <div
               className="showMore"
               style={{ webkitBoxOrient: 'vertical', color: 'rgba(43, 43, 43, 0.85)' }}
