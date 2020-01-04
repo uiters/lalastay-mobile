@@ -5,7 +5,7 @@ import Grow from '@material-ui/core/Grow';
 import RoomIcon from '@material-ui/icons/Room';
 import SmallRoomItem from '../SmallRoomItem';
 import { ReservationForm, DescriptionHomeDetail, InformationUserForm } from '../index';
-import Comments from '../../pages/HomeDetail/components/Comments';
+import Comments from '../../routes/HomeDetail/components/Comments';
 import './style.css';
 
 function BodyHomedetail() {
