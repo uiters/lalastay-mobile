@@ -1,0 +1,47 @@
+@media (min-width: 376px) and (max-width: 767px) {
+  .video {
+    display: none !important;
+    margin: 10px;
+  }
+  .img-introduce {
+    background-image: url('../../assets/hoian.png');
+    height: 350px;
+    object-fit: cover;
+    display: block !important;
+    border-radius: 6px !important;
+    margin: 15px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .video {
+    display: none !important;
+  }
+  .img-introduce {
+    background-image: url('../../assets/hoian.png');
+    height: 300px;
+    object-fit: cover;
+    display: block !important;
+    border-radius: 6px !important;
+    margin: 15px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+.img-introduce {
+  display: none;
+}
+.title-introduce {
+  text-align: center;
+  font-size: 24px;
+  color: #fafafa;
+  padding-top: 80px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.button-xemngay {
+  font-size: 20px;
+}
