@@ -12,7 +12,7 @@ const Container = styled.div`
   display: flex;
   align-item: center;
   height: 57px;
-  box-shadow: 0px 2px 6px rgba(43, 43, 43, 0.2);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
   background-color: #fff;
 `;
 const HeaderTitle = styled.p`
@@ -24,7 +24,7 @@ const HeaderTitle = styled.p`
 `;
 const Icon = styled.div`
   color: #2B2B2B;
-  font-size: 17px;
+  font-size: 18px;
   color: ${Color.text};
   margin: auto 15px;
   transition: 250ms all ease-in-out;

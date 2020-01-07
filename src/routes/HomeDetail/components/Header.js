@@ -1,5 +1,5 @@
 import React from 'react';
-import CloseIcon from '@material-ui/icons/Close';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
 import { Color } from 'config';
@@ -12,7 +12,7 @@ const Container = styled.div`
   display: flex;
   align-item: center;
   height: 57px;
-  box-shadow: 0px 2px 6px rgba(43, 43, 43, 0.2);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
   background-color: #fff;
 `;
 const HeaderTitle = styled.p`
@@ -48,7 +48,7 @@ const Header = ({ title }) => {
   return (
     <Container>
       <LeftContainer onClick={() => history.goBack()}>
-        <Icon><CloseIcon fontSize="inherit" /></Icon>
+        <Icon><ArrowBackIosIcon fontSize="inherit" /></Icon>
       </LeftContainer>
       <HeaderTitle>
         {title}
