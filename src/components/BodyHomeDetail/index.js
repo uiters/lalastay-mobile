@@ -4,7 +4,7 @@ import { Grid, Box } from '@material-ui/core';
 import Grow from '@material-ui/core/Grow';
 import RoomIcon from '@material-ui/icons/Room';
 import SmallRoomItem from '../SmallRoomItem';
-import { ReservationForm, DescriptionHomeDetail, InformationUserForm } from '../index';
+import { DescriptionHomeDetail } from '../index';
 import './style.css';
 
 function BodyHomedetail() {
@@ -23,14 +23,6 @@ function BodyHomedetail() {
               <Box fontSize={25} fontWeight={600}>
                 Homestay Pha Lê
               </Box>
-              <Box fontSize={20} fontWeight={600}>
-                <span
-                  style={{ textDecoration: 'line-through', marginRight: '10px', fontWeight: '400' }}
-                >
-                  1.500k/đêm
-                </span>
-                <span>1.235k/đêm</span>
-              </Box>
             </Grid>
 
             <Box style={{ display: 'flex' }}>
@@ -44,11 +36,6 @@ function BodyHomedetail() {
 
           <DescriptionHomeDetail />
         </Grid>
-        <Grid item md={4} sm={4} xs={12}>
-          <ReservationForm />
-          <div style={{ height: '50px' }} />
-          <InformationUserForm />
-        </Grid>
       </Grid>
       <div className="compare">
         <div>
@@ -56,8 +43,8 @@ function BodyHomedetail() {
             control={<Switch checked={checked} onChange={handleChange} />}
             label="H"
           /> */}
-          <Box onClick={handleChange} fontWeight={500} fontSize={20} className="compare-now">
-            Homestay nào phù hợp với bạn? <b>Tìm hiểu thêm</b>
+          <Box onClick={handleChange} fontWeight={500} fontSize={16} style={{ marginBottom: '15px' }} className="compare-now">
+            <span style={{ color: 'gray' }}>Homestay nào phù hợp với bạn? </span><b>Tìm hiểu thêm</b>
           </Box>
           <div style={{ display: checked ? 'block' : 'none' }}>
             <Grid container>
