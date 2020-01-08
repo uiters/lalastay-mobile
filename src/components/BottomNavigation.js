@@ -36,7 +36,7 @@ function BottomNav() {
       className={classes.root}
     >
       <BottomNavigationAction onClick={() => history.push('/')} style={value === 0 ? { color: '#FC6C85' } : {}} label="Trang chủ" icon={<HomeIcon />} />
-      <BottomNavigationAction onClick={() => history.push('/coming-soon')} style={value === 1 ? { color: '#FC6C85' } : {}} label="Khám phá" icon={<ExploreIcon />} />
+      <BottomNavigationAction onClick={() => history.push('/home-by-area')} style={value === 1 ? { color: '#FC6C85' } : {}} label="Khám phá" icon={<ExploreIcon />} />
       <BottomNavigationAction onClick={() => history.push('/coming-soon')} style={value === 2 ? { color: '#FC6C85' } : {}} label="Lịch sử" icon={<HistoryIcon />} />
       <BottomNavigationAction onClick={() => history.push('/coming-soon')} style={value === 3 ? { color: '#FC6C85' } : {}} label="Tài khoản" icon={<AccountCircleIcon />} />
     </BottomNavigation>
