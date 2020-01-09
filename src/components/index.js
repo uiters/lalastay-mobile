@@ -19,3 +19,6 @@ export { default as InformationUserForm } from './FormInformationUser';
 export { default as BottomNavigation } from './BottomNavigation'
 export { default as Header } from './Header';
 export { default as Breadcrumb } from './Breadcrumb';
+export { default as Rating } from './Rating';
+export { default as CommentReview } from './CommentReview';
+export { default as CommentReviews } from './CommentReviews';
