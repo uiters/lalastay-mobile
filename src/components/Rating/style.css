@@ -1,0 +1,34 @@
+@media (max-width: 375px) {
+  .loading {
+    margin-left: 5px !important;
+    width: 190px !important;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 767px) {
+}
+
+.loading {
+  width: 200px;
+  height: 18px;
+  background-color: #e5e5e5;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.button-bar {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 4px 8px;
+  border: 1px solid rgba(150, 150, 150, 0.4);
+  width: 65px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 35px;
+  margin-bottom: 15px;
+}
+
+.button-bar:hover {
+  cursor: pointer;
+}

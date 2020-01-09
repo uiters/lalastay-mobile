@@ -17,7 +17,7 @@ import garden from '../../assets/garden.png';
 import parking from '../../assets/parking.png';
 import bando from '../../assets/bando.png';
 import Comments from '../../routes/HomeDetail/components/Comments';
-
+import { Rating } from '../index';
 import './style.css';
 
 function TabPanel(props) {
@@ -72,6 +72,7 @@ function DescriptionHomeDetail() {
             <Tab label="Mô tả" {...a11yProps(0)} />
             <Tab label="Tiện nghi" {...a11yProps(1)} />
             <Tab label="Bình luận" {...a11yProps(2)} />
+            <Tab label="Đánh giá" {...a11yProps(3)} />
           </Tabs>
         </AppBar>
         <TabPanel value={value} index={0}>
@@ -247,6 +248,9 @@ function DescriptionHomeDetail() {
         </TabPanel>
         <TabPanel value={value} index={2}>
           <Comments />
+        </TabPanel>
+        <TabPanel value={value} index={3}>
+          <Rating />
         </TabPanel>
       </div>
     </div>
