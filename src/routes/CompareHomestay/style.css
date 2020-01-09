@@ -6,7 +6,7 @@
   font-size: 24px !important;
 }
 .container-show-image > .swiper-container {
-  height: 250px !important;
+  height: 350px !important;
   margin-bottom: 10px !important;
 }
 .slide-under {
@@ -41,7 +41,7 @@
   background-color: #c4c4c4;
 }
 .content-compare {
-  margin-top: 80px;
+  margin-top: 60px;
   text-align: center;
   width: 100%;
   display: flex;
@@ -52,6 +52,117 @@
 }
 
 .datcho {
-  width: 350px !important;
   text-align: center !important;
+  width: 100%;
+}
+
+.icon-left {
+  margin-right: -100px;
+}
+.icon-right {
+  margin-right: -90px;
+}
+
+@media (max-width: 375px) {
+  .icon-left {
+    display: none !important;
+  }
+  .icon-right {
+    display: none !important;
+  }
+  .container-show-image > .swiper-container {
+    height: 150px !important;
+  }
+  .content-compare {
+    font-size: 14px !important;
+  }
+  .content-compare {
+    margin-top: 20px !important;
+  }
+}
+
+@media (min-width: 320px) {
+  .icon-left {
+    display: none !important;
+  }
+  .icon-right {
+    display: none !important;
+  }
+  .container-show-image > .swiper-container {
+    height: 150px !important;
+  }
+  .content-compare {
+    font-size: 14px !important;
+  }
+  .content-compare {
+    margin-top: 20px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1022px) {
+  .icon-left {
+    display: none !important;
+  }
+  .icon-right {
+    display: none !important;
+  }
+  .pading-lef-50 {
+    padding-left: 100px;
+  }
+  .content-compare {
+    font-size: 18px !important;
+  }
+  .content-compare {
+    margin-top: 20px !important;
+  }
+  .container-show-image > .swiper-container {
+    height: 280px !important;
+  }
+}
+@media (min-width: 1023px) {
+  .icon-left {
+    margin-right: -80px !important;
+  }
+  .icon-right {
+    margin-right: -65px !important;
+  }
+  .container-show-image > .swiper-container {
+    height: 350px !important;
+  }
+  .content-compare {
+    font-size: 18px !important;
+  }
+  .content-compare {
+    margin-top: 60px !important;
+  }
+}
+
+.cancel :hover {
+  cursor: pointer;
+}
+.container-show-image .swiper-button-next {
+  width: 26px !important;
+  height: 26px !important;
+  background-color: #ffffff !important;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: 7px 6px;
+}
+
+.container-show-image .swiper-button-prev {
+  width: 26px !important;
+  height: 26px !important;
+  background-color: #ffffff !important;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: 5px 6px;
+}
+
+.container-show-image .swiper-button-next {
+  background-size: 13px !important;
+}
+
+.container-show-image .swiper-button-prev {
+  background-size: 13px !important;
 }
