@@ -192,6 +192,7 @@
 }
 
 .payment-button2 {
+  width: 100%;
   padding: 10px;
   background: #fc6c85;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
