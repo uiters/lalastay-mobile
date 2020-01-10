@@ -7,7 +7,7 @@ import DateRangeIcon from '@material-ui/icons/DateRange';
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import WarningOutlinedIcon from '@material-ui/icons/WarningOutlined';
 import { useHistory } from 'react-router-dom'
-import { Header, BottomNavigation } from 'components';
+import { Header } from 'components';
 import './style.css';
 
 const Payment = () => {
@@ -217,17 +217,14 @@ const Payment = () => {
           </p>
         </Grid>
       </Grid>
-      <input
-        style={{
-          marginLeft: matches ? '96px' : '16px',
-          marginBottom: matches ? '48px' : '16px',
-        }}
-        className="payment-button2"
-        type="button"
-        value="ĐẶT NGAY"
-        onClick={() => history.push('/invoice')}
-      />
-      <BottomNavigation />
+      <div style={{ padding: '16px' }}>
+        <input
+          className="payment-button2"
+          type="button"
+          value="ĐẶT NGAY"
+          onClick={() => history.push('/invoice')}
+        />
+      </div>
     </IonContent>
   );
 };

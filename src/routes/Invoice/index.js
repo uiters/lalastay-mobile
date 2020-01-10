@@ -6,7 +6,7 @@ import DateRangeIcon from '@material-ui/icons/DateRange';
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import WarningOutlinedIcon from '@material-ui/icons/WarningOutlined';
 import { useHistory } from 'react-router-dom'
-import { Header, BottomNavigation } from 'components';
+import { Header } from 'components';
 import './style.css';
 
 const Payment = () => {
@@ -124,17 +124,10 @@ const Payment = () => {
             nêu trên sẽ không được hoàn lại phí dịch vụ.
           </p>
         </div>
-        <div className="invoice-right-section">
-          <input
-            className="invoice-button2"
-            type="button"
-            value="TRANG CHỦ"
-            onClick={() => history.push('/')}
-          />
-          <input className="invoice-button1" type="button" value="TIẾP TỤC XEM" />
+        <div>
+          <input className="invoice-button1" type="button" value="VỀ TRANG CHỦ" onClick={() => history.push('/')} />
         </div>
       </div>
-      <BottomNavigation />
     </IonContent>
   );
 };

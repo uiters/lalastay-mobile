@@ -186,9 +186,10 @@
 }
 
 .invoice-button1 {
+  margin-top: 16px;
+  width: 100%;
   cursor: pointer;
   padding: 10px;
-  height: 40px;
   right: 0;
   background: #fc6c85;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
@@ -200,13 +201,12 @@
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-  margin-left: 40px;
+  /* margin-left: 40px; */
 }
 
 .invoice-button2 {
   cursor: pointer;
   padding: 10px;
-  height: 40px;
   background: rgba(0, 0, 0, 0.05);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   border: none;
@@ -217,7 +217,6 @@
   text-align: center;
   text-transform: uppercase;
   color: #2b2b2b;
-  margin-right: 40px;
 }
 
 .invoice-location {
