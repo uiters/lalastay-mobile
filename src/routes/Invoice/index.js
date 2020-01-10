@@ -125,13 +125,13 @@ const Payment = () => {
           </p>
         </div>
         <div className="invoice-right-section">
-          <input
+          {/* <input
             className="invoice-button2"
             type="button"
-            value="TRANG CHỦ"
+            value="VỀ TRANG CHỦ"
             onClick={() => history.push('/')}
-          />
-          <input className="invoice-button1" type="button" value="TIẾP TỤC XEM" />
+          /> */}
+          <input className="invoice-button1" type="button" value="TIẾP TỤC XEM" onClick={() => history.push('/')} />
         </div>
       </div>
       <BottomNavigation />

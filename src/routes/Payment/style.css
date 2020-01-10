@@ -35,7 +35,7 @@
 .payment-sub-title2 {
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 31px;
   display: flex;
   align-items: center;
@@ -47,7 +47,7 @@
 .payment-sub-title3 {
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 32px;
   /* identical to box height */
   display: flex;
@@ -59,7 +59,7 @@
 .payment-sub-title4 {
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 32px;
   /* identical to box height */
 

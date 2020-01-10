@@ -200,7 +200,7 @@
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-  margin-left: 40px;
+  /* margin-left: 40px; */
 }
 
 .invoice-button2 {
@@ -217,7 +217,7 @@
   text-align: center;
   text-transform: uppercase;
   color: #2b2b2b;
-  margin-right: 40px;
+  /* margin-right: 40px; */
 }
 
 .invoice-location {
